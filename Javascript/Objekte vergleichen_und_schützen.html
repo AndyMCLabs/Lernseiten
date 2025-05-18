@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Objekte vergleichen und schützen</h1>
+            <p>In JavaScript ist das Vergleichen von Objekten so, als würde man zwei Zaubertränke anschauen und fragen:
+                "Sind sie identisch, weil sie gleich aussehen?" Nope! In Wahrheit interessiert JavaScript eher, ob sie
+                aus dem gleichen Kessel stammen - also ob sie die gleiche Referenz haben. 🤯</p>
+            <p>In diesem Kapitel lernst du, wie du Objekte vergleichen und schützen kannst. Wir zeigen dir, wie du
+                Objekte tief vergleichen kannst, wie du sie vor Veränderungen schützt und welche Best Practices es gibt.
+                Außerdem gibt's ein paar coole Übungen und Projektideen, um dein Wissen zu vertiefen!</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Vergleichen von Objekten</h2>
+            <p>Objekte werden nach Referenz verglichen, nicht nach Inhalt. Zwei identische Objekte mit den gleichen
+                Eigenschaften und Werten sind nicht gleich - es sei denn, sie sind dasselbe Objekt im Speicher.</p>
+
+            <pre><code class="language-js">// Zwei identische Objekte
+const zaubertrank1 = { inhalt: "Heiltrank", menge: 50 };
+const zaubertrank2 = { inhalt: "Heiltrank", menge: 50 };
+
+console.log(zaubertrank1 === zaubertrank2); // false
+console.log(zaubertrank1 === zaubertrank1); // true</code></pre>
+            <p>Das liegt daran, dass JavaScript Objekte als Referenzen behandelt. Wenn du also zwei Objekte mit dem
+                gleichen Inhalt vergleichst, wird immer <code>false</code> zurückgegeben.</p>
+            <p>Wenn du also wissen willst, ob zwei Objekte gleich sind, musst du sie manuell vergleichen. Das ist wie
+                Detektivarbeit! 🔍</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Objekte tief vergleichen</h2>
+            <p>Wenn du tatsächlich prüfen willst, ob zwei Objekte die gleichen Eigenschaften und Werte haben, musst du
+                sie manuell oder mit einer Utility-Funktion vergleichen. Oder du benutzt ein Hilfs-Tool wie Lodash.</p>
+
+            <pre><code class="language-js">function deepEqual(a, b) {
+  if (a === b) return true;
+  if (typeof a !== "object" || typeof b !== "object" || a == null || b == null) return false;
+
+  let keysA = Object.keys(a), keysB = Object.keys(b);
+  if (keysA.length !== keysB.length) return false;
+
+  for (let key of keysA) {
+    if (!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
+  }
+
+  return true;
+}</code></pre>
+            <p>Hier ist eine einfache Funktion, die zwei Objekte rekursiv vergleicht. Sie prüft, ob sie die gleichen
+                Eigenschaften und Werte haben. Wenn ja, gibt sie <code>true</code> zurück, andernfalls
+                <code>false</code>.</p>
+            <p>Das ist wie ein Zaubertrank-Rezept: Wenn alle Zutaten gleich sind, ist der Trank gleich! 🧪</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Objekte schützen - Freeze und Seal</h2>
+            <p>Damit niemand mehr dein heiliges Artefakt (aka Objekt) verändert, kannst du `Object.freeze()` oder
+                `Object.seal()` verwenden. Wie ein Schild, der deine Daten schützt! 🛡️</p>
+
+            <pre><code class="language-js">const charakter = {
+name: "Lara",
+klasse: "Schurkin"
+};
+
+Object.freeze(charakter);
+charakter.name = "Thanos"; // Nope!
+console.log(charakter.name); // "Lara"</code></pre>
+            <p>Mit `Object.freeze()` wird das Objekt so eingefroren, dass keine Änderungen mehr möglich sind. Das ist
+                wie
+                ein magischer Zauber, der dein Objekt vor bösen Zauberern schützt! ❄️</p>
+            <p>Mit `Object.seal()` kannst du das Objekt zwar nicht mehr erweitern oder Eigenschaften löschen, aber die
+                Werte der bestehenden Eigenschaften können weiterhin geändert werden.</p>
+            <pre><code class="language-js">const charakter = {
+name: "Lara",
+klasse: "Schurkin"
+};
+Object.seal(charakter);
+charakter.name = "Thanos"; // Ja, das geht!
+console.log(charakter.name); // "Thanos"
+charakter.neueEigenschaft = "Magier"; // Nope!
+console.log(charakter.neueEigenschaft); // undefined</code></pre>
+            <p>Das ist wie ein Zauber, der dein Objekt vor dem Hinzufügen neuer Eigenschaften schützt, aber die alten
+                Eigenschaften weiterhin bearbeitet werden können.</p>
+            <p>Beachte: `Object.freeze()` und `Object.seal()` sind nicht rekursiv! Das bedeutet, dass sie nur auf die
+                oberste Ebene des Objekts wirken. Wenn du also ein tiefes Objekt hast, musst du es selbst einfrieren
+                oder
+                versiegeln.</p>
+            <p>Hier ist ein Beispiel für ein tiefes Objekt:</p>
+            <pre><code class="language-js">const tiefesObjekt = {
+    name: "Lara",
+    klasse: "Schurkin",
+    attribute: {
+        geschicklichkeit: 10,
+        intelligenz: 8
+    }
+};
+Object.freeze(tiefesObjekt);
+tiefesObjekt.attribute.geschicklichkeit = 20; // Nope!
+console.log(tiefesObjekt.attribute.geschicklichkeit); // 10</code></pre>
+            <p>Hier wird nur die oberste Ebene eingefroren, die inneren Eigenschaften bleiben unverändert. Wenn du also
+                ein tiefes Objekt hast, musst du es selbst einfrieren oder versiegeln.</p>
+            <p>Das ist wie ein Zauber, der nur auf die oberste Ebene wirkt - du musst selbst dafür sorgen, dass alles
+                andere auch geschützt ist!</p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practises</h1>
+            <p>
+                ✨ Verwende `===` nur, wenn du prüfen willst, ob zwei Objekte identisch sind (Referenzgleichheit). <br>
+                ✨ Für tiefen Vergleich nutze eigene Funktionen oder Libraries. <br>
+                ✨ Verwende `Object.freeze()` für maximale Sicherheit - aber beachte: es ist tief nicht rekursiv!<br>
+                ✨ Nutze `Object.seal()` wenn du Eigenschaften nicht löschen oder hinzufügen, aber noch ändern willst.
+                <br>
+                ✨ Sei vorsichtig mit `Object.freeze()` und `Object.seal()` - sie sind nicht rückgängig zu machen!<br>
+                ✨ Teste deine Objekte gründlich, bevor du sie einfrierst oder versiegelst. <br>
+                ✨ Nutze Utility-Funktionen wie Lodash für tiefen Vergleich und Manipulation. <br>
+                ✨ Halte deine Objekte so flach wie möglich, um die Komplexität zu reduzieren. <br>
+                ✨ Dokumentiere deine Objekte gut, damit andere Entwickler wissen, wie sie funktionieren. <br>
+                ✨ Verwende `Object.isFrozen()` und `Object.isSealed()` um den Status deiner Objekte zu prüfen. <br>
+                ✨ Sei vorsichtig mit der Verwendung von `Object.freeze()` und `Object.seal()` in großen Projekten - sie
+                können die Performance beeinträchtigen. <br>
+                ✨ Nutze `Object.assign()` oder Spread-Operator für flache Kopien von Objekten. <br>
+                ✨ Verwende `Object.create()` für die Erstellung von Objekten mit Prototypen. <br>
+                ✨ Nutze `Object.keys()`, `Object.values()` und `Object.entries()` für einfache Iteration über Objekte.
+                <br>
+                ✨ Halte deine Objekte so klein wie möglich, um die Performance zu verbessern. <br>
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Fragen mit Antworten</h2>
+            <ol>
+                <li>Was gibt <code>{a:1} === {a:1}</code> zurück?<br><strong>A:</strong> false</li>
+                <li>Wie kann man ein Objekt vor Änderungen schützen?<br><strong>A:</strong> Mit
+                    <code>Object.freeze()</code>
+                </li>
+                <li>Was macht <code>Object.seal()</code> genau?<br><strong>A:</strong> Verhindert das Hinzufügen und
+                    Löschen von Eigenschaften</li>
+                <li>Was ist eine Referenz in JavaScript?<br><strong>A:</strong> Ein Zeiger auf die Speicheradresse eines
+                    Objekts</li>
+                <li>Wie erkennt man tief gleiche Objekte?<br><strong>A:</strong> Durch rekursiven Vergleich aller
+                    Schlüssel und Werte</li>
+                <li>Was passiert, wenn man ein gefreeztes Objekt ändern will?<br><strong>A:</strong> Nichts, es bleibt
+                    unverändert</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Häufige Fehler und Lösungen</h2>
+            <ul>
+                <li><strong>Fehler:</strong> Zwei Objekte mit gleichen Werten werden als gleich angenommen →
+                    <em>Lösung:</em> Nutze deepEqual.
+                </li>
+                <li><strong>Fehler:</strong> Änderungen an einem gefreezten Objekt → <em>Lösung:</em> Vorher prüfen mit
+                    <code>Object.isFrozen()</code>
+                </li>
+                <li><strong>Fehler:</strong> Objekt versehentlich überschrieben → <em>Lösung:</em> Mit
+                    <code>const</code> deklarieren
+                </li>
+                <li><strong>Fehler:</strong> Annahme, dass Freeze auch verschachtelte Objekte einfriert →
+                    <em>Lösung:</em> Tiefes Einfrieren mit rekursiver Funktion
+                </li>
+                <li><strong>Fehler:</strong> Nutzung von Freeze ohne Notwendigkeit → <em>Lösung:</em> Nur verwenden,
+                    wenn Schutz wirklich nötig</li>
+                <li><strong>Fehler:</strong> Objekte mit `Object.seal()` verändert → <em>Lösung:</em> Nur bestehende
+                    Eigenschaften ändern, keine neuen hinzufügen</li>
+                <li><strong>Fehler:</strong> Unklare Objekthierarchie → <em>Lösung:</em> Gut dokumentieren und
+                    strukturieren</li>
+                <li><strong>Fehler:</strong> Objekte werden nicht richtig verglichen → <em>Lösung:</em> Utility-Funktionen
+                    wie Lodash verwenden</li>
+                <li><strong>Fehler:</strong> Objekte werden nicht richtig iteriert → <em>Lösung:</em> Verwende
+                    <code>Object.keys()</code>, <code>Object.values()</code> oder <code>Object.entries()</code></li>
+                <li><strong>Fehler:</strong> Objekte werden nicht richtig kopiert → <em>Lösung:</em> Verwende
+                    <code>Object.assign()</code> oder den Spread-Operator</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Übungen</h2>
+            <ol>
+                <li>Erstelle zwei identische Objekte. Vergleiche sie mit <code>===</code>.</li>
+                <li>Schreibe eine Funktion <code>deepEqual(obj1, obj2)</code>.</li>
+                <li>Erstelle ein Objekt "settings" und friere es ein. Teste ob Änderungen greifen.</li>
+                <li>Nutze <code>Object.seal()</code> und versuche, eine neue Eigenschaft hinzuzufügen.</li>
+                <li>Implementiere eine rekursive Funktion, die ein Objekt tief einfriert.</li>
+                <li>Erstelle ein Objekt mit verschachtelten Objekten und teste den tiefen Vergleich.</li>
+                <li>Schreibe eine Funktion, die prüft, ob ein Objekt gefreezt ist.</li>
+                <li>Erstelle ein Objekt mit einer Methode und teste den Vergleich.</li>
+                <li>Nutze Lodash, um zwei Objekte tief zu vergleichen.</li>
+                <li>Erstelle ein Objekt mit Arrays und teste den Vergleich.</li>
+                <li>Implementiere eine Funktion, die alle Eigenschaften eines Objekts auflistet.</li>
+                <li>Erstelle ein Objekt mit verschiedenen Datentypen und teste den Vergleich.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Projektideen</h2>
+            <ul>
+                <li>🎮 RPG-Charaktereditor mit schreibgeschützten Attributen</li>
+                <li>💾 Einstellungsmenü für eine App mit eingefrorenen Konfigs</li>
+                <li>🕵️‍♂️ Detektivspiel, bei dem Objekte manipuliert und geschützt werden</li>
+                <li>📚 JSON-Tiefvergleichstool mit Nutzeroberfläche</li>
+                <li>🧪 Object Freeze vs. Seal Simulator</li>
+                <li>🛡️ Sicherheitsüberprüfung für Objekte in einer Webanwendung</li>
+                <li>🔍 Objektdetektiv: Finde Unterschiede zwischen zwei Objekten</li>
+                <li>📊 Visualisierung von Objekteigenschaften und deren Schutzstatus</li>
+                <li>🧩 Objekterstellungs-Tool mit Drag-and-Drop-Funktionalität</li>
+                <li>🧙‍♂️ Magisches Buch: Objekte mit Zaubersprüchen erstellen und schützen</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Speed Debugging Challenges</h2>
+            <ol>
+                <li>Ein Objekt lässt sich trotz `freeze` verändern - warum? Finde die verschachtelte Struktur!</li>
+                <li>Zwei Objekte sehen gleich aus, Vergleich schlägt fehl - debugge warum!</li>
+                <li>Ein `seal`-geschütztes Objekt bekommt neue Eigenschaften - wie kann das sein?</li>
+                <li>Ein gefreeztes Objekt wird verändert - finde den Übeltäter!</li>
+                <li>Ein tiefes Objekt wird nicht richtig verglichen - finde den Fehler!</li>
+                <li>Ein Objekt wird nicht richtig eingefroren - finde den Grund!</li>
+                <li>Ein Objekt wird nicht richtig versiegelt - finde den Grund!</li>
+                <li>Ein Objekt wird nicht richtig kopiert - finde den Grund!</li>
+                <li>Ein Objekt wird nicht richtig iteriert - finde den Grund!</li>
+                <li>Ein Objekt wird nicht richtig dokumentiert - finde den Grund!</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p>
+                Objekte sind magisch - aber JavaScript prüft lieber, ob sie aus demselben Zauberbuch stammen statt
+                gleich aussehen. Mit <code>Object.freeze()</code> und <code>Object.seal()</code> rüstest du deine
+                Objekte mit Schilden aus, und mit einer eigenen Vergleichsfunktion kannst du sie auf ihre wahre
+                Gleichheit prüfen. Möge die Referenz mit dir sein!
+            </p>
+        </section>
+
+        <section class="playground">
+            <textarea id="codeInput" rows="30" cols="120">
+// Teste hier dein Wissen!
+const obj1 = { wert: 10 };
+const obj2 = { wert: 10 };
+console.log(obj1 === obj2); // false
+
+Object.freeze(obj1);
+obj1.wert = 99;
+console.log(obj1.wert); // 10
+  </textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Array-Grundlagen.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

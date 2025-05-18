@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Vergleichs- und logische Operatoren - Das moralische Kompass-System deines Codes 🧭🧠</h1>
+            <p>
+                Willkommen, Held der Logik! Heute geht's um den moralischen Kodex deiner Variablen: Wer ist größer? Wer
+                ist gleich? Und was passiert, wenn mehrere Bedingungen zusammenarbeiten müssen?
+                🧐 Klingt nach einem Detektivabenteuer - und genau so ist es auch!
+            </p>
+            <p>
+                In dieser Lektion lernst du, wie du mit Vergleichs- und logischen Operatoren die Geheimnisse deiner
+                Variablen lüften kannst. Egal, ob du ein magisches Item vergibst oder den Zugang zu deinem Dungeon
+                kontrollierst - diese Operatoren sind deine treuen Begleiter! 🧙‍♂️✨
+            </p>
+            <p>
+                Also schnapp dir deinen Zauberstab (oder besser gesagt, deine Tastatur) und lass uns in die Welt der
+                Bedingungen eintauchen! 🚀 
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Erklärung</h2>
+            <p>Mit Vergleichs- und logischen Operatoren lassen sich Bedingungen prüfen - also klassische <em>“Wenn das
+                    so ist, dann mach dies”</em>-Situationen.</p>
+
+            <h3>Vergleichsoperatoren 🔍</h3>
+            <ul>
+                <li><code>==</code> Gleich (Wert, nicht Typ)</li>
+                <li><code>===</code> Streng gleich (Wert und Typ)</li>
+                <li><code>!=</code> Ungleich (Wert)</li>
+                <li><code>!==</code> Streng ungleich (Wert und Typ)</li>
+                <li><code>&gt;</code> Größer als</li>
+                <li><code>&gt;=</code> Größer gleich</li>
+                <li><code>&lt;</code> Kleiner als</li>
+                <li><code>&lt;=</code> Kleiner gleich</li>
+                <li><code>instanceof</code> Prüft, ob ein Objekt eine Instanz eines bestimmten Typs ist</li>
+                <li><code>in</code> Prüft, ob eine Eigenschaft in einem Objekt existiert</li>
+                <li><code>typeof</code> Gibt den Typ einer Variablen zurück</li>
+                <li><code>void</code> Gibt <code>undefined</code> zurück, ohne eine Variable zu erstellen</li>
+                <li><code>delete</code> Löscht eine Eigenschaft aus einem Objekt</li>
+                <li><code>??</code> Nullish Coalescing Operator: Gibt den rechten Wert zurück, wenn der linke Wert null
+                    oder undefined ist</li>
+                <li><code>??=</code> Nullish Coalescing Assignment: Weist den rechten Wert zu, wenn der linke Wert null
+                    oder undefined ist</li>
+            </ul>
+
+            <h3>Logische Operatoren 🧠</h3>
+            <ul>
+                <li><code>&&</code> (UND): Beide Bedingungen müssen wahr sein</li>
+                <li><code>||</code> (ODER): Eine der Bedingungen reicht</li>
+                <li><code>!</code> (NICHT): Kehrt das Ergebnis um</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel</h2>
+<pre><code>let alter = 18;
+let eintrittErlaubt = alter &gt;= 18;
+
+console.log("Darf rein?", eintrittErlaubt); // true
+
+let level = 12;
+let magie = true;
+
+if (level &gt; 10 && magie) {
+console.log("Willkommen im Magierzirkel!");
+} else {
+console.log("Zugang verweigert...");
+}
+
+let geheimnis = false;
+console.log("Verrätst du es?", !geheimnis); // true</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices</h1>
+            <ul>
+                <li>Verwende <code>===</code> statt <code>==</code>, um Überraschungen zu vermeiden (Typ-Sicherheit!)
+                </li>
+                <li>Formuliere Bedingungen möglichst klar und eindeutig</li>
+                <li>Nutze Klammern für komplexe Vergleiche: <code>(a &gt; 5 || b &lt; 3) && c === true</code></li>
+                <li>Sei vorsichtig mit Negationen: <code>!false</code> ist <code>true</code>, aber <code>!0</code> auch!
+                </li>
+                <li>Logische Operatoren sind kurzschlussfähig: Bei <code>false && ...</code> wird der Rest nicht geprüft
+                </li>
+                <li>Nutze <code>console.log()</code>, um den Zustand deiner Variablen zu überprüfen</li>
+                <li>Teste deine Bedingungen in einem Playground, um Fehler zu vermeiden</li>
+                <li>Vermeide zu viele Bedingungen in einer Zeile - das macht den Code unübersichtlich</li>
+                <li>Nutze <code>===</code> und <code>!==</code> für strenge Vergleiche, um Typfehler zu vermeiden</li>
+                <li>Verwende <code>??</code> für Standardwerte, wenn eine Variable null oder undefined ist</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Fragen &amp; Antworten</h2>
+            <ol>
+                <li><strong>Was ergibt <code>5 == "5"</code>?</strong><br>true (nur Wert wird geprüft)</li>
+                <li><strong>Was ergibt <code>5 === "5"</code>?</strong><br>false (unterschiedlicher Typ!)</li>
+                <li><strong>Wann ist <code>a &gt; 10 && b &lt; 5</code> wahr?</strong><br>Wenn beide Bedingungen stimmen
+                </li>
+                <li><strong>Was bedeutet <code>!true</code>?</strong><br>false</li>
+                <li><strong>Was passiert bei <code>0 || "Hallo"</code>?</strong><br>"Hallo", weil 0 als false gilt</li>
+                <li><strong>Wie prüfe ich, ob eine Variable null oder undefined ist?</strong><br>Mit <code>if (x ==
+                        null)</code></li>
+                <li><strong>Was ist der Unterschied zwischen <code>&&</code> und <code>||</code>?</strong><br><code>&&</code>
+                    ist logisch UND, <code>||</code> ist logisch ODER</li>
+                <li><strong>Wie kann ich mehrere Bedingungen kombinieren?</strong><br>Mit Klammern: <code>(a &gt; 5 ||
+                        b &lt; 3) && c === true</code></li>
+                <li><strong>Was ist der Unterschied zwischen <code>==</code> und <code>===</code>?</strong><br><code>==</code>
+                    prüft nur den Wert, <code>===</code> prüft auch den Typ</li>
+                <li><strong>Wie kann ich sicherstellen, dass eine Variable einen bestimmten Typ hat?</strong><br>Mit
+                    <code>typeof</code>: <code>if (typeof x === "number") { ... }</code></li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Häufige Fehler und ihre Lösungen</h2>
+            <ul>
+                <li><strong>Fehler:</strong> <code>if (x = 5)</code><br><strong>Lösung:</strong> Verwende
+                    <code>==</code> oder <code>===</code> für Vergleiche, nicht <code>=</code> (Zuweisung!)</li>
+                <li><strong>Fehler:</strong> <code>==</code> statt <code>===</code> genutzt<br><strong>Lösung:</strong>
+                    Immer <code>===</code> nutzen für Sicherheit</li>
+                <li><strong>Fehler:</strong> Kein Verständnis für Negationen<br><strong>Lösung:</strong> Nutze
+                    <code>console.log(!true)</code> zur Verdeutlichung</li>
+                <li><strong>Fehler:</strong> Verwechslung von <code>&&</code> und
+                    <code>||</code><br><strong>Lösung:</strong> Merksatz: "UND ist strenger als ODER"</li>
+                <li><strong>Fehler:</strong> Vergleiche ohne Klammern bei komplexen
+                    Bedingungen<br><strong>Lösung:</strong> Gruppiere mit Klammern für Klarheit</li>
+                <li><strong>Fehler:</strong> <code>if (x = 5)</code> statt <code>if (x == 5)</code><br><strong>Lösung:</strong>
+                    Verwende <code>===</code> für Vergleiche, nicht <code>=</code> (Zuweisung!)</li>
+                <li><strong>Fehler:</strong> <code>if (x == null)</code> statt <code>if (x === null || x ===
+                        undefined)</code><br><strong>Lösung:</strong> Nutze <code>==</code> für null und undefined</li>
+                <li><strong>Fehler:</strong> <code>if (x &gt;= 10 && x &lt;= 20)</code><br><strong>Lösung:</strong> Nutze
+                    <code>if (x &gt;= 10 &amp;&amp; x &lt;= 20)</code> für Klarheit</li>
+                <li><strong>Fehler:</strong> <code>if (x == 5 || x == 10)</code><br><strong>Lösung:</strong> Nutze
+                    <code>if (x === 5 || x === 10)</code> für strenge Vergleiche</li>             
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Übungen</h2>
+            <ol>
+                <li>Vergleiche <code>10 === "10"</code> und <code>10 == "10"</code></li>
+                <li>Schreibe eine Bedingung, die prüft, ob jemand 18 oder älter ist <strong>und</strong> einen Ausweis
+                    hat</li>
+                <li>Erstelle eine Funktion <code>istGeradeUndGroesserAls10()</code></li>
+                <li>Baue eine Bedingung: Wenn entweder <code>mana &gt; 50</code> oder <code>energie &gt; 100</code></li>
+                <li>Schreibe eine Funktion, die zurückgibt, ob zwei Werte streng ungleich sind</li>
+                <li>Erstelle eine Bedingung, die prüft, ob ein Spieler ein Magier ist und mindestens Level 10 hat</li>
+                <li>Schreibe eine Funktion, die prüft, ob ein Wert null oder undefined ist</li>
+                <li>Erstelle eine Bedingung, die prüft, ob ein Spieler ein Heiler ist oder ein Item hat</li>
+                <li>Schreibe eine Funktion, die prüft, ob ein Wert kleiner als 0 oder größer als 100 ist</li>
+                <li>Erstelle eine Bedingung, die prüft, ob ein Spieler ein Tank ist und mindestens Level 20 hat</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Projektideen</h2>
+            <ol>
+                <li><strong>Login-Simulator</strong> - Name und Passwort prüfen</li>
+                <li><strong>Zugangskontrolle</strong> - Nur wenn Alter &gt;= 18 UND Einladung</li>
+                <li><strong>Rollenprüfer</strong> - Wer darf als Heiler, Tank oder DD rein?</li>
+                <li><strong>Item-Nutzung</strong> - Nur wenn Ausdauer &gt; 20 UND Item vorhanden</li>
+                <li><strong>Quests freischalten</strong> - Wenn Level &gt;= 5 ODER Bonusquest aktiviert</li>
+                <li><strong>Magie-Check</strong> - Wenn Mana &gt; 50 UND Magier</li>
+                <li><strong>Dungeon-Check</strong> - Wenn Schlüssel vorhanden ODER Level &gt;= 10</li>  
+                <li><strong>Ressourcen-Management</strong> - Wenn Gold &gt; 100 ODER Item vorhanden</li>
+                <li><strong>Charakter-Status</strong> - Wenn HP &gt; 0 UND Mana &gt; 0</li>
+                <li><strong>Ressourcen-Check</strong> - Wenn Gold &gt; 100 ODER Item vorhanden</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Speed Debugging-Challenges</h2>
+            <ol>
+                <li><strong>Code:</strong> <code>if (x = 10) { ... }</code><br><strong>Fix:</strong>
+                    <code>if (x === 10)</code></li>
+                <li><strong>Code:</strong> <code>if (!false)</code><br><strong>Ergebnis:</strong> true - korrekt!</li>
+                <li><strong>Code:</strong> <code>if (true || false && false)</code><br><strong>Fix:</strong> Klammern
+                    klären die Reihenfolge!</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p>
+                Vergleichs- und logische Operatoren sind der Wächter deines Codes - sie entscheiden, ob Türen aufgehen
+                oder verschlossen bleiben. 💡 Ob du ein Formular prüfst oder ein episches Item vergibst: Nur wer
+                Bedingungen richtig formuliert, wird siegreich aus der if-Schlacht hervorgehen! ⚔️💾
+            </p>
+            <p>
+                Denke daran: <code>===</code> ist dein bester Freund, und Klammern sind deine Geheimwaffe! Und wenn du
+                mal nicht weiterweißt, schau einfach in die Konsole - sie verrät dir alles! 🖥️🔍
+            </p>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">// Hier kannst du deinen Code eintippen und testen
+let alter = 20;
+let hatAusweis = true;
+
+if (alter &gt;= 18 && hatAusweis) {
+console.log("Eintritt erlaubt!");
+} else {
+console.log("Zutritt verweigert.");
+}
+
+let magie = false;
+console.log("Kann zaubern?", !magie);</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Zuweisungen_und_Kurzschreibweisen.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

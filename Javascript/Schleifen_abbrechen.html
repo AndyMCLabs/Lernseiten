@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Schleifen abbrechen wie ein Boss: <code>break</code>, <code>continue</code> &amp; Co. 🧨</h1>
+            <p>
+                Willkommen zurück, Abenteurer*in! Heute lernst du, wie du aus endlosen Schleifen aussteigen kannst wie
+                ein echter Raid-Leader: Mit einem klaren "Stop!" 💥
+                Denn nicht jede Schleife muss bis zum bitteren Ende durchlaufen - manchmal musst du mitten im Gefecht
+                sagen: „Genug ist genug!“
+            </p>
+            <p>
+                In diesem Kapitel zeigen wir dir, wie du mit <code>break</code>, <code>continue</code> und
+                <code>return</code> die Kontrolle über deine Schleifen übernimmst. Egal, ob du ein Monster besiegen,
+                einen Schatz finden oder einfach nur den nächsten Level erreichen willst - diese Tricks helfen dir,
+                schneller ans Ziel zu kommen! 🚀
+            </p>
+            <p>
+                Lass uns gleich loslegen und die Geheimnisse der Schleifensteuerung lüften! Und keine Sorge, wir
+                haben auch ein paar coole Beispiele und Übungen für dich vorbereitet. Also schnapp dir deinen
+                Zauberstab (oder deine Tastatur) und lass uns starten! 🪄
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2><code>break</code> - Der Notausgang 🛑</h2>
+            <p>
+                <code>break</code> verlässt sofort die aktuelle Schleife - stell dir vor, du bist in einem Dungeon und
+                entdeckst eine Falle. Was machst du? Genau - raus da!
+            </p>
+<pre><code>for (let i = 1; i &lt;= 10; i++) {
+if (i === 5) {
+console.log("Monster zu stark! Flucht bei Stufe " + i);
+break; // Schleife wird hier beendet
+}
+console.log("Stufe " + i + " geschafft!");
+}</code></pre>
+            <p>
+                In diesem Beispiel wird die Schleife abgebrochen, wenn die Stufe 5 erreicht ist. Du kannst auch
+                <code>break</code> in <code>while</code>-Schleifen verwenden - es funktioniert überall dort, wo du
+                eine Schleife hast.
+            </p>
+            <pre><code>let i = 1;
+while (i &lt;= 10) {
+if (i === 5) {
+console.log("Monster zu stark! Flucht bei Stufe " + i);
+break; // Schleife wird hier beendet
+}
+console.log("Stufe " + i + " geschafft!");
+i++;
+}</code></pre>
+            <p>
+                Hier wird die Schleife ebenfalls abgebrochen, wenn die Stufe 5 erreicht ist. Du kannst auch
+                <code>break</code> in <code>switch</code>-Anweisungen verwenden, um den aktuellen Fall zu beenden.
+            </p>
+            <pre><code>let waffe = "Schwert";
+switch (waffe) {
+case "Schwert":
+console.log("Du hast ein Schwert! ⚔️");
+break; // Beendet den switch-Fall
+case "Bogen":
+console.log("Du hast einen Bogen! 🏹");
+break; // Beendet den switch-Fall
+default:
+console.log("Unbekannte Waffe! ❓");
+break; // Beendet den switch-Fall
+}</code></pre>
+            <p>
+                Hier wird der aktuelle Fall beendet, wenn die Waffe ein Schwert ist. Wenn du kein <code>break</code>
+                verwendest, wird der Code in den nächsten Fall weiter ausgeführt - das kann zu unerwarteten Ergebnissen
+                führen.
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2><code>continue</code> - Der Trickser 🦊</h2>
+            <p>
+                Mit <code>continue</code> überspringst du nur den aktuellen Durchlauf und springst direkt zur nächsten
+                Runde. Ideal, wenn du etwas auslassen, aber nicht komplett abbrechen willst - wie ein Rogue, der sich
+                unauffällig vorbeischleicht.
+            </p>
+            <pre><code>for (let i = 1; i &lt;= 5; i++) {
+  if (i === 3) {
+    console.log("Runde " + i + " übersprungen 🚫");
+    continue;
+  }
+  console.log("Runde " + i + " abgeschlossen ✅");
+}</code></pre>
+            <p>
+                In diesem Beispiel wird die Runde 3 übersprungen, aber die Schleife läuft weiter. Das ist nützlich,
+                wenn du bestimmte Bedingungen hast, die du ignorieren möchtest, aber trotzdem den Rest der Schleife
+                durchlaufen willst.
+            </p>
+            <pre><code>let i = 1;
+while (i &lt;= 5) {
+    if (i === 3) {
+        console.log("Runde " + i + " übersprungen 🚫")
+        continue;
+    }
+    console.log("Runde " + i + " abgeschlossen ✅")
+    i++;
+}</code></pre>
+            <p>
+                Hier wird die Runde 3 ebenfalls übersprungen, aber die Schleife läuft weiter. Du kannst auch
+                <code>continue</code> in <code>switch</code>-Anweisungen verwenden, um den aktuellen Fall zu
+                überspringen.
+            </p>
+            <pre><code>let waffe = "Schwert";
+switch (waffe) {
+case "Schwert":
+console.log("Du hast ein Schwert! ⚔️");
+continue; // Überspringt den aktuellen Fall
+case "Bogen":
+console.log("Du hast einen Bogen! 🏹");
+continue; // Überspringt den aktuellen Fall
+default:
+console.log("Unbekannte Waffe! ❓");
+continue; // Überspringt den aktuellen Fall
+}</code></pre>
+            <p>
+                Hier wird der aktuelle Fall übersprungen, wenn die Waffe ein Schwert ist. Wenn du kein
+                <code>continue</code> verwendest, wird der Code in den nächsten Fall weiter ausgeführt - das kann zu
+                unerwarteten Ergebnissen führen.
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2><code>return</code> in Funktionen - Der Heimweg 🏠</h2>
+            <p>
+                Wenn du dich in einer Funktion befindest, kannst du mit <code>return</code> nicht nur die Schleife,
+                sondern gleich die gesamte Funktion verlassen - wie ein Magier, der sich mit einem Teleport-Zauber aus
+                dem Staub macht.
+            </p>
+<pre><code>function kämpfe(bossLevel) {
+for (let i = 1; i &lt;= bossLevel; i++) {
+if (i === 4) {
+console.log("Boss zu stark - Rückzug!");
+return;
+}
+console.log("Angriff auf Boss-Stufe " + i);
+}
+console.log("Kampf vorbei!");
+}
+
+kämpfe(6);</code></pre>
+            <p>
+                In diesem Beispiel wird die Funktion abgebrochen, wenn die Boss-Stufe 4 erreicht ist. Das ist nützlich,
+                wenn du eine Funktion hast, die mehrere Schleifen enthält und du nur eine davon abbrechen möchtest.
+            </p>
+            <pre><code>function monsterSuchen(monsterListe) {
+for (let i = 0; i &lt; monsterListe.length; i++) {
+if (monsterListe[i] === "Drache") {
+console.log("Drache gefunden! 🐉");
+return; // Funktion wird hier beendet
+}
+console.log("Monster " + monsterListe[i] + " gefunden!");
+}
+console.log("Suche abgeschlossen!");
+}
+
+monsterSuchen(["Goblin", "Ork", "Drache", "Zentaur"]);</code></pre>
+            <p>
+                Hier wird die Funktion beendet, wenn ein Drache gefunden wird. Das ist nützlich, wenn du eine
+                Funktion hast, die mehrere Schleifen enthält und du nur eine davon abbrechen möchtest.
+            </p>
+            <p>
+                <code>return</code> kann auch in <code>switch</code>-Anweisungen verwendet werden, um die gesamte
+                Funktion zu beenden.
+            </p>
+            <pre><code>function waffenSwitch(waffe) {
+switch (waffe) {
+case "Schwert":
+console.log("Du hast ein Schwert! ⚔️");
+return; // Funktion wird hier beendet
+case "Bogen":
+console.log("Du hast einen Bogen! 🏹");
+return; // Funktion wird hier beendet
+case "Zauberstab":
+console.log("Du hast einen Zauberstab! 🪄");
+return; // Funktion wird hier beendet
+default:
+console.log("Unbekannte Waffe! ❓");
+return; // Funktion wird hier beendet
+}
+}
+
+waffenSwitch("Schwert");</code></pre>
+            <p>
+                Hier wird die Funktion beendet, wenn die Waffe ein Schwert ist. Das ist nützlich, wenn du eine
+                Funktion hast, die mehrere Schleifen enthält und du nur eine davon abbrechen möchtest.
+            </p>
+            <p>
+                <code>return</code> kann auch in <code>try...catch</code>-Anweisungen verwendet werden, um die
+                gesamte Funktion zu beenden.
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices 🎯</h1>
+            <ul>
+                <li>Verwende <code>break</code> für vorzeitiges Schleifenende - aber mit Bedacht!</li>
+                <li><code>continue</code> ist super für Filterfunktionen oder überspringbare Schritte.</li>
+                <li><code>return</code> nur in Funktionen, niemals allein in der Schleife.</li>
+                <li>Kommentiere gut, wenn du Schleifen frühzeitig beendest - für Mitstreiter und zukünftiges Ich!</li>
+                <li>Vermeide zu viele verschachtelte <code>break</code>s - sonst wird's unübersichtlich!</li>
+                <li>Teste deinen Code gründlich - manchmal ist der Ausstieg nicht so einfach, wie du denkst!</li>
+                <li>Nutze <code>break</code>, <code>continue</code> und <code>return</code> strategisch - sie sind
+                    mächtige Werkzeuge!</li>
+                <li>Vermeide endlose Schleifen - sie sind wie ein Labyrinth ohne Ausgang!</li>
+                <li>Denke daran, dass <code>break</code> und <code>continue</code> nur in Schleifen funktionieren -
+                    nicht in Funktionen!</li>
+                <li>Verwende <code>return</code>, um Werte aus Funktionen zurückzugeben - nicht nur zum Beenden!</li>
+                <li>Teste deinen Code regelmäßig - so findest du Fehler schneller!</li>
+                <li>Nutze Debugging-Tools, um den Code Schritt für Schritt zu durchlaufen - so siehst du, was passiert!</li>
+                <li>Verwende <code>console.log()</code>, um den Status deiner Variablen zu überprüfen - so siehst du,
+                    was passiert!</li>
+                <li>Verwende <code>debugger;</code>, um den Code an einer bestimmten Stelle anzuhalten - so kannst du
+                    den Status deiner Variablen überprüfen!</li>
+                <li>Verwende <code>try...catch</code>, um Fehler abzufangen - so kannst du den Code trotzdem
+                    ausführen!</li>
+                <li>Verwende <code>finally</code>, um Code auszuführen, egal ob ein Fehler aufgetreten ist oder nicht -
+                    so kannst du sicherstellen, dass der Code immer ausgeführt wird!</li>
+                <li>Verwende <code>throw</code>, um eigene Fehler zu werfen - so kannst du den Code anpassen!</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Praktisches Beispiel: Loot-Suche 🧰</h2>
+<pre><code>let loot = ["Gold", "Heiltrank", "Schlüssel", "Leeres Fass", "Legendäres Schwert"];
+
+for (let i = 0; i &lt; loot.length; i++) {
+if (loot[i] === "Leeres Fass") {
+continue; // Zeitverschwendung - weitersuchen
+}
+if (loot[i] === "Legendäres Schwert") {
+console.log("Beute gefunden: " + loot[i] + " 🗡️");
+break; // Mission erfüllt - ab nach Hause!
+}
+console.log("Untersuche: " + loot[i]);
+}</code></pre>
+            <p>
+                In diesem Beispiel durchsuchen wir eine Liste von Loot-Items. Wenn wir ein leeres Fass finden, überspringen
+                wir es mit <code>continue</code>. Wenn wir das legendäre Schwert finden, brechen wir die Schleife mit
+                <code>break</code> ab. So sparen wir Zeit und Nerven! ⏳
+            </p>
+            <p>
+                Du kannst auch <code>return</code> verwenden, um die gesamte Funktion zu beenden, wenn du das
+                legendäre Schwert gefunden hast. Das ist nützlich, wenn du eine Funktion hast, die mehrere Schleifen
+                enthält und du nur eine davon abbrechen möchtest.
+            </p>
+            <pre><code>function lootSuchen(loot) {
+for (let i = 0; i &lt; loot.length; i++) {
+if (loot[i] === "Leeres Fass") {
+continue; // Zeitverschwendung - weitersuchen
+
+}
+if (loot[i] === "Legendäres Schwert") {
+console.log("Beute gefunden: " + loot[i] + " 🗡️");
+return; // Mission erfüllt - ab nach Hause!
+}
+console.log("Untersuche: " + loot[i]);
+}
+}
+
+lootSuchen(["Gold", "Heiltrank", "Schlüssel", "Leeres Fass", "Legendäres Schwert"]);</code></pre>
+            <p>
+                Hier wird die Funktion beendet, wenn das legendäre Schwert gefunden wird. Das ist nützlich, wenn du
+                eine Funktion hast, die mehrere Schleifen enthält und du nur eine davon abbrechen möchtest.
+            </p>
+            <p>
+                Du kannst auch <code>return</code> verwenden, um die gesamte Funktion zu beenden, wenn du das
+                legendäre Schwert gefunden hast. Das ist nützlich, wenn du eine Funktion hast, die mehrere Schleifen
+                enthält und du nur eine davon abbrechen möchtest.
+            </p>
+            <p>
+                Und das Beste daran? Du kannst diese Tricks in deinen eigenen Projekten verwenden, um deine
+                Schleifensteuerung zu optimieren und deine Quests schneller abzuschließen! 🏆
+            </p>
+            <p>
+                Also, worauf wartest du noch? Schnapp dir deinen Code und leg los! Und vergiss nicht, uns deine
+                Ergebnisse zu zeigen - wir sind gespannt auf deine Loot-Suche! 🎉
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Fragen mit Antworten 🧠</h2>
+            <ol>
+                <li><strong>Was macht <code>break</code> in einer Schleife?</strong><br>Beendet die Schleife sofort.
+                </li>
+                <li><strong>Was ist der Unterschied zu <code>continue</code>?</strong><br><code>continue</code>
+                    überspringt nur den aktuellen Schleifendurchlauf.</li>
+                <li><strong>Kann ich <code>break</code> in <code>while</code>-Schleifen verwenden?</strong><br>Ja,
+                    absolut!</li>
+                <li><strong>Was passiert nach <code>break</code>?</strong><br>Der Code nach der Schleife wird
+                    fortgesetzt.</li>
+                <li><strong>Wo kann ich <code>return</code> verwenden?</strong><br>Nur in Funktionen, um sie frühzeitig
+                    zu beenden.</li>
+                <li><strong>Kann ich <code>return</code> in Schleifen verwenden?</strong><br>Ja, aber nur innerhalb
+                    von Funktionen.</li>
+                <li><strong>Was passiert, wenn ich <code>return</code> in einer Schleife ohne Funktion benutze?</strong><br>
+                    Das führt zu einem Fehler, weil <code>return</code> nur in Funktionen gültig ist.</li>
+                <li><strong>Kann ich <code>break</code> in <code>switch</code>-Anweisungen verwenden?</strong><br>Ja,
+                    <code>break</code> beendet den aktuellen Fall.</li>
+                <li><strong>Was passiert, wenn ich kein <code>break</code> in <code>switch</code> benutze?</strong><br>
+                    Der Code im nächsten Fall wird ebenfalls ausgeführt.</li>
+                <li><strong>Wie kann ich endlose Schleifen vermeiden?</strong><br>Stelle sicher, dass die Schleifenbedingung
+                    irgendwann falsch wird.</li>
+                <li><strong>Was ist der Unterschied zwischen <code>break</code> und <code>return</code>?</strong><br>
+                    <code>break</code> beendet nur die Schleife, während <code>return</code> die gesamte Funktion
+                    verlässt.</li>
+                <li><strong>Kann ich <code>continue</code> in <code>switch</code>-Anweisungen verwenden?</strong><br>Ja,
+                    <code>continue</code> überspringt den aktuellen Fall.</li>
+                <li><strong>Was passiert, wenn ich kein <code>continue</code> in <code>switch</code> benutze?</strong><br>
+                    Der Code im nächsten Fall wird ebenfalls ausgeführt.</li>
+                <li><strong>Wie kann ich den Code in einer Schleife debuggen?</strong><br>Verwende <code>console.log()</code>
+                    oder Debugging-Tools, um den Code Schritt für Schritt zu durchlaufen.</li>
+                <li><strong>Was ist der Unterschied zwischen <code>try...catch</code> und <code>if...else</code>?</strong><br>
+                    <code>try...catch</code> fängt Fehler ab, während <code>if...else</code> Bedingungen überprüft.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Häufige Fehler und Lösungen ⚠️</h2>
+            <ul>
+                <li><strong>Fehler:</strong> <code>break</code> außerhalb einer Schleife<br><strong>Lösung:</strong> Nur
+                    innerhalb von <code>for</code>, <code>while</code> oder <code>switch</code> verwenden</li>
+                <li><strong>Fehler:</strong> <code>continue</code> endet Schleife<br><strong>Lösung:</strong>
+                    <code>continue</code> springt nur zur nächsten Runde</li>
+                <li><strong>Fehler:</strong> <code>return</code> außerhalb einer Funktion<br><strong>Lösung:</strong> In
+                    eine Funktion packen</li>
+                <li><strong>Fehler:</strong> Schleife läuft weiter nach <code>break</code><br><strong>Lösung:</strong>
+                    Code genau prüfen - vielleicht steckt das <code>break</code> in einem <code>if</code> ohne
+                    Bedingung?</li>
+                <li><strong>Fehler:</strong> Zu viele verschachtelte Schleifen<br><strong>Lösung:</strong> Lieber in
+                    Funktionen aufteilen</li>
+                <li><strong>Fehler:</strong> Endlose Schleife<br><strong>Lösung:</strong> Bedingung überprüfen -
+                    vielleicht fehlt ein <code>i++</code>?</li>
+                <li><strong>Fehler:</strong> <code>break</code> in einer Funktion<br><strong>Lösung:</strong> Nur in
+                    Schleifen verwenden</li>
+                <li><strong>Fehler:</strong> <code>continue</code> in einer Funktion<br><strong>Lösung:</strong> Nur in
+                    Schleifen verwenden</li>
+                <li><strong>Fehler:</strong> <code>return</code> in einer Schleife<br><strong>Lösung:</strong> Nur in
+                        Funktionen verwenden</li>
+                <li><strong>Fehler:</strong> <code>break</code> in einer Funktion<br><strong>Lösung:</strong> Nur in
+                    Schleifen verwenden</li>
+                <li><strong>Fehler:</strong> <code>continue</code> in einer Funktion<br><strong>Lösung:</strong> Nur in
+                    Schleifen verwenden</li>
+                <li><strong>Fehler:</strong> <code>return</code> in einer Schleife<br><strong>Lösung:</strong> Nur in
+                    Funktionen verwenden</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Übungen mit steigendem Schwierigkeitsgrad 🧪</h2>
+            <ol>
+                <li>Erstelle eine Schleife, die Zahlen von 1 bis 10 ausgibt, aber bei 5 abbricht.</li>
+                <li>Gib alle Zahlen von 1 bis 10 aus, außer 7 (mit <code>continue</code>).</li>
+                <li>Durchlaufe ein Array mit Früchten, brich ab, wenn „Ananas“ gefunden wird.</li>
+                <li>In einer <code>while</code>-Schleife: zähle rückwärts, überspringe gerade Zahlen.</li>
+                <li>In einer Funktion: Prüfe in einer Schleife, ob eine Zahl im Array <code>[2, 4, 6, 8]</code> ungerade
+                    ist. Wenn ja, <code>return</code>.</li>
+                <li>Erstelle eine Funktion, die ein Array von Zahlen durchläuft und bei der ersten Zahl größer als 10
+                    abbricht.</li>
+                <li>Erstelle eine Schleife, die von 1 bis 20 zählt, aber bei 15 abbricht und „Ziel erreicht!“ ausgibt.</li>
+                <li>Durchlaufe ein Array mit Tieren und überspringe „Katze“.</li>
+                <li>In einer Funktion: Zähle von 1 bis 100, aber gib nur die Zahlen aus, die durch 5 teilbar sind.</li>
+                <li>Erstelle eine Schleife, die von 1 bis 50 zählt, aber bei 25 abbricht und „Halbzeit!“ ausgibt.</li>
+                <li>Durchlaufe ein Array mit Farben und überspringe „Blau“.</li>
+                <li>In einer Funktion: Zähle von 1 bis 100, aber gib nur die Zahlen aus, die durch 3 teilbar sind.</li>
+                <li>Erstelle eine Schleife, die von 1 bis 100 zählt, aber bei 50 abbricht und „Ziel erreicht!“ ausgibt.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Projektideen 💡</h2>
+            <ol>
+                <li><strong>Bosskampf-Simulation</strong>: Wenn Leben auf 0 fällt, <code>break</code></li>
+                <li><strong>Monsterfilter</strong>: Überspringe Monster unter Level 5</li>
+                <li><strong>Geheimtür-Finder</strong>: Brich Schleife ab, wenn Geheimtür gefunden wird</li>
+                <li><strong>Dialogsystem</strong>: Wiederhole Fragen, bis Spieler „Ja“ sagt</li>
+                <li><strong>Code-Schnitzeljagd</strong>: Suche ein bestimmtes Item in einer Liste</li>
+                <li><strong>Loot-Generator</strong>: Erstelle eine Liste von Items, überspringe leere</li>
+                <li><strong>Rätsel-Lösung</strong>: Brich ab, wenn Spieler die richtige Antwort gibt</li>
+                <li><strong>Quest-Tracker</strong>: Zähle Quests, überspringe abgeschlossene</li>
+                <li><strong>Inventar-System</strong>: Zähle Items, überspringe leere</li>
+                <li><strong>Charakter-Statistik</strong>: Zähle Level, überspringe niedrigere</li>
+                <li><strong>Monster-Spawn-System</strong>: Zähle Monster, überspringe besiegte</li>
+                <li><strong>Loot-Filter</strong>: Zähle Items, überspringe leere</li>
+                <li><strong>Quest-Log</strong>: Zähle Quests, überspringe abgeschlossene</li>
+                <li><strong>Charakter-Statistik</strong>: Zähle Level, überspringe niedrigere</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Speed Debugging-Challenges 🛠️</h2>
+            <ol>
+                <li><code>if (i = 5) break;</code><br><strong>Fix:</strong> <code>i === 5</code></li>
+                <li><code>return "Fertig";</code> außerhalb einer Funktion<br><strong>Fix:</strong> <code>return</code>
+                    in Funktion packen</li>
+                <li><code>continue</code> beendet Schleife vorzeitig<br><strong>Fix:</strong> Erkläre Unterschied
+                    zwischen <code>break</code> und <code>continue</code></li>
+                <li><code>while (true) { break; }</code><br><strong>Fix:</strong> Bedingung anpassen</li>
+                <li><code>for (let i = 0; i &lt; 10; i++) { if (i === 5) return; }</code><br><strong>Fix:</strong> <code>return</code> in Funktion packen</li>
+                <li><code>for (let i = 0; i &lt; 10; i++) { if (i === 5) continue; }</code><br><strong>Fix:</strong>
+                    <code>continue</code> überspringt nur den aktuellen Durchlauf</li>
+                <li><code>for (let i = 0; i &lt; 10; i++) { if (i === 5) break; }</code><br><strong>Fix:</strong>
+                    <code>break</code> beendet die Schleife vorzeitig</li>
+                <li><code>for (let i = 0; i &lt; 10; i++) { if (i === 5) return; }</code><br><strong>Fix:</strong>
+                    <code>return</code> beendet die Funktion vorzeitig</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung 📚</h2>
+            <p>
+                Schleifen sind mächtig - aber du musst wissen, wann du den Rückzug antreten solltest! Mit
+                <code>break</code>, <code>continue</code> und <code>return</code> steuerst du den Flow wie ein wahrer
+                Spielleiter. Nutze diese Skills weise, junger Code-Magier - sie werden dir in vielen Quest-Logiken von
+                Nutzen sein! 🧙‍♀️
+            </p>
+            <p>
+                Und vergiss nicht: Übung macht den Meister! Also schnapp dir deinen Code und leg los! Und wenn du
+                Fragen hast, zögere nicht, uns zu fragen - wir sind hier, um dir zu helfen! 💪
+            </p>
+            <p>
+                Wir hoffen, du hattest Spaß beim Lernen und bist bereit, deine neuen Fähigkeiten in die Tat
+                umzusetzen! Und denk daran: Programmieren ist wie ein Abenteuer - manchmal musst du Risiken eingehen und
+                neue Wege ausprobieren, um ans Ziel zu kommen! 🚀
+            </p>
+            <p>
+                Also, worauf wartest du noch? Schnapp dir deinen Code und leg los! Und vergiss nicht, uns deine
+                Ergebnisse zu zeigen - wir sind gespannt auf deine Abenteuer! 🎉
+            </p>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">// Hier kannst du deinen Code eintippen und testen
+// Beispiel: Loot durchsuchen mit break
+let beute = ["Münzen", "Fass", "Buch", "Zauberstab", "Legendäres Item"];
+
+for (let i = 0; i &lt; beute.length; i++) {
+if (beute[i] === "Legendäres Item") {
+console.log("Gefunden: " + beute[i] + " 🎉");
+break;
+}
+console.log("Durchsucht: " + beute[i]);
+}</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Funktionen_erstellen_und_aufrufen.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

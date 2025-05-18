@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Fehlertypen in JavaScript 🐞 - Wenn dein Code den Drachen weckt</h1>
+            <p>
+                Willkommen, mutiger Code-Ritter! 🎖️ Heute begeben wir uns in die dunklen Verliese von JavaScript, wo
+                Bugs und Fehler auf dich lauern wie wilde Goblins. Doch keine Sorge - mit dem richtigen Wissen wirst du
+                zum <strong>Fehler-Exorzisten</strong>! 🧙‍♂️<br>
+                In diesem Kapitel lernst du, welche Fehlertypen es gibt, wie du sie erkennst und wie du sie heldenhaft
+                bekämpfst.
+            </p>
+            <p>Wir werden die drei Hauptarten von Fehlern kennenlernen und wie du sie mit dem magischen
+                <code>try...catch</code>-Zauber bannen kannst. Außerdem gibt es praktische Tipps, um Bugs zu finden und
+                zu beheben.</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Die 3 Hauptarten von Fehlern 🧟</h2>
+            <p>JavaScript-Fehler lassen sich grob in drei Kategorien einteilen:</p>
+            <ul>
+                <li><strong>SyntaxError:</strong> Dein Code ist grammatikalisch falsch. (Wie ein Satz ohne Punkt... oder
+                    Zauberspruch ohne Zauberstab!)</li>
+                <li><strong>ReferenceError:</strong> Du verweist auf etwas, das nicht existiert. (Der klassische
+                    „Zauberer nicht gefunden“-Fehler!)</li>
+                <li><strong>TypeError:</strong> Du versuchst etwas mit einem Wert zu machen, was der gar nicht kann.
+                    (Wie ein Ork, der versucht, zu häkeln.)</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiele - so sehen sie aus! 🕵️‍♀️</h2>
+
+            <h3>1. SyntaxError</h3>
+            <pre><code>console.log("Hallo Welt" // Fehler: Klammer zu fehlt!</code></pre>
+
+            <h3>2. ReferenceError</h3>
+            <pre><code>console.log(zauber); // Fehler: "zauber" ist nicht definiert</code></pre>
+
+            <h3>3. TypeError</h3>
+            <pre><code>let magie = 10; magie.toUpperCase(); // Fehler: Zahlen können nicht großgeschrieben werden</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices für den Kampf gegen Bugs 🛡️</h1>
+            <ul>
+                <li><strong>Verwende <code>console.log()</code></strong> großzügig zur Fehlersuche</li>
+                <li><strong>Lese die Fehlermeldung</strong> - sie ist oft dein bester Verbündeter!</li>
+                <li><strong>Nutze <code>try...catch</code></strong> für Fehlerbehandlung in riskanten Code-Abschnitten
+                </li>
+                <li><strong>Gib Variablen klare Namen</strong>, um <code>ReferenceErrors</code> zu vermeiden</li>
+                <li><strong>Teste deinen Code Schritt für Schritt</strong> - wie ein Dungeon Raum für Raum</li>
+                <li><strong>Nutze Linter</strong>, um Syntaxfehler zu vermeiden - wie ein treuer Begleiter!</li>
+                <li><strong>Halte deinen Code sauber und ordentlich</strong> - wie ein gut sortiertes Inventar!</li>
+                <li><strong>Verwende Kommentare</strong>, um deinen Code zu dokumentieren - wie ein Zauberbuch!</li>
+                <li><strong>Nutze Debugging-Tools</strong>, um den Code Schritt für Schritt zu durchlaufen - wie ein
+                    Magier, der seine Zauber entfaltet!</li>
+                <li><strong>Halte deine Umgebung aktuell</strong>, um Komplikationen zu vermeiden - wie ein Held, der
+                    seine Ausrüstung pflegt!</li>
+                <li><strong>Teste deinen Code in verschiedenen Browsern</strong>, um sicherzustellen, dass er überall
+                    funktioniert - wie ein Abenteurer, der verschiedene Länder bereist!</li>
+                <li><strong>Nutze Unit-Tests</strong>, um sicherzustellen, dass dein Code funktioniert - wie ein
+                    Krieger, der seine Waffen testet!</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Praktisches Beispiel: Fehlerbehandlung mit try...catch 🧰</h2>
+            <pre><code>function zauberWirken(zauber) {
+try {
+console.log(zauber.toUpperCase());
+} catch (error) {
+console.log("Ein Fehler ist aufgetreten:", error.message);
+}
+}
+
+zauberWirken("feuerball"); // FEUERBALL
+zauberWirken(undefined);   // Fehler wird abgefangen</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Fragen mit Antworten 🧠</h2>
+            <ol>
+                <li><strong>Was ist ein SyntaxError?</strong><br>Ein Fehler in der Schreibweise des Codes</li>
+                <li><strong>Was bedeutet ReferenceError?</strong><br>Du verwendest eine Variable, die nicht existiert
+                </li>
+                <li><strong>Was ist ein TypeError?</strong><br>Du wendest eine Methode auf einen falschen Typ an</li>
+                <li><strong>Wie fängt man Fehler im Code ab?</strong><br>Mit <code>try...catch</code></li>
+                <li><strong>Was zeigt dir der Browser bei einem Fehler?</strong><br>Eine Fehlermeldung mit Zeile und Typ
+                </li>
+                <li><strong>Wie kannst du Fehler im Code finden?</strong><br>Mit <code>console.log()</code> und
+                    Debugging-Tools</li>
+                <li><strong>Was ist ein Linter?</strong><br>Ein Tool, das deinen Code auf Fehler überprüft</li>
+                <li><strong>Wie kannst du deinen Code testen?</strong><br>Mit Unit-Tests und Debugging-Tools</li>
+                <li><strong>Was ist der Unterschied zwischen <code>let</code> und
+                        <code>var</code>?</strong><br><code>let</code> hat Blockscope, <code>var</code> hat
+                    Funktionsscope</li>
+                <li><strong>Wie kannst du sicherstellen, dass dein Code überall funktioniert?</strong><br>Indem du ihn
+                    in verschiedenen Browsern testest</li>
+                <li><strong>Was ist ein Unit-Test?</strong><br>Ein Test, der eine kleine Einheit deines Codes überprüft
+                </li>
+                <li><strong>Wie kannst du deinen Code dokumentieren?</strong><br>Mit Kommentaren und
+                    Dokumentations-Tools</li>
+                <li><strong>Was ist ein Debugging-Tool?</strong><br>Ein Tool, das dir hilft, Fehler im Code zu finden
+                </li>
+                <li><strong>Wie kannst du deinen Code sauber halten?</strong><br>Indem du ihn gut strukturierst und
+                    kommentierst</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Häufige Fehler</h2>
+            <ul>
+                <li><strong>Vergessene Klammer</strong> → <em>SyntaxError</em><br><strong>Lösung:</strong> Code-Editor
+                    mit Linter benutzen</li>
+                <li><strong>Falscher Variablenname</strong> → <em>ReferenceError</em><br><strong>Lösung:</strong>
+                    Auto-Completion aktivieren</li>
+                <li><strong>Methoden auf falschen Typ anwenden</strong> → <em>TypeError</em><br><strong>Lösung:</strong>
+                    <code>typeof</code> prüfen</li>
+                <li><strong>Undefinierte Rückgaben nutzen</strong><br><strong>Lösung:</strong> Rückgabewert vorher
+                    prüfen</li>
+                <li><strong>Fehlender Return in Funktion</strong><br><strong>Lösung:</strong> Funktion auf gewünschte
+                    Ausgabe prüfen</li>
+                <li><strong>Falsche Parameterübergabe</strong><br><strong>Lösung:</strong> Parameter in Funktion
+                    überprüfen</li>
+                <li><strong>Falsche Verwendung von <code>this</code></strong><br><strong>Lösung:</strong>
+                    <code>console.log(this)</code> verwenden</li>
+                <li><strong>Asynchrone Fehler</strong><br><strong>Lösung:</strong> <code>async/await</code> verwenden
+                </li>
+                <li><strong>Vergessene Semikolons</strong><br><strong>Lösung:</strong> Code-Editor mit Linter benutzen
+                </li>
+                <li><strong>Falsche Verwendung von <code>==</code> statt
+                        <code>===</code></strong><br><strong>Lösung:</strong> Immer <code>===</code> verwenden</li>
+                <li><strong>Falsche Verwendung von <code>let</code> und
+                        <code>const</code></strong><br><strong>Lösung:</strong> Immer <code>const</code> verwenden, wenn
+                    möglich</li>
+                <li><strong>Falsche Verwendung von <code>var</code></strong><br><strong>Lösung:</strong> Immer
+                    <code>let</code> oder <code>const</code> verwenden</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Übungen zum Bug-Jagen 🔎</h2>
+            <ol>
+                <li>Erzeuge einen <code>SyntaxError</code> und behebe ihn</li>
+                <li>Nutze eine nicht definierte Variable - finde den Fehler</li>
+                <li>Wende eine String-Methode auf eine Zahl an - finde den Bug</li>
+                <li>Schreibe eine Funktion mit <code>try...catch</code>, die eine fehlerhafte Eingabe behandelt</li>
+                <li>Schreibe eine Funktion, die prüft, ob ein Wert ein String ist, bevor du <code>.toUpperCase()</code>
+                    verwendest</li>
+                <li>Erzeuge einen <code>TypeError</code> und fange ihn mit <code>try...catch</code> ab</li>
+                <li>Erzeuge einen <code>ReferenceError</code> und fange ihn mit <code>try...catch</code> ab</li>
+                <li>Erzeuge einen <code>SyntaxError</code> und fange ihn mit <code>try...catch</code> ab</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Projektideen zur Fehlerbekämpfung ⚔️</h2>
+            <ol>
+                <li><strong>Fehler-Diagnose-App:</strong> Zeigt häufige Fehler und Lösungen</li>
+                <li><strong>Typenprüfer:</strong> Web-App zur Typprüfung von Eingaben</li>
+                <li><strong>Debug-Spiel:</strong> Nutzer muss Fehler im Code finden</li>
+                <li><strong>Konsole-Quiz:</strong> Nutzer muss erraten, welcher Fehler passiert</li>
+                <li><strong>Fehler-Simulator:</strong> Tool, das typische Fehler absichtlich erzeugt</li>
+                <li><strong>Fehler-Tracker:</strong> App, die Fehler in Echtzeit verfolgt</li>
+                <li><strong>Code-Review-Tool:</strong> Tool, das Code auf Fehler überprüft</li>
+                <li><strong>Fehler-Statistik:</strong> Tool, das häufige Fehler und deren Lösungen anzeigt</li>
+                <li><strong>Fehler-Forum:</strong> Plattform, um Fehler zu diskutieren und Lösungen zu finden</li>
+                <li><strong>Fehler-Newsletter:</strong> Regelmäßige Updates zu neuen Fehlern und Lösungen</li>
+                <li><strong>Fehler-Blog:</strong> Blog über häufige Fehler und deren Lösungen</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Speed Debugging Challenges ⚡</h2>
+            <ol>
+                <li><code>console.log("Hallo</code> → <strong>Fehlende Anführungszeichen!</strong></li>
+                <li><code>console.log(magie)</code> → <strong>magie nicht definiert!</strong></li>
+                <li><code>42.toUpperCase()</code> → <strong>Zahl hat keine String-Methoden!</strong></li>
+                <li><code>let magie = 10; magie.toUpperCase();</code> → <strong>TypeError!</strong></li>
+                <li><code>function zauber() { return; }</code> → <strong>Fehlender Rückgabewert!</strong></li>
+                <li><code>let magie = 10; magie.toUpperCase();</code> → <strong>TypeError!</strong></li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung 🧠</h2>
+            <p>
+                Fehler gehören zum Coden wie Loot zu Bosskämpfen - aber jetzt bist du vorbereitet! Du kennst die drei
+                häufigsten Fehlertypen, kannst sie erkennen und sie sogar mit einem <code>try...catch</code>-Zauber
+                bannen. 🪄
+            </p>
+            <p>
+                Denke daran, dass Fehler nicht das Ende sind, sondern der Anfang eines neuen Abenteuers. Mit den
+                richtigen Tools und Techniken wirst du zum Meister der Fehlerbehebung! 🏆
+            </p>
+            <p>
+                Und vergiss nicht: Jeder Bug, den du besiegst, macht dich zu einem besseren Programmierer! Also schnapp
+                dir deinen Code-Zauberstab und mach dich bereit, die Drachen der Programmierwelt zu bezwingen! 🐉
+            </p>
+            <p>Viel Erfolg bei deinem Abenteuer! Und denk daran: Wenn du mal nicht weiterkommst, frag einfach deinen
+                Mentor oder die Community um Hilfe. Gemeinsam sind wir stark! 💪</p>
+        </section>
+
+        <section class="playground">
+            <textarea id="codeInput" rows="30" cols="120">// Teste einen Fehler:
+function fehlerTesten() {
+try {
+let magie = 42;
+magie.toUpperCase(); // TypeError
+} catch (err) {
+console.log("💥 Fehler abgefangen:", err.message);
+}
+}
+
+fehlerTesten();</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./try...catch_verwenden.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

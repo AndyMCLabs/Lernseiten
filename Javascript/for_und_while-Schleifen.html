@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Endloslevel &amp; Kontrollzauber: <code>for</code>- und <code>while</code>-Schleifen 🔁🧙‍♂️</h1>
+            <p>
+                Willkommen zurück, Heldin der JavaScript-Akademie! Heute lernst du die uralten Zauber, die Aktionen
+                wiederholen können - Schleifen! Stell dir ein Training mit deinem Lieblings-NPC vor, der dich immer
+                wieder auffordert: „Noch ein Durchgang!“ Genau das machen Schleifen - sie wiederholen Aufgaben so lange,
+                bis du sagst: „Stopp!“ 🛑
+            </p>
+            <p>
+                In diesem Kapitel wirst du die verschiedenen Arten von Schleifen kennenlernen und wie du sie in deinem
+                Code einsetzen kannst. Egal, ob du ein erfahrener Magier oder ein neugieriger Lehrling bist, diese
+                Lektion wird dir helfen, deine Programmierfähigkeiten auf das nächste Level zu bringen! 🚀
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2><code>for</code>-Schleife - Die Trainingsrunde 🥋</h2>
+            <p>
+                Die <code>for</code>-Schleife ist perfekt, wenn du weißt, wie oft etwas wiederholt werden soll. Denk an
+                ein Set von 10 Liegestützen:
+            </p>
+<pre><code>for (let i = 1; i &lt;= 10; i++) {
+console.log("Liegestütz Nr. " + i + " 💪");
+}</code></pre>
+            <p>
+                Die <code>for</code>-Schleife besteht aus drei Teilen:<br>
+                <strong>Initialisierung</strong> (Startwert), <strong>Bedingung</strong> (wann stoppen?),
+                <strong>Iteration</strong> (wie verändern wir den Zähler?).
+            </p>
+            <p>
+                Hier ist ein Beispiel, das die Zahlen von 1 bis 5 ausgibt:
+            </p>
+<pre><code>for (let i = 1; i &lt;= 5; i++) {
+console.log("Zahl: " + i);}</code></pre>
+            <p>
+                Du kannst auch <code>break</code> verwenden, um die Schleife vorzeitig zu beenden, oder <code>continue</code>, um den aktuellen Durchlauf zu überspringen.
+            </p>
+            <p>
+                Hier ist ein Beispiel, das die Zahlen von 1 bis 10 ausgibt, aber die Zahl 5 überspringt:
+            </p>
+<pre><code>for (let i = 1; i &lt;= 10; i++) {
+if (i === 5) {
+continue;
+}
+console.log("Zahl: " + i);}</code></pre>
+            <p>
+                Und hier ist ein Beispiel, das die Schleife bei der Zahl 5 abbricht:
+            </p>
+<pre><code>for (let i = 1; i &lt;= 10; i++) {
+if (i === 5) {
+break;
+}
+console.log("Zahl: " + i);}</code></pre>
+            <p>
+                In diesem Beispiel wird die Schleife bei der Zahl 5 abgebrochen, sodass nur die Zahlen 1 bis 4 ausgegeben
+                werden.
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2><code>while</code>-Schleife - Das Dungeon der Ungewissheit 🕸️</h2>
+            <p>
+                Mit der <code>while</code>-Schleife wiederholst du Code, solange eine Bedingung <code>true</code> ist.
+                Ideal für dynamische, unvorhersehbare Situationen - zum Beispiel, bis dein Held keine Ausdauer mehr hat:
+            </p>
+<pre><code>let ausdauer = 5;
+
+while (ausdauer &gt; 0) {
+console.log("Schlag ausgeteilt! 🗡️");
+ausdauer--;
+}</code></pre>
+            <p>
+                Hier wird die Schleife so lange durchlaufen, wie die Ausdauer größer als 0 ist. Wenn die Ausdauer 0
+                erreicht, stoppt die Schleife.
+            </p>
+            <p>
+                Du kannst auch hier <code>break</code> und <code>continue</code> verwenden, um den Fluss der Schleife zu
+                steuern.
+            </p>
+            <p>
+                Hier ist ein Beispiel, das die Schleife abbricht, wenn die Ausdauer 3 erreicht:
+            </p>
+<pre><code>let ausdauer = 5;
+
+while (ausdauer &gt; 0) {
+if (ausdauer === 3) {
+break;
+}
+console.log("Schlag ausgeteilt! 🗡️");
+ausdauer--;
+}</code></pre>
+            <p>
+                In diesem Beispiel wird die Schleife abgebrochen, wenn die Ausdauer 3 erreicht, sodass nur die
+                Ausdauerwerte 5 und 4 ausgegeben werden.
+            </p>
+            <p>
+                Und hier ist ein Beispiel, das die Schleife überspringt, wenn die Ausdauer 3 erreicht:
+            </p>
+<pre><code>let ausdauer = 5;
+
+while (ausdauer &gt; 0) {
+if (ausdauer === 3) {
+continue;
+}
+console.log("Schlag ausgeteilt! 🗡️");
+ausdauer--;
+}</code></pre>
+            <p>
+                In diesem Beispiel wird die Schleife übersprungen, wenn die Ausdauer 3 erreicht, sodass nur die
+                Ausdauerwerte 5 und 4 ausgegeben werden.
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2><code>do...while</code> - Die „Mindestens-einmal“-Mission 🌀</h2>
+            <p>
+                Diese Schleife wird <strong>immer mindestens einmal</strong> ausgeführt - wie ein Zauberspruch, der beim
+                ersten Mal aktiviert werden <em>muss</em>, egal wie deine Mana-Lage ist:
+            </p>
+<pre><code>let mana = 0;
+
+do {
+console.log("Zauber gewirkt! ✨");
+mana--;
+} while (mana &gt; 0);</code></pre>
+            <p>
+                Hier wird der Zauber einmal gewirkt, auch wenn das Mana 0 ist. Die Schleife prüft die Bedingung erst
+                nach dem ersten Durchlauf.
+            </p>
+            <p>
+                Das ist besonders nützlich, wenn du sicherstellen willst, dass eine Aktion mindestens einmal
+                ausgeführt wird, bevor du die Bedingung überprüfst.
+            </p>
+            <p>
+                Hier ist ein Beispiel, das die Schleife abbricht, wenn die Mana 3 erreicht:
+            </p>
+<pre><code>let mana = 5;
+
+do {
+console.log("Zauber gewirkt! ✨");
+mana--;
+} while (mana &gt; 3);</code></pre>
+            <p>
+                In diesem Beispiel wird die Schleife abgebrochen, wenn die Mana 3 erreicht, sodass nur die Mana-Werte
+                5 und 4 ausgegeben werden.
+            </p>
+            <p>
+                Und hier ist ein Beispiel, das die Schleife überspringt, wenn die Mana 3 erreicht:
+            </p>
+<pre><code>let mana = 5;
+
+do {
+console.log("Zauber gewirkt! ✨");
+mana--;
+} while (mana &gt; 3);</code></pre>
+            <p>
+                In diesem Beispiel wird die Schleife übersprungen, wenn die Mana 3 erreicht, sodass nur die Mana-Werte
+                5 und 4 ausgegeben werden.
+            </p>
+
+            <p>
+                Das ist besonders nützlich, wenn du sicherstellen willst, dass eine Aktion mindestens einmal
+                ausgeführt wird, bevor du die Bedingung überprüfst.
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices 🎓</h1>
+            <ul>
+                <li>Nutze <code>for</code>, wenn du die Anzahl der Wiederholungen kennst.</li>
+                <li>Nutze <code>while</code>, wenn du nicht weißt, wie oft wiederholt werden soll.</li>
+                <li>Vermeide Endlosschleifen - sie können deinen Browser einfrieren! 🧊</li>
+                <li>Kommentare helfen, die Schleifenlogik verständlich zu machen.</li>
+                <li>Wähle sprechende Variablennamen wie <code>index</code> oder <code>versuch</code>.</li>
+                <li>Teste deinen Code regelmäßig, um Fehler frühzeitig zu erkennen.</li>
+                <li>Nutze <code>break</code> und <code>continue</code>, um den Fluss der Schleife zu steuern.</li>
+                <li>Verwende <code>let</code> für Schleifenvariablen, um Scope-Probleme zu vermeiden.</li>
+                <li>Sei vorsichtig mit <code>do...while</code>, da sie immer mindestens einmal ausgeführt wird.</li>
+                <li>Nutze <code>forEach</code> für Arrays, um eleganteren Code zu schreiben.</li>
+                <li>Vermeide komplexe Bedingungen in der Schleifenbedingung.</li>
+                <li>Nutze <code>break</code> und <code>continue</code>, um den Fluss der Schleife zu steuern.</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel zum Nachmachen ⚔️</h2>
+<pre><code>console.log("=== FOR-SCHLEIFE ===");
+for (let stufe = 1; stufe &lt;= 5; stufe++) {
+console.log("Level up! Du bist jetzt Stufe " + stufe);
+}
+
+console.log("=== WHILE-SCHLEIFE ===");
+let leben = 3;
+while (leben &gt 0) {
+console.log("Der Boss schlägt dich... 💥 Leben: " + leben);
+leben--;
+}</code></pre>
+            <p>
+                In diesem Beispiel siehst du, wie eine <code>for</code>-Schleife für das Level-Up und eine
+                <code>while</code>-Schleife für den Bosskampf verwendet wird. Du kannst die Werte anpassen und
+                experimentieren, um ein besseres Verständnis zu bekommen.
+            </p>
+            <p>
+                Du kannst auch die Schleifenbedingungen ändern, um verschiedene Szenarien zu testen. Zum Beispiel kannst
+                du die Anzahl der Level-Up-Schritte erhöhen oder die Lebenspunkte des Bosses anpassen.
+            </p>
+            <p>
+                Probiere es aus und schau, wie sich die Schleifen verhalten! Du kannst auch eigene Variablen und
+                Bedingungen erstellen, um deine eigenen Herausforderungen zu meistern.
+            </p>  
+        </section>
+
+        <section class="chapter">
+            <h2>Fragen &amp; Antworten ❓</h2>
+            <ol>
+                <li><strong>Was ist der Unterschied zwischen <code>for</code> und
+                        <code>while</code>?</strong><br><em>For</em> ist für feste Wiederholungsanzahlen, <em>while</em>
+                    für flexible Bedingungen.</li>
+                <li><strong>Was passiert, wenn die Schleifenbedingung nie <code>false</code>
+                        wird?</strong><br>Endlosschleife! Dein Code hängt sich auf 🌀</li>
+                <li><strong>Wofür steht <code>i++</code> in der <code>for</code>-Schleife?</strong><br>Erhöht den Zähler
+                    um 1 in jedem Durchlauf.</li>
+                <li><strong>Wann wird <code>do...while</code> ausgeführt?</strong><br>Immer mindestens einmal,
+                    unabhängig von der Bedingung.</li>
+                    <li><strong>Wie kann man eine Schleife vorzeitig beenden?</strong><br>Mit <code>break;</code></li>    
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Häufige Fehler &amp; Lösungen 🛠️</h2>
+            <ul>
+                <li><strong>Fehler:</strong> Bedingung wird nie <code>false</code><br><strong>Lösung:</strong> Zähler
+                    oder Variable korrekt aktualisieren!</li>
+                <li><strong>Fehler:</strong> Schleife beginnt bei falschem Wert<br><strong>Lösung:</strong> Startwert
+                    prüfen</li>
+                <li><strong>Fehler:</strong> <code>while</code> mit leerem Block<br><strong>Lösung:</strong> Inhalt der
+                    Schleife einfügen</li>
+                <li><strong>Fehler:</strong> Kein <code>break</code> bei Kontrollabbruch<br><strong>Lösung:</strong>
+                    Verwende <code>break;</code> sinnvoll</li>
+                <li><strong>Fehler:</strong> Schleifenvariable im falschen Scope<br><strong>Lösung:</strong>
+                    <code>let</code> statt <code>var</code> benutzen</li>
+                <li><strong>Fehler:</strong> Endlosschleife durch falsche Bedingung<br><strong>Lösung:</strong> Bedingung
+                    überprüfen</li>
+                <li><strong>Fehler:</strong> Schleife wird nie ausgeführt<br><strong>Lösung:</strong> Bedingung
+                    anpassen</li>
+                <li><strong>Fehler:</strong> Schleifenvariable wird nicht aktualisiert<br><strong>Lösung:</strong>
+                    Inkrementierung hinzufügen</li>
+                <li><strong>Fehler:</strong> Schleifenvariable wird außerhalb der Schleife verwendet<br><strong>Lösung:</strong>
+                    Variablen-Scope beachten</li>
+                <li><strong>Fehler:</strong> Schleifenbedingung ist immer <code>true</code><br><strong>Lösung:</strong>
+                    Bedingung anpassen</li>
+                <li><strong>Fehler:</strong> Schleifenvariable wird nicht deklariert<br><strong>Lösung:</strong>
+                    Variablen deklarieren</li>
+                <li><strong>Fehler:</strong> Schleifenvariable wird nicht initialisiert<br><strong>Lösung:</strong>
+                    Initialisierung hinzufügen</li>
+                <li><strong>Fehler:</strong> Schleifenvariable wird nicht inkrementiert<br><strong>Lösung:</strong>
+                    Inkrementierung hinzufügen</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Übungen mit steigendem Schwierigkeitsgrad 🎯</h2>
+            <ol>
+                <li>Erstelle eine <code>for</code>-Schleife, die die Zahlen 1 bis 10 ausgibt.</li>
+                <li>Nutze eine <code>while</code>-Schleife, um einen Countdown von 5 auf 0 auszugeben.</li>
+                <li>Schreibe eine Schleife, die alle geraden Zahlen von 0 bis 20 ausgibt.</li>
+                <li>Verwende eine <code>do...while</code>-Schleife, die einen Benutzer fragt, ob er weitermachen will.
+                </li>
+                <li>Programmiere eine Schleife, die nur dann durchläuft, wenn zwei Bedingungen erfüllt sind (z.B. Leben
+                    &gt; 0 && Mana &gt; 0).</li>
+                <li>Erstelle eine Schleife, die alle Zahlen von 1 bis 100 ausgibt, aber nur die Zahlen, die durch 3
+                    teilbar sind.</li>
+                <li>Schreibe eine Schleife, die alle Zahlen von 1 bis 100 ausgibt, aber die Zahlen, die durch 5 teilbar
+                    sind, überspringt.</li>
+                <li>Nutze eine Schleife, um die Fakultät einer Zahl zu berechnen (z.B. 5! = 5 * 4 * 3 * 2 * 1).</li>
+                <li>Erstelle eine Schleife, die alle Primzahlen von 1 bis 100 ausgibt.</li>
+                <li>Programmiere eine Schleife, die die Fibonacci-Zahlen bis zu einer bestimmten Zahl ausgibt.</li>
+                <li>Schreibe eine Schleife, die die Summe aller Zahlen von 1 bis 100 berechnet.</li>
+                <li>Erstelle eine Schleife, die die Anzahl der Vokale in einem gegebenen Text zählt.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Projektideen 🧪🧠</h2>
+            <ol>
+                <li><strong>XP-Tracker</strong>: Zähle Erfahrungspunkte nach jedem Kampf</li>
+                <li><strong>Countdown-Timer</strong>: Erstelle einen visuellen Countdown</li>
+                <li><strong>Inventar-Liste</strong>: Gib alle Gegenstände aus einer Liste aus</li>
+                <li><strong>Levelsystem</strong>: Berechne benötigte XP für jedes neue Level</li>
+                <li><strong>Trainingsplaner</strong>: Wiederhole Übungen basierend auf Wochentagen</li>
+                <li><strong>Quiz-App</strong>: Stelle Fragen und zähle richtige Antworten</li>
+                <li><strong>Wetter-App</strong>: Zeige Wetterdaten für mehrere Städte an</li>
+                <li><strong>Notizbuch</strong>: Erstelle eine Liste von Notizen mit Schleifen</li>
+                <li><strong>Reiseplaner</strong>: Zähle Tage bis zur nächsten Reise</li>
+                <li><strong>Budget-Tracker</strong>: Berechne Ausgaben über mehrere Monate</li>
+                <li><strong>Spieler-Statistiken</strong>: Zähle Punkte und Level in einem Spiel</li>
+                <li><strong>To-Do-Liste</strong>: Erstelle eine Liste von Aufgaben mit Schleifen</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Speed Debugging-Challenges ⚡</h2>
+            <ol>
+                <li><code>for (let i = 0; i &lt;= 5; )</code><br><strong>Fix:</strong> Zähler vergessen! →
+                    <code>i++</code> ergänzen</li>
+                <li><code>while (x = 5)</code><br><strong>Fix:</strong> Vergleich vergessen! → <code>x === 5</code></li>
+                <li><code>let i = 10; while (i &gt; 0) { console.log(i); }</code><br><strong>Fix:</strong>
+                    <code>i--</code> vergessen → Endlosschleife</li>
+                <li><code>for (let i = 0; i &lt; 10; i++) { console.log(i); }</code><br><strong>Fix:</strong> <code>i++</code>
+                    vergessen → Endlosschleife</li>
+                <li><code>do { console.log("Hallo"); } while (false);</code><br><strong>Fix:</strong> Bedingung
+                    immer <code>false</code> → Schleife wird nie ausgeführt</li>
+                <li><code>let i = 0; while (i &lt; 5) { console.log(i); }</code><br><strong>Fix:</strong> <code>i++</code>
+                    vergessen → Endlosschleife</li>
+                <li><code>for (let i = 0; i &lt;= 5; i++) { console.log(i); }</code><br><strong>Fix:</strong> <code>i++</code>
+                    vergessen → Endlosschleife</li>
+                <li><code>while (true) { console.log("Endlosschleife"); }</code><br><strong>Fix:</strong> Bedingung
+                    immer <code>true</code> → Endlosschleife</li>
+                <li><code>for (let i = 0; i &lt;= 5; i++) { console.log(i); }</code><br><strong>Fix:</strong> <code>i++</code>
+                    vergessen → Endlosschleife</li>
+                <li><code>let i = 0; while (i &lt;= 5) { console.log(i); }</code><br><strong>Fix:</strong> <code>i++</code>
+                    vergessen → Endlosschleife</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung 💾</h2>
+            <p>
+                Schleifen sind wie Buffs für deinen Code - sie wiederholen Abläufe und machen dein Programm effizienter.
+                Mit <code>for</code> bist du präzise wie ein Elfenschütze, mit <code>while</code> flexibel wie ein
+                Schurke, und mit <code>do...while</code> kannst du garantieren, dass zumindest ein Zauber gesprochen
+                wird. Möge die Wiederholung mit dir sein! 🔁✨
+            </p>
+            <p>
+                Du hast jetzt die Grundlagen der Schleifen in JavaScript kennengelernt. Du weißt
+                jetzt, wie du <code>for</code>, <code>while</code> und <code>do...while</code>-Schleifen
+                verwenden kannst, um wiederholte Aufgaben in deinem Code zu erledigen. Du hast auch gelernt, wie du
+                Schleifenbedingungen anpassen und kontrollieren kannst, um den Fluss deines Codes zu steuern.
+            </p>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">// Hier kannst du deinen Code eintippen und testen
+// Beispiel: Stufenaufstieg
+for (let stufe = 1; stufe &lt;= 5; stufe++) {
+console.log("🎉 Du hast Level " + stufe + " erreicht!");
+}</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Schleifen_abbrechen.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

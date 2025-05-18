@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>var, let &amp; const - Drei Zauberstäbe, ein Ziel!</h1>
+            <p>Willkommen, junger Code-Magier! 🧙‍♂️ Heute lüften wir den Schleier über drei mächtige
+                JavaScript-Zauberworte: <code>var</code>, <code>let</code> und <code>const</code>. Alle drei erschaffen
+                Variablen - doch jedes hat seine Eigenheiten, seine Stärken und seine dunklen Seiten. Zeit, sie
+                kennenzulernen und ihre Kräfte weise zu nutzen!</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Was ist der Unterschied?</h2>
+            <p>Obwohl alle drei Schlüsselwörter verwendet werden, um Variablen zu deklarieren, unterscheiden sie sich im
+                Verhalten, besonders im Hinblick auf Gültigkeitsbereich (<em>Scope</em>), Änderbarkeit und
+                Wiederverwendbarkeit.</p>
+
+            <h3><code>var</code> - Der alte Magier</h3>
+            <ul>
+                <li>Wurde schon in der Ära von Netscape 4 verwendet - ganz schön alt! 🧓</li>
+                <li>Hat **Funktions-Scope**, kein Block-Scope. Das bedeutet, <code>var</code>-Variablen sind außerhalb
+                    von Schleifen und If-Statements sichtbar.</li>
+                <li>Kann mehrfach deklariert und neu zugewiesen werden - was schnell zu Chaos führen kann.</li>
+            </ul>
+
+            <h3><code>let</code> - Der moderne Held</h3>
+            <ul>
+                <li>Wurde mit ES6 eingeführt - frisch und sicherer! 💪</li>
+                <li>Hat **Block-Scope** - sie lebt nur innerhalb von { geschweiften Klammern }.</li>
+                <li>Kann neu zugewiesen, aber nicht neu deklariert werden (im selben Scope).</li>
+            </ul>
+
+            <h3><code>const</code> - Der Unveränderliche</h3>
+            <ul>
+                <li>Auch Block-Scope - wie <code>let</code>.</li>
+                <li>**Wert kann nicht verändert** werden, wenn es sich um primitive Werte handelt.</li>
+                <li>Ideal für Werte, die sich nie ändern sollen - wie der Name eines Pokémon: Pikachu bleibt Pikachu! ⚡
+                </li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices für var, let und const</h1>
+            <ul>
+                <li><strong>Benutze <code>const</code></strong>, wann immer du einen Wert nicht ändern musst - das macht
+                    deinen Code sicherer und lesbarer.</li>
+                <li><strong>Verwende <code>let</code></strong> für alles, was sich ändern soll (z. B. Punktestand,
+                    Zustände, Zähler).</li>
+                <li><strong>Vermeide <code>var</code></strong> in modernem Code - es sei denn, du arbeitest mit alten
+                    Projekten oder brauchst es für spezielle Anwendungsfälle.</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel: Scope und Verhalten</h2>
+<pre><code>// Mit var
+if (true) {
+var held = "Frodo";
+}
+console.log(held); // Frodo - lebt außerhalb des Blocks
+
+// Mit let
+if (true) {
+let zauberer = "Gandalf";
+}
+// console.log(zauberer); // Fehler - lebt nur im Block
+
+// Mit const
+const ringtraeger = "Bilbo";
+// ringtraeger = "Sam"; // Fehler - darf nicht neu zugewiesen werden</code></pre>
+            <p>Du siehst: <code>let</code> und <code>const</code> sind viel verlässlicher. Sie respektieren die
+                Blockgrenzen - wie ein gut trainierter Paladin! 🛡️</p>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Fragen mit Antworten</h2>
+            <ol>
+                <li><strong>Was ist der Unterschied zwischen <code>var</code> und
+                        <code>let</code>?</strong><br><em><code>var</code> hat Funktions-Scope, <code>let</code> hat
+                        Block-Scope.</em></li>
+                <li><strong>Kann man den Wert einer <code>const</code>-Variable ändern?</strong><br><em>Nein - zumindest
+                        nicht bei primitiven Werten. Objekte können aber verändert werden!</em></li>
+                <li><strong>Wann sollte man <code>const</code> verwenden?</strong><br><em>Wenn du weißt, dass sich der
+                        Wert nie ändern wird.</em></li>
+                <li><strong>Was passiert, wenn du eine <code>let</code>-Variable zweimal im selben Block
+                        deklarierst?</strong><br><em>Es gibt einen Fehler. Du darfst sie nur einmal deklarieren.</em>
+                </li>
+                <li><strong>Warum gilt <code>var</code> als unsicher?</strong><br><em>Weil sie über ihren Block hinaus
+                        existiert - das kann zu schwer nachvollziehbaren Fehlern führen.</em></li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Häufige Fehler und Lösungen</h2>
+            <ul>
+                <li><strong>Fehler:</strong>
+                    <code>Uncaught SyntaxError: Identifier already declared</code><br><strong>Lösung:</strong> Verwende
+                    nicht zweimal dieselbe <code>let</code>- oder <code>const</code>-Variable im gleichen Scope.</li>
+                <li><strong>Fehler:</strong>
+                    <code>Uncaught TypeError: Assignment to constant variable</code><br><strong>Lösung:</strong> Du
+                    versuchst, einer <code>const</code>-Variable einen neuen Wert zuzuweisen - das geht nicht.</li>
+                <li><strong>Fehler:</strong> Zugriff auf <code>let</code>-Variable vor ihrer
+                    Deklaration.<br><strong>Lösung:</strong> Stelle sicher, dass du die Variable erst nach ihrer
+                    Deklaration nutzt.</li>
+                <li><strong>Fehler:</strong> Variablen innerhalb von Schleifen mit <code>var</code> deklarieren und sich
+                    wundern, warum sie „leben“.<br><strong>Lösung:</strong> Verwende <code>let</code> für Schleifen, um
+                    Block-Scope zu nutzen.</li>
+                <li><strong>Fehler:</strong> Versuch, <code>const</code> mit Objekten falsch zu
+                    nutzen.<br><strong>Lösung:</strong> Du kannst den Inhalt eines Objekts verändern, aber nicht das
+                    Objekt selbst neu zuweisen.</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Übungen</h2>
+            <ol>
+                <li>Erstelle drei Variablen mit <code>var</code>, <code>let</code> und <code>const</code> und gib sie im
+                    <code>console.log()</code> aus.</li>
+                <li>Ändere den Wert der <code>let</code>-Variable und versuche dasselbe mit <code>const</code> -
+                    beobachte den Unterschied.</li>
+                <li>Erstelle eine Schleife mit <code>var</code> und eine mit <code>let</code>, und gib den Zähler
+                    außerhalb der Schleife aus.</li>
+                <li>Baue eine Funktion, die eine <code>const</code>-Variable in sich verwendet. Probiere, sie von außen
+                    zu ändern.</li>
+                <li>Erstelle ein Objekt mit <code>const</code> und ändere eine seiner Eigenschaften - funktioniert das?
+                </li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Projektideen</h2>
+            <ol>
+                <li><strong>Charaktereditor für ein Rollenspiel</strong> - Verwende <code>let</code> für veränderbare
+                    Attribute und <code>const</code> für feste Charakterwerte.</li>
+                <li><strong>Quiz-App</strong> - Nutze <code>const</code> für die Fragenliste und <code>let</code> für
+                    den aktuellen Punktestand.</li>
+                <li><strong>Timer/Stopuhr</strong> - Speichere Startzeit mit <code>const</code>, die aktuelle Zeit mit
+                    <code>let</code>.</li>
+                <li><strong>Mini-Budget-Rechner</strong> - <code>let</code> für Einnahmen/Ausgaben, <code>const</code>
+                    für feste Grenzwerte.</li>
+                <li><strong>Ein „Magischer Hut“-Zufallsgenerator</strong> - Nutze <code>const</code> für die Liste der
+                    Namen, <code>let</code> für den gezogenen Namen.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>3 Speed Debugging-Challenges</h2>
+            <ol>
+                <li><strong>Challenge:</strong> Finde den Fehler!
+                    <code>const leben = 3; leben = 2;</code><br><strong>Tipp:</strong> Du darfst <code>const</code>
+                    nicht neu zuweisen!</li>
+                <li><strong>Challenge:</strong> Warum wird mein <code>var</code>-Zähler nach der Schleife nicht
+                    zurückgesetzt?<br><strong>Tipp:</strong> Verwende <code>let</code> in Block-Scope.</li>
+                <li><strong>Challenge:</strong> Ich sehe „undefined“, obwohl die Variable später deklariert
+                    wird.<br><strong>Tipp:</strong> Das ist der sogenannte "Temporal Dead Zone"-Effekt bei
+                    <code>let</code>!</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p><code>var</code>, <code>let</code> und <code>const</code> sind die Werkzeuge, mit denen du deine
+                Variablen formst. Denk daran: <code>const</code> für Dinge, die unverändert bleiben sollen.
+                <code>let</code> für alles Dynamische. Und <code>var</code>... tja, nur noch für archäologische Zwecke.
+                🏺</p>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">// Hier kannst du deinen Code eintippen und testen
+const name = "Zelda";
+let level = 5;
+var ruf = "Heldin von Hyrule";
+
+console.log(name);
+console.log(level);
+console.log(ruf);</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Namen_und_Konventionen.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

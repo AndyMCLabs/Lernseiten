@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Die Entscheidungs-Matrix: <code>if</code>, <code>else</code> und <code>switch</code> 🧠⚔️</h1>
+            <p>
+                Willkommen, tapfere Codekriegerin! 🧙‍♀️ Heute betreten wir die heilige Halle der Entscheidungen! Stell
+                dir vor: Dein Charakter steht an einer Kreuzung. Soll er links in die Trollhöhle, rechts zur
+                Schatzkammer oder geradeaus ins Dorf? Genau hier kommt JavaScript mit <code>if</code>, <code>else</code>
+                und <code>switch</code> ins Spiel - deinem Werkzeug zur Entscheidungsfindung!
+            </p>
+            <p>
+                In diesem Kapitel lernst du, wie du mit <code>if</code> und <code>else</code> Bedingungen prüfst und
+                mit <code>switch</code> zwischen verschiedenen Optionen wählst. Egal, ob du ein Rätsel lösen oder einen
+                Drachen besiegen willst - diese Werkzeuge sind deine treuen Begleiter! 🐉✨
+            </p>
+            <p>
+                Lass uns gleich loslegen und die Geheimnisse der Entscheidungsfindung lüften! 🚀
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2><code>if</code> und <code>else</code> - Die Ritter der Bedingung 🎯</h2>
+            <p>
+                Mit <code>if</code> prüfst du, ob eine Bedingung erfüllt ist. Wenn ja, wird der Codeblock ausgeführt.
+                <code>else</code> fängt alle anderen Fälle auf. Denk an ein Schild mit zwei Wegen - je nach Bedingung
+                biegst du links oder rechts ab.
+            </p>
+            <p>
+                Hier ein Beispiel: Stell dir vor, du bist ein Held mit Lebenspunkten. Wenn du mehr als 50 hast, bist du
+                stark. Wenn du zwischen 20 und 50 bist, bist du verwundet. Und wenn du weniger als 20 hast, brauchst
+                du Heilung.
+                <code>if</code> und <code>else</code> helfen dir, diese Entscheidungen zu treffen.
+            </p>
+
+<pre><code>let leben = 30;
+
+if (leben &gt; 50) {
+console.log("Der Held ist stark 💪");
+} else if (leben &gt; 20) {
+console.log("Der Held ist verwundet 🤕");
+} else {
+console.log("Der Held braucht Heilung! 🩹");
+}</code></pre>
+            <p>
+                Hier prüft das Programm die Lebenspunkte und gibt die entsprechende Nachricht aus. Wenn du mehr als 50
+                hast, bist du stark. Wenn du zwischen 20 und 50 bist, bist du verwundet. Und wenn du weniger als 20
+                hast, brauchst du Heilung.
+            </p>
+            <p>
+                Du kannst auch mehrere Bedingungen kombinieren, um komplexere Entscheidungen zu treffen. Zum Beispiel:
+                Wenn du mehr als 50 Lebenspunkte hast und ein Schwert trägst, bist du ein mächtiger Krieger! Wenn du
+                weniger als 20 Lebenspunkte hast und ein Zauberbuch trägst, bist du ein verletzter Magier.
+                <code>if</code> und <code>else</code> helfen dir, diese Entscheidungen zu treffen.
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2><code>switch</code> - Der Magische Entscheidungs-Zauber 🔮</h2>
+            <p>
+                Wenn du viele mögliche Fälle prüfen willst, ist <code>switch</code> dein Freund! Stell dir einen
+                Zauberer vor, der bei verschiedenen Zaubersprüchen jeweils eine andere Aktion ausführt. Genau das tut
+                <code>switch</code>.
+            </p>
+            <p>
+                Hier ein Beispiel: Stell dir vor, du bist ein Zauberer und hast verschiedene Zaubersprüche. Je nach
+                Zauber sprichst du unterschiedliche Worte aus. Mit <code>switch</code> kannst du das ganz einfach
+                machen.
+            </p>
+
+<pre><code>let waffe = "Bogen";
+
+switch (waffe) {
+case "Schwert":
+console.log("Du schwingst dein Schwert ⚔️");
+break;
+case "Bogen":
+console.log("Du spannst den Bogen 🏹");
+break;
+case "Magie":
+console.log("Du zauberst einen Feuerball 🔥");
+break;
+default:
+console.log("Unbekannte Waffe 🤷‍♂️");
+}</code></pre>
+
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices 🧠✨</h1>
+            <ul>
+                <li>Nutze <code>if/else</code> für einfache Vergleiche oder logische Operationen.</li>
+                <li>Nutze <code>switch</code>, wenn du viele verschiedene, feste Werte vergleichen willst.</li>
+                <li>Denk an <code>break</code> im <code>switch</code>, sonst werden alle folgenden Fälle auch ausgeführt
+                    (Fallthrough).</li>
+                <li>Verwende <code>default</code> im <code>switch</code> für unerwartete Fälle.</li>
+                <li>Halte die Bedingungen lesbar - kein Hexenwerk in einer Zeile! 🧙‍♀️</li>
+                <li>Teste deinen Code regelmäßig, um Fehler frühzeitig zu finden.</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel zum Nachmachen 🧪</h2>
+<pre><code>let klasse = "Magier";
+
+if (klasse === "Krieger") {
+console.log("Du bist ein Krieger mit viel Stärke! 💪");
+} else if (klasse === "Magier") {
+console.log("Du wirkst Zauber und nutzt Mana! ✨");
+} else {
+console.log("Unbekannte Klasse 👀");
+}
+
+switch (klasse) {
+case "Krieger":
+console.log("Bereit für den Nahkampf! 🛡️");
+break;
+case "Magier":
+console.log("Magische Kräfte aktiv! 🪄");
+break;
+default:
+console.log("Was auch immer du bist - willkommen! 🎭");
+}</code></pre>
+            <p>
+                In diesem Beispiel wird die Klasse des Spielers geprüft. Je nach Klasse wird eine andere Nachricht
+                ausgegeben. Wenn der Spieler ein Krieger ist, erhält er eine Nachricht über seine Stärke. Wenn er ein
+                Magier ist, erhält er eine Nachricht über seine magischen Kräfte. Wenn die Klasse unbekannt ist, wird
+                eine allgemeine Nachricht ausgegeben.
+            </p>
+            <p>
+                Du kannst das Beispiel anpassen, indem du die Klasse änderst und verschiedene Nachrichten hinzufügst.
+                Experimentiere mit verschiedenen Bedingungen und sieh dir an, wie sich der Code verhält!
+            </p>
+            <p>
+                Du kannst auch die Bedingungen ändern, um verschiedene Szenarien zu testen. Zum Beispiel: Was passiert,
+                wenn du die Klasse auf "Ritter" änderst? Oder was passiert, wenn du die Bedingungen in den
+                <code>if</code>- und <code>switch</code>-Anweisungen änderst?
+                Probiere es aus und entdecke die Möglichkeiten!
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Fragen und Antworten ❓💡</h2>
+            <ol>
+                <li><strong>Was prüft ein <code>if</code>?</strong><br>Ob eine Bedingung wahr (<code>true</code>) ist.
+                </li>
+                <li><strong>Was passiert, wenn ein <code>if</code> nicht zutrifft?</strong><br>Dann wird der
+                    <code>else</code>-Block (wenn vorhanden) ausgeführt.</li>
+                <li><strong>Wofür steht <code>break</code> im <code>switch</code>?</strong><br>Es beendet den Fall und
+                    verhindert, dass weitere ausgeführt werden.</li>
+                <li><strong>Kann man <code>if</code>-Blöcke ineinander schachteln?</strong><br>Ja, aber Achtung: Das
+                    kann unübersichtlich werden.</li>
+                <li><strong>Wann ist ein <code>switch</code> nützlicher als ein <code>if</code>?</strong><br>Bei vielen
+                    festen Vergleichswerten.</li>
+                <li><strong>Was ist der Unterschied zwischen <code>==</code> und <code>===</code>?</strong><br><code>==</code>
+                    prüft nur den Wert, <code>===</code> auch den Typ.</li>
+                <li><strong>Was ist der <code>default</code>-Fall im <code>switch</code>?</strong><br>Der Fall, der
+                    ausgeführt wird, wenn keine der Bedingungen zutrifft.</li>
+                <li><strong>Wie kann ich mehrere Bedingungen in einem <code>if</code> kombinieren?</strong><br>Mit
+                    logischen Operatoren wie <code>&&</code> (und) und <code>||</code> (oder).</li>
+                <li><strong>Was passiert, wenn ich kein <code>break</code> im <code>switch</code> setze?</strong><br>
+                    Dann wird der Code in den folgenden Fällen ebenfalls ausgeführt (Fallthrough).</li>
+                <li><strong>Wie kann ich einen <code>switch</code>-Fall überspringen?</strong><br>Mit dem
+                    <code>break</code>-Befehl.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Häufige Fehler und ihre Lösungen 🚧</h2>
+            <ul>
+                <li><strong>Fehler:</strong> Kein <code>break</code> im <code>switch</code><br><strong>Lösung:</strong>
+                    Nach jedem <code>case</code> ein <code>break</code> setzen!</li>
+                <li><strong>Fehler:</strong> Vergleich mit <code>=</code> statt
+                    <code>===</code><br><strong>Lösung:</strong> Immer <code>===</code> für echte Vergleiche verwenden
+                </li>
+                <li><strong>Fehler:</strong> Unübersichtliche
+                    <code>if</code>-Verschachtelungen<br><strong>Lösung:</strong> Logik in Funktionen auslagern</li>
+                <li><strong>Fehler:</strong> Kein <code>default</code> im
+                    <code>switch</code><br><strong>Lösung:</strong> Immer einen <code>default</code>-Fall definieren
+                </li>
+                <li><strong>Fehler:</strong> Bedingungen mit falscher Logik<br><strong>Lösung:</strong> Bedingungen
+                    testen und ggf. umformulieren</li>
+                <li><strong>Fehler:</strong> Vergessen, <code>else</code> zu verwenden<br><strong>Lösung:</strong> Immer
+                    <code>else</code> für alternative Fälle hinzufügen</li>
+                <li><strong>Fehler:</strong> <code>if</code>-Bedingungen nicht in Klammern<br><strong>Lösung:</strong>
+                    Immer Bedingungen in <code>()</code> setzen</li>
+                <li><strong>Fehler:</strong> <code>switch</code> ohne <code>break</code><br><strong>Lösung:</strong>
+                    Immer <code>break</code> nach jedem <code>case</code> setzen</li>
+                <li><strong>Fehler:</strong> <code>if</code>-Bedingungen nicht eindeutig<br><strong>Lösung:</strong>
+                    Bedingungen klar und eindeutig formulieren</li>
+                <li><strong>Fehler:</strong> <code>switch</code> ohne <code>default</code><br><strong>Lösung:</strong>
+                    Immer einen <code>default</code>-Fall definieren</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Übungen mit steigendem Schwierigkeitsgrad 🏋️‍♂️</h2>
+            <ol>
+                <li>Schreibe ein <code>if</code>-Statement, das prüft, ob ein Spieler online ist.</li>
+                <li>Erstelle eine <code>switch</code>-Anweisung für verschiedene Haustier-Typen (z.B. Katze, Hund,
+                    Drache).</li>
+                <li>Baue ein <code>if-else if-else</code> zur Klassifizierung von Punkten (z.B. 0-50: Anfänger, 51-100:
+                    Profi).</li>
+                <li>Erstelle ein Mini-Menü mit <code>switch</code>, das je nach Eingabe (1-3) verschiedene Aktionen
+                    ausgibt.</li>
+                <li>Verknüpfe Bedingungen mit logischen Operatoren (<code>&&</code>, <code>||</code>) im
+                    <code>if</code>-Statement.</li>
+                <li>Erstelle ein <code>switch</code>, das verschiedene Wetterbedingungen (z.B. Sonne, Regen, Schnee)
+                    behandelt.</li>
+                <li>Schreibe ein <code>if</code>-Statement, das prüft, ob ein Spieler genug Gold hat, um einen Zauber zu
+                    wirken.</li>
+                <li>Erstelle ein <code>switch</code>, das verschiedene Charakterklassen (z.B. Krieger, Magier, Dieb)
+                    behandelt.</li>
+                <li>Baue ein <code>if-else</code>-Statement, das prüft, ob ein Spieler einen bestimmten Gegenstand im
+                    Inventar hat.</li>
+                <li>Erstelle ein <code>switch</code>, das verschiedene Quest-Typen (z.B. Sammeln, Kämpfen, Erkunden)
+                    behandelt.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Projektideen 🧪🎮</h2>
+            <ol>
+                <li><strong>Charakterauswahl</strong> - Wähle per <code>switch</code> deine Klasse und reagiere darauf
+                </li>
+                <li><strong>Quizspiel</strong> - Verzweigungen je nach Antwort mit <code>if</code>/<code>else</code>
+                </li>
+                <li><strong>Wetter-App</strong> - Unterschiedliche Kleidung je nach Wetterlage anzeigen</li>
+                <li><strong>NPC-Reaktionen</strong> - Unterschiedliche Dialoge je nach Spielerentscheidung</li>
+                <li><strong>Zufallsereignis-Handler</strong> - Reagiere mit <code>switch</code> auf Ereignistypen</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Speed Debugging-Challenges 🚀🪲</h2>
+            <ol>
+                <li><code>if (x = 5)</code> gibt immer true zurück<br><strong>Fix:</strong> <code>if (x === 5)</code>
+                </li>
+                <li><code>switch(wert) { case 1: console.log("eins") }</code> führt nichts aus<br><strong>Fix:</strong>
+                    <code>break;</code> hinzufügen</li>
+                <li><code>if (true) else { console.log("nope") }</code> - Syntaxfehler<br><strong>Fix:</strong>
+                    <code>{}</code> nach <code>if</code> ergänzen</li>
+                <li><code>switch (x) { case 1: console.log("eins") }</code> gibt immer "eins" aus<br><strong>Fix:</strong>
+                    <code>break;</code> nach jedem <code>case</code> hinzufügen</li>
+                <li><code>if (x = 5) { console.log("x ist 5") }</code> gibt immer "x ist 5" aus<br><strong>Fix:</strong>
+                    <code>if (x === 5)</code> verwenden</li>
+                <li><code>switch (x) { case 1: console.log("eins") }</code> gibt immer "eins" aus<br><strong>Fix:</strong>
+                    <code>break;</code> nach jedem <code>case</code> hinzufügen</li>
+                <li><code>if (x = 5) { console.log("x ist 5") }</code> gibt immer "x ist 5" aus<br><strong>Fix:</strong>
+                    <code>if (x === 5)</code> verwenden</li>
+                <li><code>switch (x) { case 1: console.log("eins") }</code> gibt immer "eins" aus<br><strong>Fix:</strong>
+                    <code>break;</code> nach jedem <code>case</code> hinzufügen</li>
+                <li><code>if (x = 5) { console.log("x ist 5") }</code> gibt immer "x ist 5" aus<br><strong>Fix:</strong>
+                    <code>if (x === 5)</code> verwenden</li>
+                <li><code>switch (x) { case 1: console.log("eins") }</code> gibt immer "eins" aus<br><strong>Fix:</strong>
+                    <code>break;</code> nach jedem <code>case</code> hinzufügen</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung 🧠💾</h2>
+            <p>
+                Mit <code>if</code> triffst du einfache Entscheidungen, mit <code>else if</code> kannst du verschiedene
+                Wege prüfen, und <code>switch</code> hilft dir bei der Wahl zwischen festen Optionen. Denk dran: Dein
+                Code ist wie ein Dungeon-Master - die Kontrolle über den Pfad liegt bei dir! 🎲👾
+            </p>
+            <p>
+                Nutze diese Werkzeuge, um spannende Geschichten zu erzählen und Entscheidungen zu treffen. Egal, ob du
+                ein Held bist, der gegen Drachen kämpft, oder ein Magier, der Zauber wirkt - mit <code>if</code>,
+                <code>else</code> und <code>switch</code> bist du bereit für jedes Abenteuer! 🧙‍♂️⚔️
+            </p>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">// Hier kannst du deinen Code eintippen und testen
+let klasse = "Magier";
+
+if (klasse === "Krieger") {
+console.log("Nahkampf aktiviert!");
+} else if (klasse === "Magier") {
+console.log("Zauber vorbereitet!");
+} else {
+console.log("Unbekannte Klasse!");
+}
+
+switch (klasse) {
+case "Krieger":
+console.log("Stärke +10");
+break;
+case "Magier":
+console.log("Mana +10");
+break;
+default:
+console.log("Neuling ohne Klasse");
+}</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./for_und_while-Schleifen.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

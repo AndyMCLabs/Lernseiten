@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Typprüfung und Umwandlung - Was bist du wirklich, kleiner Wert?</h1>
+            <p>
+                Willkommen in der mystischen Welt der Typprüfung! 🧙‍♀️ In JavaScript kann ein Wert mehr Gestalten
+                annehmen als ein Gestaltwandler im Dschungel von Stranglethorn. Manchmal ist etwas eine Zahl, manchmal
+                ein String - und manchmal... etwas dazwischen?! 🤯 Um Fehler zu vermeiden (z.B. wenn du versuchst, "3"
+                + 4 zu rechnen), solltest du wissen, wie du den Typ eines Wertes prüfst und bei Bedarf umwandelst.
+            </p>
+            <p>
+                In diesem Kapitel lernst du, wie du den Typ eines Wertes mit <code>typeof</code> prüfst und wie du
+                Werte in andere Typen umwandelst. Du wirst auch lernen, wie du mit den verschiedenen Typen von Werten
+                in JavaScript umgehst und wie du sicherstellst, dass dein Code immer das tut, was du willst. 🚀
+            </p>
+            <p>
+                Lass uns gleich loslegen! Du wirst sehen, dass Typprüfung und Umwandlung nicht nur wichtig, sondern auch
+                spannend sind! 🎉
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Erklärung</h2>
+            <p>
+                JavaScript ist ein dynamisch typisierter Magier - Variablen können ihren Typ ändern, wie andere ihre
+                Rüstung. 🛡️ Damit du die Kontrolle behältst, stehen dir zwei mächtige Werkzeuge zur Verfügung:
+            </p>
+            <ul>
+                <li><strong>typeof</strong> - Enthüllt den wahren Typ des Wertes</li>
+                <li><strong>Typumwandlung</strong> - Verwandelt Werte in das, was du brauchst (z.#B. String → Zahl)</li>
+            </ul>
+
+<pre><code>// Typ prüfen
+console.log(typeof "Hallo"); // "string"
+console.log(typeof 42);      // "number"
+console.log(typeof true);    // "boolean"
+
+// Explizite Typumwandlung
+let zahl = "123";
+let num = Number(zahl); // wird zu 123
+
+// Implizite Typumwandlung (JS macht's automatisch)
+let combo = "5" + 1;    // ergibt "51" (String!)
+let summe = "5" * 1;    // ergibt 5 (Number!)</code></pre>
+            <p>
+                Aber Vorsicht! JavaScript kann manchmal wie ein Zauberer sein, der seine Tricks nicht verrät. Wenn du
+                "5" + 1 schreibst, denkt JS: "Oh, das ist ein String!" und gibt dir "51" zurück. Wenn du aber "5" * 1
+                schreibst, denkt es: "Das ist eine Zahl!" und gibt dir 5 zurück. Magie oder Betrug? Du entscheidest! 🪄
+            </p>
+            <p>
+                Um sicherzustellen, dass du mit dem richtigen Typ arbeitest, kannst du auch <code>isNaN()</code> verwenden,
+                um zu prüfen, ob ein Wert keine gültige Zahl ist. Das ist besonders nützlich, wenn du mit Benutzereingaben
+                arbeitest, die manchmal wie ein Zaubertrick erscheinen können! 🎩✨
+            </p>
+            <p>
+                Hier ist ein Beispiel, wie du den Typ eines Wertes prüfen und ihn bei Bedarf umwandeln kannst:
+            </p>
+<pre><code>// Typ prüfen und umwandeln
+let eingabe = "42"; // Eingabe als String
+let zahl = Number(eingabe); // Umwandlung in eine Zahl
+console.log(typeof eingabe); // "string"
+console.log(typeof zahl); // "number"
+console.log(zahl + 3); // 45 (Zahl + 3)</code></pre>
+            <p>
+                In diesem Beispiel wird die Eingabe als String betrachtet, aber durch die Umwandlung mit <code>Number()</code>
+                wird sie zu einer Zahl. So kannst du sicher rechnen, ohne dass JS dir einen Streich spielt! 🎉
+            </p>
+            <p>
+                Und denk daran: Wenn du mit Booleans spielst, kannst du sie auch in Strings und Zahlen umwandeln. Ein
+                leerer String wird zu false, während ein nicht-leerer String zu true wird. Das ist wie ein magischer
+                Trick, den du beherrschen solltest! 🎩✨
+            </p>
+            <p>
+                Hier ist ein weiteres Beispiel, das zeigt, wie du mit Booleans und Typumwandlungen jonglieren kannst:
+            </p>
+<pre><code>// Boolean-Umwandlung
+let wahr = true; // Boolean
+let falsch = false; // Boolean
+console.log(Boolean("")); // false (leerer String)
+console.log(Boolean("Hallo")); // true (nicht-leerer String)
+console.log(Boolean(0)); // false (0 ist falsy)
+console.log(Boolean(1)); // true (1 ist truthy)</code></pre>
+            <p>
+                Hier siehst du, wie JavaScript mit verschiedenen Typen umgeht. Es ist wichtig, die Unterschiede zu
+                verstehen, um Fehler zu vermeiden und deinen Code zum Laufen zu bringen! 🚀
+            </p>
+            <p>
+                Zusammengefasst: JavaScript ist ein flexibler Zauberer, der dir viele Möglichkeiten bietet, mit Typen zu
+                jonglieren. Aber sei vorsichtig! Manchmal kann es wie ein Trick wirken, der schiefgeht. Lerne die Tricks
+                und du wirst der Meister der Typenprüfung und -umwandlung! 🧙‍♂️✨
+            </p>
+            <p>
+                Und vergiss nicht: Wenn du mit Benutzereingaben arbeitest, überprüfe immer den Typ! Ein String ist kein
+                Number und ein Number ist kein String. Sei der Meister deines Codes! 💪
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices</h1>
+            <ul>
+                <li>Nutze <code>typeof</code>, um den Typ zu prüfen, bevor du Operationen durchführst</li>
+                <li>Vermeide implizite Umwandlungen, sie sind oft magisch - aber gefährlich! 🧨</li>
+                <li>Verwende <code>Number()</code>, <code>String()</code> und <code>Boolean()</code> für saubere
+                    Umwandlungen</li>
+                <li>Nutze <code>isNaN()</code> oder <code>Number.isNaN()</code> um ungültige Zahlen zu erkennen</li>
+                <li>Überprüfe Eingabewerte aus Formularen immer (sie sind <code>string</code>!)</li>
+                <li>Sei vorsichtig mit <code>==</code> und <code>===</code>: Ersteres ist wie ein Zaubertrick, der
+                    manchmal schiefgeht!</li>
+                <li>Vermeide magische Tricks mit Typen - sei der Meister deines Codes!</li>
+                <li>Teste deinen Code regelmäßig, um sicherzustellen, dass alles wie gewünscht funktioniert</li>
+                <li>Nutze Debugging-Tools, um den Typ und die Werte deiner Variablen zu überprüfen</li>
+                <li>Halte deinen Code sauber und lesbar, um Verwirrung zu vermeiden</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel</h2>
+<pre><code>// Formulareingabe als String
+let eingabe = "42";
+
+// Umwandlung in eine echte Zahl
+let echteZahl = Number(eingabe);
+
+console.log(typeof eingabe);     // string
+console.log(typeof echteZahl);   // number
+
+// Bonus: Boolean-Umwandlung
+console.log(Boolean(""));    // false
+console.log(Boolean("Hi"));  // true
+console.log(Boolean(0));     // false
+console.log(Boolean(1));     // true</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h2>Fragen &amp; Antworten</h2>
+            <ol>
+                <li><strong>Mit welchem Befehl prüfst du den Typ eines Werts?</strong><br><code>typeof</code></li>
+                <li><strong>Was ergibt <code>typeof null</code>?</strong><br>"object" (historischer Bug in JS 🤷)</li>
+                <li><strong>Was ergibt <code>typeof NaN</code>?</strong><br>"number"</li>
+                <li><strong>Wie wandelst du den String "99" in eine Zahl um?</strong><br><code>Number("99")</code></li>
+                <li><strong>Wie prüfst du, ob eine Eingabe keine gültige Zahl
+                        ist?</strong><br><code>isNaN(eingabe)</code></li>
+                <li><strong>Was ist der Unterschied zwischen <code>==</code> und <code>===</code>?</strong><br><code>==</code>
+                    prüft nur den Wert, <code>===</code> prüft auch den Typ!</li>
+                <li><strong>Was passiert, wenn du <code>Boolean(0)</code> machst?</strong><br>Es ergibt false!</li>
+                <li><strong>Wie wandelst du eine Zahl in einen String um?</strong><br><code>String(zahl)</code></li>
+                <li><strong>Was passiert, wenn du <code>parseInt("10.5")</code> machst?</strong><br>Es ergibt 10!</li>
+                <li><strong>Wie wandelst du einen String in eine Zahl um?</strong><br><code>Number(string)</code></li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Häufige Fehler und ihre Lösungen</h2>
+            <ul>
+                <li><strong>Fehler:</strong> "5" + 5 ergibt 55 statt 10<br><strong>Lösung:</strong>
+                    <code>Number("5") + 5</code></li>
+                <li><strong>Fehler:</strong> <code>parseInt("123abc")</code> ergibt 123<br><strong>Lösung:</strong>
+                    Immer prüfen, was der String enthält</li>
+                <li><strong>Fehler:</strong> <code>typeof NaN</code> zeigt "number"<br><strong>Lösung:</strong> Immer
+                    mit <code>isNaN()</code> abfragen</li>
+                <li><strong>Fehler:</strong> <code>Boolean("false")</code> ergibt true<br><strong>Lösung:</strong>
+                    "false" ist ein nicht-leerer String → true!</li>
+                <li><strong>Fehler:</strong> Typprüfung mit <code>==</code><br><strong>Lösung:</strong> Immer
+                    <code>===</code> für strikte Typvergleiche nutzen</li>
+                <li><strong>Fehler:</strong> <code>0 == false</code> ergibt true<br><strong>Lösung:</strong> Immer
+                    <code>===</code> verwenden, um Typen zu vergleichen</li>
+                <li><strong>Fehler:</strong> <code>Boolean(0)</code> ergibt false<br><strong>Lösung:</strong> 0 ist
+                    falsy, aber <code>Boolean(1)</code> ergibt true</li>
+                <li><strong>Fehler:</strong> <code>parseInt("10.5")</code> ergibt 10<br><strong>Lösung:</strong>
+                    Verwende <code>parseFloat()</code>, wenn du Dezimalzahlen brauchst</li>
+                <li><strong>Fehler:</strong> <code>Number("abc")</code> ergibt NaN<br><strong>Lösung:</strong> Immer
+                    prüfen, ob der String eine gültige Zahl ist</li>
+                <li><strong>Fehler:</strong> <code>Boolean(null)</code> ergibt false<br><strong>Lösung:</strong>
+                    null ist falsy, aber <code>Boolean("null")</code> ergibt true</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Übungen</h2>
+            <ol>
+                <li>Gib den Typ folgender Werte aus: <code>42</code>, <code>"Hallo"</code>, <code>true</code>,
+                    <code>null</code></li>
+                <li>Wandle den String <code>"7"</code> in eine Zahl um und rechne +3</li>
+                <li>Erzeuge eine Funktion, die prüft, ob eine Eingabe eine gültige Zahl ist</li>
+                <li>Wandle <code>0</code> in einen Boolean um - was kommt raus?</li>
+                <li>Erstelle eine Funktion, die einen Wert prüft und je nach Typ anders behandelt</li>
+                <li>Teste die Funktion mit verschiedenen Eingaben: <code>"5"</code>, <code>5</code>, <code>true</code></li>
+                <li>Erstelle eine Funktion, die einen String in eine Zahl umwandelt und addiere 10 dazu</li>
+                <li>Teste die Funktion mit verschiedenen Strings: <code>"10"</code>, <code>"abc"</code>, <code>"5.5"</code></li>
+                <li>Erstelle eine Funktion, die prüft, ob ein Wert NaN ist und gib eine entsprechende Nachricht aus</li>
+                <li>Teste die Funktion mit verschiedenen Werten: <code>NaN</code>, <code>5</code>, <code>"abc"</code></li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Projektideen</h2>
+            <ol>
+                <li><strong>Typen-Scanner</strong> - Ein Tool, das den Typ jedes eingegebenen Wertes anzeigt</li>
+                <li><strong>Formular-Helfer</strong> - Prüft automatisch, ob Zahlen wirklich Zahlen sind</li>
+                <li><strong>Mini-Rechner</strong> - Rechnet nur, wenn Typen korrekt sind</li>
+                <li><strong>Quiz-Tool</strong> - Stellt Fragen und wertet Antworten aus inkl. Typumwandlung</li>
+                <li><strong>Debug-Konsole</strong> - Zeigt Eingabewerte und deren Typen live an</li>
+                <li><strong>Typen-Umwandler</strong> - Wandelt Werte in den gewünschten Typ um (z.B. String zu Zahl)</li>
+                <li><strong>Typen-Checker</strong> - Prüft, ob ein Wert eine Zahl, ein String oder ein Boolean ist</li>
+                <li><strong>Formular-Validator</strong> - Validiert Benutzereingaben und gibt Fehlermeldungen aus</li>
+                <li><strong>Typen-Visualizer</strong> - Visualisiert die Typen von Variablen in einem Diagramm</li>
+                <li><strong>Typen-Quiz</strong> - Ein Spiel, bei dem du den Typ eines Wertes erraten musst</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Speed Debugging-Challenges</h2>
+            <ol>
+                <li><strong>Code:</strong> <code>let x = "5" + 1;</code><br><strong>Fix:</strong>
+                    <code>let x = Number("5") + 1;</code></li>
+                <li><strong>Code:</strong> <code>if ("false") { ... }</code><br><strong>Fix:</strong> Prüfe besser den
+                    echten Bool-Wert</li>
+                <li><strong>Code:</strong> <code>typeof NaN === "NaN"</code><br><strong>Fix:</strong> Nutze
+                    <code>isNaN()</code> statt Typvergleich</li>
+                <li><strong>Code:</strong> <code>let y = "10.5" * 2;</code><br><strong>Fix:</strong>
+                    <code>let y = parseFloat("10.5") * 2;</code></li>
+                <li><strong>Code:</strong> <code>let z = "abc" + 5;</code><br><strong>Fix:</strong>
+                    <code>let z = Number("abc") + 5;</code></li>
+                <li><strong>Code:</strong> <code>let a = "5" - 1;</code><br><strong>Fix:</strong>
+                    <code>let a = Number("5") - 1;</code></li>
+                <li><strong>Code:</strong> <code>let b = "5" * "2";</code><br><strong>Fix:</strong>
+                    <code>let b = Number("5") * Number("2");</code></li>
+                <li><strong>Code:</strong> <code>let c = "5" / 0;</code><br><strong>Fix:</strong>
+                    <code>let c = Number("5") / 0;</code></li>
+                <li><strong>Code:</strong> <code>let d = "5" + "2";</code><br><strong>Fix:</strong>
+                    <code>let d = Number("5") + Number("2");</code></li>
+                <li><strong>Code:</strong> <code>let e = "5" == 5;</code><br><strong>Fix:</strong>
+                    <code>let e = "5" === 5;</code></li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p>
+                JavaScript liebt es, Dinge zu "wandeln", manchmal zu deinem Vorteil - manchmal zu deinem Verhängnis. 😅
+                Lerne also, deine Typen zu prüfen wie ein wahrer Code-Inspektor und zaubere mit <code>typeof</code>,
+                <code>Number()</code>, <code>String()</code> und <code>Boolean()</code>, was du brauchst. So bleibst du
+                der Herr deiner Werte!
+            </p>
+        </section>
+
+        <section class="playground">
+            <textarea id="codeInput" rows="30" cols="120">// Hier kannst du deinen Code eintippen und testen
+let input = "42";
+console.log(typeof input);           // "string"
+let num = Number(input);
+console.log(typeof num);             // "number"
+
+let bool = Boolean(num);
+console.log("Wahr oder falsch?", bool);
+  </textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Mathematische_Operatoren.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

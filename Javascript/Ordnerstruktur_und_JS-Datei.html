@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Ordnerstruktur &amp; die JavaScript-Datei</h1>
+            <p>Bevor du mit dem Coden beginnst, solltest du wie ein echter Code-Ranger deine Basis aufbauen: Ein klar
+                strukturierter Projektordner hilft dir, Ordnung zu bewahren und Bugs den Gar aus zu machen!</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Wie sieht eine gute Ordnerstruktur aus?</h2>
+            <p>Hier ein klassisches Grundgerüst für kleine bis mittlere Projekte:</p>
+<pre><code>projekt-name/
+├── index.html         <!-- Dein HTML-Hauptquartier -->
+├── css/
+│   └── style.css      <!-- Deine Style-Zauberei -->
+├── js/
+│   └── script.js      <!-- Hier wohnt dein JavaScript-Code -->
+└── assets/
+└── bilder/        <!-- Für Logos, Grafiken, Memes und Drachenbilder --></code></pre>
+            <p>
+                Die JavaScript-Datei liegt in einem eigenen <code>js</code>-Ordner. Warum? Weil Struktur sexy ist. Und
+                weil du später vielleicht noch weitere Skripte brauchst - für Magie, Kämpfe oder Interface-Kram.
+            </p>
+
+            <h2>Wie bindest du deine JavaScript-Datei ein?</h2>
+            <p>In deiner <code>index.html</code> sieht das so aus:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Mein JS-Projekt&lt;/title&gt;
+        &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;h1&gt;Hello JavaScript!&lt;/h1&gt;
+
+        &lt;script src="js/script.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <h2>✨ Praktisches Beispiel</h2>
+            <p>Deine <code>script.js</code> könnte so starten:</p>
+<pre><code>// js/script.js
+
+console.log("🧙‍♀️ Deine JavaScript-Reise beginnt genau... JETZT!");
+alert("Willkommen in der Welt von JavaScript!");</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices für Struktur &amp; Skripte</h1>
+            <p>
+                🌟 Benenne deine Dateien sprechend (nicht <code>kram1.js</code> oder
+                <code>test_final_2_END.js</code>)<br>
+                🌟 Halte deine Verzeichnisstruktur flach und logisch<br>
+                🌟 Trenne HTML, CSS und JavaScript klar<br>
+                🌟 Nutze relative Pfade, z.B. <code>js/script.js</code><br>
+                🌟 Binde JS am Ende des <code>&lt;body&gt;</code> ein, damit erst der HTML-Inhalt geladen wird<br>
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>🧠 Fragen mit Antworten</h2>
+            <ol>
+                <li><strong>Wo speichert man normalerweise JavaScript-Dateien?</strong><br>In einem eigenen Ordner
+                    namens <code>js</code>.</li>
+                <li><strong>Wie wird eine JS-Datei in HTML eingebunden?</strong><br>Mit
+                    <code>&lt;script src="js/script.js"&gt;&lt;/script&gt;</code>.</li>
+                <li><strong>Warum sollte man HTML, CSS und JS trennen?</strong><br>Weil Ordnung und Übersichtlichkeit
+                    Bugs und Frust vermeiden.</li>
+                <li><strong>Was passiert, wenn du eine Datei falsch verlinkst?</strong><br>Der Browser findet sie nicht
+                    und du bekommst Errors in der Konsole.</li>
+                <li><strong>Was ist der Unterschied zwischen relativen und absoluten Pfaden?</strong><br>Relative Pfade
+                    zeigen relativ zum aktuellen Dokument, absolute Pfade ab Root oder Domain.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>💪 Übungen zum Strukturieren &amp; Einbinden</h2>
+            <ol>
+                <li>Erstelle einen Projektordner mit Unterordnern: <code>css</code>, <code>js</code>,
+                    <code>assets</code>.</li>
+                <li>Lege in <code>js/</code> eine Datei <code>script.js</code> an und schreibe ein
+                    <code>console.log()</code>.</li>
+                <li>Verlinke die Datei korrekt in <code>index.html</code> und überprüfe sie im Browser.</li>
+                <li>Füge eine zweite JavaScript-Datei ein (z.B. <code>helper.js</code>) und teste die Einbindung.</li>
+                <li>Nutze <code>alert()</code>, um beim Laden der Seite eine Nachricht anzuzeigen.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>🚀 Projektideen zum Ordnerstruktur-Training</h2>
+            <ul>
+                <li>📦 Ein Mini-Projekt mit mehreren Seiten (z. B. Startseite, Kontakt, Impressum)</li>
+                <li>🎨 Eine Style-Übersicht mit CSS-Animationen und sauberem File Management</li>
+                <li>🕹️ Ein kleiner JS-Clicker mit ausgelagerter <code>game.js</code></li>
+                <li>📚 Ein Online-Notizblock, der deine Eingaben loggt</li>
+                <li>🔁 Eine einfache Slideshow mit JS-Logik und ausgelagerten Ressourcen</li>
+            </ul>
+        </section>
+
+        <section class="playground">
+            <textarea id="codeInput" rows="30" cols="120">
+// Beispielinhalt für js/script.js
+
+console.log("🎉 Datei erfolgreich eingebunden!");
+alert("✨ Willkommen in deinem JS-Projekt!");
+  </textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Script-Tag_richtig_nutzen.html"><button>Zum nächsten Thema</button></a>
+        </section>
+
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

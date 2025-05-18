@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>🕰️ Die Historie &amp; Einsatzgebiete von JavaScript</h1>
+            <p>
+                Im Jahr 1995 - also zur Zeit der ersten PlayStation, Windows 95 und Tamagotchis - erschuf der Entwickler
+                <strong>Brendan Eich</strong> innerhalb von nur <em>zehn Tagen</em> eine neue Skriptsprache für den
+                Webbrowser „Netscape Navigator“.
+                Ursprünglich hieß sie "Mocha", wurde dann zu "LiveScript" und schließlich - vermutlich aus
+                Marketinggründen - in <strong>JavaScript</strong> umbenannt.
+            </p>
+            <p>
+                JavaScript war von Anfang an dazu gedacht, Webseiten lebendig zu machen. Während HTML das Skelett ist 🦴
+                und CSS das Styling übernimmt 👗,
+                sorgt JavaScript für die Magie ✨ - es bringt alles zum Leben! Buttons klicken? Slider bewegen? Daten
+                verarbeiten? Kein Problem für JS!
+            </p>
+            <p>
+                Heute läuft JavaScript nicht nur im Browser, sondern auch auf Servern (z. B. mit <code>Node.js</code>),
+                in Apps (React Native),
+                in Spielen (z.B. Phaser), im Internet of Things - und wer weiß, vielleicht bald auf deinem Toaster.
+            </p>
+            <p>
+                JavaScript ist also nicht nur ein „Frontend-Zauberer“ 🧙, sondern ein echter Allround-Held wie Geralt
+                von Riva oder Iron Man.
+            </p>
+        </section>
+
+        <section>
+            <h2>💡 Praktisches Beispiel: Eine interaktive Begrüßung</h2>
+            <p>Wir erstellen einen Button, der beim Klicken eine persönliche Nachricht anzeigt. Voilà, dein erster
+                Zauberspruch in JavaScript:</p>
+
+            <pre><code>&lt;button onclick="sayHello()"&gt;Klick mich!&lt;/button&gt;
+
+&lt;script&gt;
+  function sayHello() {
+    alert("Willkommen im JavaScript-Königreich, edler Held!");
+  }
+&lt;/script&gt;
+</code></pre>
+        </section>
+
+        <section>
+            <h3>🧠 Fragen - Bist du würdig, junger Padawan?</h3>
+            <ol>
+                <li>Wann wurde JavaScript erfunden und von wem?</li>
+                <li>Warum wurde es ursprünglich entwickelt?</li>
+                <li>Welche zwei anderen Technologien arbeiten eng mit JavaScript zusammen?</li>
+                <li>Nenne drei moderne Einsatzgebiete von JavaScript.</li>
+                <li>Was ist der Unterschied zwischen Java und JavaScript?</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>⚔️ Übungen - Trainiere deine Skills!</h3>
+            <ul>
+                <li>Schreibe ein kurzes Textfeld mit Button, das einen eingegebenen Namen begrüßt.</li>
+                <li>Erstelle eine einfache Webseite mit HTML, CSS und JavaScript, die beim Laden einen Willkommenssatz
+                    ausgibt.</li>
+                <li>Baue einen Button, der beim Klicken die Farbe der Seite ändert.</li>
+                <li>Nutze JavaScript, um das aktuelle Datum und die Uhrzeit auf der Seite anzuzeigen.</li>
+                <li>Simuliere mit JavaScript ein einfaches Zufallsspiel (z.B. Münzwurf oder Würfel).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>🛠️ Projektideen - Zeig, was in dir steckt!</h3>
+            <ul>
+                <li>Ein „Hallo Welt“-Generator mit verschiedenen Sprachen.</li>
+                <li>Ein digitales Glücksrad mit kleinen Gags und Aufgaben.</li>
+                <li>Eine interaktive Webseite, die Witze oder Zitate auf Knopfdruck zeigt.</li>
+                <li>Ein JavaScript-Museum mit Timeline über die Geschichte von Web-Technologien.</li>
+                <li>Ein Mini-Game mit Buttons, Sounds und Reaktionszeitmessung.</li>
+            </ul>
+        </section>
+
+        <section class="playground">
+            <textarea id="codeInput" rows="30" cols="120">
+// Beispiel: Klicke auf den Button und fühle die Macht!
+
+function runCode() {
+  alert("Willkommen im JavaScript-Tempel, Auserwählter!");
+};
+
+runCode();
+  </textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./HTML_CSS_JavaScript.html"><button>Zum nächsten Thema</button></a>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+    <script src="../../../src/js/main.js"></script>
+</body>
+
+</html>

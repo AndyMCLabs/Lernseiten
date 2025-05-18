@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+  <h1>Reihenfolge und Timing - Wer zuerst kommt, kodet zuerst!</h1>
+  <p>JavaScript ist ein bisschen wie ein ungeduldiger NPC - wenn du's nicht im Griff hast, macht es einfach das, was gerade zuerst möglich ist. Und das kann Chaos stiften wie eine Horde Kobolde in deinem Dungeon-UI.</p>
+</section>
+
+<section class="chapter">
+  <h2>Wie JavaScript geladen und ausgeführt wird</h2>
+  <p>
+    JavaScript wird im Browser **top to bottom** geladen - also von oben nach unten. Wird ein <code>&lt;script&gt;</code>-Tag ohne Attribute eingebaut, blockiert es das HTML-Parsing, bis das Script geladen und ausgeführt ist. Das kann deine Seite „freezen“ wie ein Eiszauber ❄️😨.
+  </p>
+  <p>Es gibt drei magische Schlüsselwörter, um das zu kontrollieren:</p>
+  <ul>
+    <li><strong>Normal</strong>: <code>&lt;script src="..."&gt;&lt;/script&gt;</code> - blockiert das HTML.</li>
+    <li><strong>defer</strong>: Wartet, bis HTML geladen ist, dann wird JS in der richtigen Reihenfolge ausgeführt.</li>
+    <li><strong>async</strong>: Wird geladen und sofort ausgeführt - egal, was das HTML gerade macht. Chaosmodus! 🌀</li>
+  </ul>
+</section>
+
+<section class="chapter">
+  <h1>Best Practises</h1>
+  <p>
+    ✅ Verwende <code>defer</code> für Scripts im <code>&lt;head&gt;</code> - damit blockiert nix.<br>
+    ✅ Packe JS am besten ganz ans Ende vom <code>&lt;body&gt;</code> wenn kein <code>defer</code> genutzt wird.<br>
+    ✅ Meide <code>async</code> für Skripte, die andere Skripte brauchen - Reihenfolge kann sonst kaputtgehen.<br>
+    ✅ Verwende Event-Listener wie <code>DOMContentLoaded</code> für sicheres Timing.<br>
+    ✅ Keep it simple, hero! Keine unnötigen <code>setTimeout</code>-Hacks zur Ladeverzögerung.
+  </p>
+</section>
+
+<section class="chapter">
+  <h2>Beispiel zum Nachmachen</h2>
+  <p>Nutzen wir <code>DOMContentLoaded</code>, um sicherzustellen, dass das HTML geladen ist:</p>
+  <pre><code>document.addEventListener("DOMContentLoaded", () =&gt; {
+  const btn = document.createElement("button");
+  btn.innerText = "Ich komme, wenn du bereit bist!";
+  btn.onclick = () =&gt; alert("Boom! HTML war bereit!");
+  document.body.appendChild(btn);
+});</code></pre>
+</section>
+
+<section class="chapter">
+  <h2>5 Quizfragen (mit Antworten)</h2>
+  <ol>
+    <li>Wann wird ein normales Script ohne <code>defer</code> geladen?<br><strong>A:</strong> Direkt, blockierend beim Parsen des HTMLs.</li>
+    <li>Was macht das Attribut <code>defer</code>?<br><strong>A:</strong> Führt das Script aus, wenn das HTML fertig geladen wurde.</li>
+    <li>Was passiert bei <code>async</code>?<br><strong>A:</strong> Das Script wird geladen und sofort ausgeführt, unabhängig vom HTML.</li>
+    <li>Was ist <code>DOMContentLoaded</code>?<br><strong>A:</strong> Ein Event, das feuert, wenn das DOM komplett geladen ist.</li>
+    <li>Warum ist <code>defer</code> oft besser als <code>async</code>?<br><strong>A:</strong> Es erhält die Reihenfolge mehrerer Skripte.</li>
+  </ol>
+</section>
+
+<section class="chapter">
+  <h2>5 Übungen</h2>
+  <ol>
+    <li>Erstelle ein Script ohne <code>defer</code> und beobachte das Ladeverhalten.</li>
+    <li>Nutze <code>defer</code> und vergleiche die Reihenfolge mit dem normalen Script.</li>
+    <li>Teste zwei <code>async</code>-Skripte und beobachte, in welcher Reihenfolge sie laufen.</li>
+    <li>Erstelle ein Script, das auf <code>DOMContentLoaded</code> wartet und dann ein Element einfügt.</li>
+    <li>Simuliere eine Ladeverzögerung mit <code>setTimeout</code> und bespreche, warum das nicht ideal ist.</li>
+  </ol>
+</section>
+
+<section class="chapter">
+  <h2>5 Projektideen</h2>
+  <ol>
+    <li>Ein Ladebildschirm, der verschwindet, wenn das DOM geladen ist.</li>
+    <li>Ein Quiz, das erst geladen wird, wenn das HTML bereit ist.</li>
+    <li>Eine Zufallsnachricht, die nach <code>DOMContentLoaded</code> erscheint.</li>
+    <li>Ein Countdown, der durch <code>setInterval</code> startet - erst wenn alles geladen ist.</li>
+    <li>Ein kleines "Start Game"-Button mit verschiedenen Ladezuständen: before DOM, after DOM, on button click.</li>
+  </ol>
+</section>
+
+<section class="playground">
+  <textarea id="codeInput" rows="30" cols="120">
+// Beispiel: DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () =&gt; {
+  const h1 = document.createElement("h1");
+  h1.innerText = "DOM ist bereit - und du auch!";
+  document.body.appendChild(h1);
+});
+  </textarea><br>
+  <button onclick="runCode()">Code ausführen</button><br>
+  <pre id="output"></pre><br>
+  <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN Playground</a></p>
+</section>
+
+<section class="end">
+  <a href="./alert_prompt_confirm.html"><button>Zum nächsten Thema</button></a>
+</section>
+
+<script src="../../../src/js/main.js" defer></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="chapter">
+            <h1>UI dynamisch manipulieren</h1>
+            <p>In dieser Welt der JavaScript-Zauberer kannst du nicht nur die Magie von Zahlen und Variablen
+                beherrschen, sondern auch das Aussehen und Verhalten der Elemente deiner Website! Mit JavaScript greifst
+                du auf das **Document Object Model (DOM)** zu, die geheime Karte, die dir Zugang zu allen HTML-Elementen
+                gewährt. 💫</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Was bedeutet „UI dynamisch manipulieren“?</h2>
+            <p>„UI dynamisch manipulieren“ bedeutet, dass du Elemente auf der Webseite während der Laufzeit verändern
+                kannst. Das bedeutet, dass du Texte, Farben, Layouts, und vieles mehr zur Laufzeit anpassen kannst -
+                genau wie ein Zauberer, der die Welt um sich herum in Echtzeit verändert! 🧙‍♂️</p>
+            <p>Mit JavaScript kannst du: <br>
+                - Texte ändern ✍️<br>
+                - Styles anpassen 🎨<br>
+                - Elemente hinzufügen oder entfernen 🚀<br>
+                - Interaktive Aktionen durchführen 🖱️<br>
+            </p>
+            <p>Und das Beste? Du kannst alles ohne das erneute Laden der Seite tun! 🌀</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel: Den Text eines Elements ändern</h2>
+            <p>Schau dir diesen einfachen Zauberspruch an! Wir verwenden JavaScript, um den Text eines HTML-Elements zu
+                verändern.</p>
+<pre><code>// HTML:
+// <h2 id="greeting">Willkommen, tapferer Held!</h2>
+
+// JavaScript:
+document.getElementById("greeting").innerHTML = "Du hast die Herausforderung gemeistert! 🏆";</code></pre>
+            <p>Hiermit greifen wir auf das Element mit der ID „greeting“ zu und ändern seinen inneren HTML-Inhalt. Das
+                Ergebnis? Der Text verändert sich zur Laufzeit!</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel: Die Farbe eines Elements ändern</h2>
+            <p>Magst du es, deine Welt farbenfroh zu gestalten? Dann wirst du diese Zauberei lieben! Mit JavaScript
+                kannst du die CSS-Eigenschaften eines Elements anpassen.</p>
+<pre><code>// HTML:
+// <div id="box">Magische Box</div>
+
+// JavaScript:
+document.getElementById("box").style.backgroundColor = "purple";</code></pre>
+            <p>Mit dem obigen Zauberspruch änderst du die Hintergrundfarbe der Box zu einem mystischen Lila! 🌈</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Best Practices: UI dynamisch manipulieren</h2>
+            <ul>
+                <li><strong>Nutze Event-Listener:</strong> Lass die Magie durch Events geschehen! Setze Event-Listener,
+                    um auf Nutzeraktionen wie Klicks oder Tasteneingaben zu reagieren. Beispiel: <code>click</code>,
+                    <code>mouseover</code>.</li>
+                <li><strong>Vermeide unnötige Manipulationen:</strong> Übermäßige DOM-Manipulation kann die Leistung
+                    beeinträchtigen. Verwende sie nur, wenn nötig und optimiere deinen Code, um Redundanz zu vermeiden.
+                </li>
+                <li><strong>Verwende CSS-Klassen für Styles:</strong> Anstatt die Styles direkt zu ändern, füge Klassen
+                    hinzu oder entferne sie, um CSS-Styles anzuwenden - das ist sauberer und besser wartbar.</li>
+                <li><strong>Optimierung:</strong> Achte darauf, dass du nur das DOM manipulierst, wenn es notwendig ist,
+                    um deine Seite schnell zu halten.</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Fragen mit Antworten</h2>
+            <ol>
+                <li>Was ist der DOM? <br><strong>A:</strong> Das Document Object Model (DOM) ist die Struktur, die
+                    HTML-Elemente als Objekte im Browser darstellt, die du mit JavaScript manipulieren kannst.</li>
+                <li>Wie greifst du auf ein HTML-Element zu, um seinen Text zu ändern? <br><strong>A:</strong> Mit
+                    <code>document.getElementById("id").innerHTML = "neuer Text";</code></li>
+                <li>Wie änderst du die Hintergrundfarbe eines Elements? <br><strong>A:</strong> Mit
+                    <code>document.getElementById("id").style.backgroundColor = "Farbe";</code></li>
+                <li>Was ist der Unterschied zwischen <code>innerHTML</code> und <code>textContent</code>?
+                    <br><strong>A:</strong> <code>innerHTML</code> erlaubt es, HTML-Tags zu setzen, während
+                    <code>textContent</code> nur den Text ohne HTML-Tags setzt.</li>
+                <li>Wie kannst du mit JavaScript ein neues Element erstellen und zur Seite hinzufügen?
+                    <br><strong>A:</strong> Mit <code>document.createElement()</code> und <code>appendChild()</code>.
+                </li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Übungen</h2>
+            <ol>
+                <li>Ändere den Text eines <code>&lt;h1&gt;</code>-Elements, wenn der Benutzer auf eine Schaltfläche klickt.
+                </li>
+                <li>Erstelle ein Programm, das den Hintergrund eines Div-Elements bei jedem Mausklick auf der Seite
+                    zufällig ändert.</li>
+                <li>Füge einem <code>div</code>-Element mit der Klasse „active“ dynamisch eine weitere Klasse hinzu,
+                    wenn der Benutzer mit der Maus darüber fährt.</li>
+                <li>Erstelle eine einfache To-Do-Liste, bei der der Benutzer neue Aufgaben hinzufügt und sie dynamisch
+                    angezeigt werden.</li>
+                <li>Erstelle ein interaktives Countdown-Timer, der bei Ablauf eine Nachricht anzeigt.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Projektideen</h2>
+            <ol>
+                <li>Erstelle ein interaktives Quiz, bei dem die Fragen und Antworten dynamisch angezeigt werden,
+                    basierend auf der Auswahl des Benutzers.</li>
+                <li>Erstelle eine Foto-Galerie, bei der der Benutzer durch Klicken auf Miniaturbilder das größere Bild
+                    dynamisch lädt.</li>
+                <li>Baue eine interaktive Wetter-App, die auf Basis der Benutzereingabe die aktuelle Wetterlage anzeigt
+                    und dynamisch verändert.</li>
+                <li>Erstelle eine dynamische Landingpage, bei der die Inhalte je nach Benutzerauswahl oder Interaktion
+                    angepasst werden.</li>
+                <li>Baue eine Chat-Anwendung, bei der neue Nachrichten dynamisch in die Benutzeroberfläche eingefügt
+                    werden.</li>
+            </ol>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">// Beispiel für dynamische UI-Manipulation
+document.getElementById("box").style.backgroundColor = "yellow";
+document.getElementById("message").innerHTML = "Die Farbe wurde geändert!";</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Was_sind_Variablen.html"><button>Zum nächsten Thema</button></a>
+        </section>
+
+        <script src="../../../src/js/main.js" defer></script>
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

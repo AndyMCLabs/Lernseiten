@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Objekte erstellen</h1>
+            <p>In JavaScript sind Objekte wie Schatztruhen: Sie speichern Dinge (Werte) unter bestimmten Namen
+                (Schlüssel). Wir nutzen sie, um strukturierte Daten darzustellen - z.B. ein Charakterblatt deines
+                liebsten RPG-Helden oder Infos über ein Raumschiff aus deiner Sci-Fi-Geschichte.</p>
+            <p>Objekte sind eine der wichtigsten Datenstrukturen in JavaScript. Sie ermöglichen es dir, komplexe Daten
+                zu organisieren und zu verwalten. Objekte bestehen aus Schlüssel-Wert-Paaren, wobei der Schlüssel ein
+                String ist und der Wert alles sein kann - von Zahlen über Arrays bis hin zu anderen Objekten.</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Objekte definieren und verwenden</h2>
+            <p>Objekte werden mit geschweiften Klammern <code>{}</code> erstellt. Jedes Objekt besteht aus
+                Schlüssel-Wert-Paaren. Hier ein Beispiel für ein Objekt, das einen Zaubertrank beschreibt:</p>
+            <pre><code>const healingPotion = {
+name: "Heiltrank",
+effect: "Regeneriert 50 HP",
+rarity: "selten",
+isMagical: true
+};
+
+console.log(healingPotion.name); // "Heiltrank"
+console.log(healingPotion["effect"]); // "Regeneriert 50 HP"</code></pre>
+            <p>Du kannst auf die Werte eines Objekts zugreifen, indem du entweder den Punkt-Operator (<code>.</code>)
+                oder
+                die eckigen Klammern (<code>[]</code>) verwendest. Der Punkt-Operator ist einfacher, während die
+                eckigen Klammern nützlich sind, wenn der Schlüssel ein String mit Sonderzeichen ist.</p>
+            <p>Hier ist ein Beispiel, wie du auf die Werte eines Objekts zugreifen kannst:</p>
+            <pre><code>const player = {
+name: "Lara",
+class: "Schurkin",
+level: 13
+};
+
+console.log(player.name); // "Lara"
+console.log(player["class"]); // "Schurkin"</code></pre>
+            <p>Du kannst auch neue Schlüssel-Wert-Paare zu einem bestehenden Objekt hinzufügen:</p>
+            <pre><code>player.guild = "Die Schatten";
+console.log(player.guild); // "Die Schatten"</code></pre>
+            <p>Um einen Schlüssel zu löschen, kannst du das <code>delete</code>-Schlüsselwort verwenden:</p>
+            <pre><code>delete player.level;
+console.log(player.level); // undefined</code></pre>
+            <p>Um zu überprüfen, ob ein Schlüssel in einem Objekt existiert, kannst du den <code>in</code>-Operator
+                verwenden:</p>
+            <pre><code>console.log("guild" in player); // true
+console.log("level" in player); // false</code></pre>
+            <p>Objekte sind extrem flexibel und können sogar andere Objekte oder Arrays als Werte enthalten. Hier ein
+                Beispiel:</p>
+            <pre><code>const character = {
+name: "Lara",
+class: "Schurkin",
+level: 13,
+inventory: ["Heiltrank", "Mana-Trank"],
+skills: {
+    stealth: true,
+    archery: false
+}
+};
+
+console.log(character.inventory[0]); // "Heiltrank"
+console.log(character.skills.stealth); // true</code></pre>
+            <p>Hier haben wir ein Objekt <code>character</code>, das ein Array <code>inventory</code> und ein
+                weiteres Objekt <code>skills</code> enthält. Das zeigt, wie mächtig Objekte in JavaScript sind!</p>
+            <p>Zusammenfassend sind Objekte eine der grundlegendsten und vielseitigsten Datenstrukturen in JavaScript.
+                Sie ermöglichen es dir, Daten in einer strukturierten und leicht zugänglichen Weise zu speichern und zu
+                organisieren. Objekte sind unverzichtbar für die Entwicklung von komplexen Anwendungen und Spielen.</p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practises</h1>
+            <p>Objekte sollten klar benannte Schlüssel haben und keine zu tief verschachtelte Struktur. Wenn du mehrere
+                ähnliche Objekte hast, solltest du überlegen, ob eine Klasse oder ein Konstruktor sinnvoll ist. Nutze
+                <code>const</code>, wenn du die Referenz nicht verändern willst.
+            </p>
+            <p>Hier sind einige Best Practices für die Arbeit mit Objekten in JavaScript:</p>
+            <ul>
+                <li>Verwende <code>const</code>, um Objekte zu deklarieren, die nicht neu zugewiesen werden sollen.</li>
+                <li>Nutze <code>let</code>, wenn du die Referenz des Objekts ändern möchtest.</li>
+                <li>Vermeide es, Objekte zu tief zu verschachteln, um die Lesbarkeit zu erhöhen.</li>
+                <li>Verwende klare und beschreibende Schlüssel, um den Code verständlicher zu machen.</li>
+                <li>Nutze Funktionen oder Methoden, um komplexe Logik innerhalb von Objekten zu kapseln.</li>
+                <li>Verwende <code>Object.keys()</code>, <code>Object.values()</code> und <code>Object.entries()</code>
+                    für Iterationen über Objekte.</li>
+                <li>Nutze <code>Object.freeze()</code>, um Objekte unveränderlich zu machen, wenn nötig.</li>
+                <li>Verwende <code>Object.assign()</code>, um Objekte zu kopieren oder zusammenzuführen.</li>
+                <li>Nutze <code>JSON.stringify()</code> und <code>JSON.parse()</code>, um Objekte in Strings zu
+                    konvertieren und umgekehrt.</li>
+                <li>Verwende <code>this</code>, um auf die Eigenschaften des aktuellen Objekts innerhalb von Methoden zu
+                    zugreifen.</li>
+                <li>Nutze <code>Object.create()</code>, um Objekte mit einem bestimmten Prototyp zu erstellen.</li>
+                <li>Verwende <code>Object.keys(obj).forEach()</code>, um über die Schlüssel eines Objekts zu iterieren.
+                </li>
+                <li>Nutze <code>Object.values(obj).forEach()</code>, um über die Werte eines Objekts zu iterieren.</li>
+                <li>Nutze <code>Object.entries(obj).forEach()</code>, um über die Schlüssel-Wert-Paare eines Objekts zu
+                    iterieren.</li>
+                <li>Verwende <code>Object.prototype.hasOwnProperty()</code>, um zu überprüfen, ob ein Schlüssel
+                    direkt im Objekt existiert und nicht im Prototypen.</li>
+                <li>Nutze <code>Object.assign()</code>, um Objekte zu kopieren oder zusammenzuführen.</li>
+                <li>Verwende <code>Object.keys(obj).length</code>, um die Anzahl der Schlüssel in einem Objekt zu
+                    ermitteln.</li>
+                <li>Nutze <code>Object.values(obj)</code>, um ein Array der Werte eines Objekts zu erhalten.</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Fragen mit Antworten</h2>
+            <ol>
+                <li>Wie erstellt man ein leeres Objekt?<br><strong>A:</strong> Mit <code>const obj = {}</code></li>
+                <li>Wie greift man auf den Wert des Schlüssels <code>name</code> zu?<br><strong>A:</strong>
+                    <code>obj.name</code> oder <code>obj["name"]</code>
+                </li>
+                <li>Wie kann man einen neuen Schlüssel hinzufügen?<br><strong>A:</strong> <code>obj.level = 99</code>
+                </li>
+                <li>Wie löscht man einen Schlüssel?<br><strong>A:</strong> <code>delete obj.level</code></li>
+                <li>Wie überprüft man, ob ein Schlüssel existiert?<br><strong>A:</strong> <code>"level" in obj</code>
+                </li>
+                <li>Wie kann prüfen, ob ein Schlüssel existiert und einen Standardwert setzen?<br><strong>A:</strong>
+                    <code>obj.level || 1</code></li>
+                <li>Wie kann sehen, ob ein Schlüssel im Prototypen existiert?<br><strong>A:</strong>
+                    <code>obj.hasOwnProperty("level")</code></li>
+                <li>Wie kann erkennen, ob ein Schlüssel ein Array ist?<br><strong>A:</strong>
+                    <code>Array.isArray(obj.level)</code></li>
+                <li>Wie greift man auf den Wert eines Schlüssels in einem verschachtelten Objekt
+                    zu?<br><strong>A:</strong> <code>obj.level.experience</code></li>
+                <li>Wie kann am besten ein Objekt in einen String umwandeln?<br><strong>A:</strong>
+                    <code>JSON.stringify(obj)</code></li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>häufige Fehler und ihre Lösungen</h2>
+            <ul>
+                <li><strong>Fehler:</strong> Zugriff auf einen nicht existierenden
+                    Schlüssel.<br><strong>Lösung:</strong> Nutze <code>in</code> oder optional chaining
+                    (<code>obj?.key</code>).</li>
+                <li><strong>Fehler:</strong> Objekt mit <code>let</code> erstellt, aber danach
+                    überschrieben.<br><strong>Lösung:</strong> Verwende <code>const</code>, wenn du das Objekt nicht
+                    komplett neu zuweisen willst.</li>
+                <li><strong>Fehler:</strong> Kommas vergessen oder zu viele gesetzt.<br><strong>Lösung:</strong> Immer
+                    auf das letzte Komma achten!</li>
+                <li><strong>Fehler:</strong> Schlüssel mit Bindestrich.<br><strong>Lösung:</strong> Nutze
+                    <code>obj["mein-schlüssel"]</code> oder verwende camelCase.
+                </li>
+                <li><strong>Fehler:</strong> Verwechslung von Arrays und Objekten.<br><strong>Lösung:</strong> Arrays
+                    haben Indexe, Objekte haben Schlüssel.</li>
+                <li><strong>Fehler:</strong> Vergessen, dass Objekte Referenzen sind.<br><strong>Lösung:</strong> Bei
+                    Zuweisungen wird nur die Referenz kopiert, nicht das Objekt selbst.</li>
+                <li><strong>Fehler:</strong> Zugriff auf ein Objekt, das nicht existiert.<br><strong>Lösung:</strong>
+                    Nutze
+                    optional chaining (<code>obj?.key</code>) oder überprüfe, ob das Objekt existiert.</li>
+                <li><strong>Fehler:</strong> Vergessen, dass Objekte dynamisch sind.<br><strong>Lösung:</strong> Du
+                    kannst
+                    jederzeit neue Schlüssel hinzufügen oder bestehende ändern.</li>
+                <li><strong>Fehler:</strong> Objekte sind nicht gleich.<br><strong>Lösung:</strong> Vergleiche die Werte
+                    der Schlüssel, nicht die Referenzen.</li>
+                <li><strong>Fehler:</strong> Objekte sind nicht serialisierbar.<br><strong>Lösung:</strong> Verwende
+                    <code>JSON.stringify()</code>, um Objekte in Strings umzuwandeln und umgekehrt.
+                </li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Übungen</h2>
+            <ol>
+                <li>Erstelle ein Objekt <code>player</code> mit den Schlüsseln <code>name</code>, <code>class</code>,
+                    <code>level</code>.
+                </li>
+                <li>Gib den Namen des Spielers in der Konsole aus.</li>
+                <li>Füge dem Objekt einen neuen Schlüssel <code>guild</code> hinzu.</li>
+                <li>Ändere den Wert von <code>level</code> auf 42.</li>
+                <li>Lösche den Schlüssel <code>guild</code>.</li>
+                <li>Überprüfe, ob der Schlüssel <code>level</code> existiert.</li>
+                <li>Erstelle ein weiteres Objekt <code>enemy</code> mit den Schlüsseln <code>name</code>,
+                    <code>health</code>, <code>attack</code>.</li>
+                <li>Füge dem <code>enemy</code>-Objekt eine Methode <code>attackPlayer()</code> hinzu, die den Spieler
+                    angreift und dessen Gesundheit verringert.</li>
+                <li>Erstelle ein Array <code>inventory</code> im <code>player</code>-Objekt mit einigen Gegenständen.
+                </li>
+                <li>Iteriere über das <code>inventory</code>-Array und gib jeden Gegenstand in der Konsole aus.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Projektideen</h2>
+            <ul>
+                <li>Charakterbogen für ein Rollenspiel als Objekt darstellen.</li>
+                <li>Objekte für verschiedene Zaubersprüche mit Effekten.</li>
+                <li>Ein digitales Inventarsystem mit Objekten und Mengen.</li>
+                <li>Highscore-Objekt für ein Mini-Game mit Spieler:innen-Infos.</li>
+                <li>Ein kleines Tier-Objekt mit Eigenschaften und Fähigkeiten.</li>
+                <li>Ein Objekt für ein Raumschiff mit verschiedenen Eigenschaften.</li>
+                <li>Ein Objekt für ein Auto mit Eigenschaften wie Marke, Modell und Baujahr.</li>
+                <li>Ein Objekt für ein Buch mit Titel, Autor und Genre.</li>
+                <li>Ein Objekt für ein Rezept mit Zutaten und Zubereitungsschritten.</li>
+                <li>Ein Objekt für ein Musikstück mit Titel, Künstler und Album.</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Speed Debugging-Challenges</h2>
+            <ol>
+                <li>Ein Objekt wird nicht korrekt angezeigt - Kommafehler?</li>
+                <li>Ein Zugriff auf <code>obj.name</code> ergibt <code>undefined</code>. Warum?</li>
+                <li>Ein Objekt soll verändert werden, aber <code>const</code> wirft einen Fehler - was tun?</li>
+                <li>Ein Schlüssel existiert nicht, aber der Code läuft weiter - wie abfangen?</li>
+                <li>Ein Objekt wird nicht korrekt kopiert - Referenzproblem?</li>
+                <li>Ein Array wird als Objekt behandelt - wie lösen?</li>
+                <li>Ein Objekt hat keine Methode - wie hinzufügen?</li>
+                <li>Ein Objekt wird nicht korrekt iteriert - wie lösen?</li>
+                <li>Ein Objekt hat keine Eigenschaften - wie initialisieren?</li>
+                <li>Ein Objekt wird nicht korrekt in einen String umgewandelt - wie lösen?</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p>Objekte sind wahre Helden im JavaScript-Universum: flexibel, mächtig und leicht verständlich. Du kannst
+                alles von Spielcharakteren bis hin zu APIs damit strukturieren. Je mehr du damit arbeitest, desto
+                epischer wird dein Code.</p>
+            <p>Denke daran, dass Objekte nicht nur Daten speichern, sondern auch Funktionen enthalten können. Das
+                macht sie zu einer großartigen Wahl für die Organisation von Code und Daten in deinen Projekten.</p>
+        </section>
+
+        <section class="playground">
+            <textarea id="codeInput" rows="30" cols="120">// Erstelle hier dein erstes Objekt!
+const spieler = {
+  name: "Lara",
+  klasse: "Schurkin",
+  level: 13
+};
+
+console.log(spieler);
+</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Eigenschaften_und_Methoden.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Werte ändern - Deine Variablen, deine Regeln!</h1>
+            <p>
+                Willkommen zurück, du tapferer Codekrieger! 🧙‍♂️ Heute lernen wir, wie du deinen Variablen einen
+                kleinen *Power-Up* verpassen kannst - indem du ihre Werte änderst! Stell dir vor, dein Held findet einen
+                neuen Helm oder trinkt einen Zaubertrank - zack, Werteänderung! Genau so funktioniert es auch in
+                JavaScript.
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Erklärung</h2>
+            <p>
+                Eine Variable speichert einen Wert. Und dieser Wert kann sich - je nachdem ob du <code>let</code> oder
+                <code>var</code> benutzt - im Laufe des Spiels ändern. Mit <code>const</code> bleibt der Wert wie ein
+                verzauberter Stein - für immer gleich. Hier ein einfaches Beispiel:
+            </p>
+<pre><code>// Wir starten mit einem Wert
+let leben = 3;
+
+// Der Spieler findet ein Herz!
+leben = leben + 1;
+
+console.log(leben); // Ausgabe: 4</code></pre>
+            <p>
+                🔁 Du kannst also mit deiner Variable machen, was du willst (solange du sie nicht mit <code>const</code>
+                fest versiegelt hast). Denk daran:
+            </p>
+            <ul>
+                <li><code>let</code> &amp; <code>var</code> → Wert änderbar</li>
+                <li><code>const</code> → Wert bleibt wie in Stein gemeißelt</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices</h1>
+            <ul>
+                <li>Verwende <code>let</code> nur, wenn du sicher bist, dass sich der Wert ändern soll.</li>
+                <li>Nutze <code>const</code> für alles, was konstant bleibt - das macht deinen Code sicherer.</li>
+                <li>Setze keine Variable auf einen komplett neuen Datentyp, wenn's keinen guten Grund gibt.</li>
+                <li>Kommentiere, warum du einen Wert änderst - für dein Zukunfts-Ich. 🧠</li>
+                <li>Vermeide „magische Zahlen“ - gib ihnen einen Namen!</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel</h2>
+<pre><code>let spielerLevel = 1;
+console.log("Level:", spielerLevel); // 1
+
+// Spieler besiegt einen Boss
+spielerLevel = spielerLevel + 1;
+console.log("Level Up!", spielerLevel); // 2
+
+// Bonuslevel durch Cheat
+spielerLevel += 5;
+console.log("Cheat aktiviert:", spielerLevel); // 7</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Fragen mit Antworten</h2>
+            <ol>
+                <li><strong>Kann man eine <code>const</code>-Variable ändern?</strong><br>Nein, der Wert bleibt fix.
+                </li>
+                <li><strong>Was passiert bei <code>leben = leben + 1;</code>?</strong><br>Die Variable wird um 1 erhöht
+                    - der Held lebt länger!</li>
+                <li><strong>Ist <code>spielerName = "Mario";</code> erlaubt, wenn <code>spielerName</code> mit
+                        <code>let</code> deklariert wurde?</strong><br>Ja, das geht.</li>
+                <li><strong>Was bewirkt <code>punkte += 10;</code>?</strong><br>Es erhöht die Variable
+                    <code>punkte</code> um 10 - eine Kurzform!</li>
+                <li><strong>Was passiert bei <code>const gold = 100; gold = 200;</code>?</strong><br>Fehler! Eine
+                    <code>const</code>-Variable kann nicht überschrieben werden.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Häufige Fehler und Lösungen</h2>
+            <ul>
+                <li><strong>Fehler:</strong>
+                    <code>Uncaught TypeError: Assignment to constant variable</code><br><strong>Lösung:</strong>
+                    Verwende <code>let</code> statt <code>const</code>, wenn du den Wert ändern willst.</li>
+                <li><strong>Fehler:</strong> Neue Variable mit gleichem Namen deklariert<br><strong>Lösung:</strong>
+                    Nutze keine doppelte <code>let</code>-Deklaration im selben Scope.</li>
+                <li><strong>Fehler:</strong> Initialwert vergessen<br><strong>Lösung:</strong> Gib direkt bei der
+                    Deklaration einen sinnvollen Startwert an.</li>
+                <li><strong>Fehler:</strong> Zahlen als Strings gespeichert<br><strong>Lösung:</strong> Nutze keine
+                    Anführungszeichen, wenn du rechnen willst: <code>let gold = 100;</code> statt <code>"100"</code>.
+                </li>
+                <li><strong>Fehler:</strong> Mit <code>let</code> deklariert, aber später <code>const</code>
+                    verwendet<br><strong>Lösung:</strong> Bleib konsequent bei einem Schlüsselwort.</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Übungen</h2>
+            <ol>
+                <li>Erstelle eine Variable <code>leben</code> und erhöhe sie um 2.</li>
+                <li>Erstelle <code>gold = 500</code> und ziehe 200 ab.</li>
+                <li>Baue eine Variable <code>istMagier</code> mit dem Wert <code>true</code> und ändere sie zu
+                    <code>false</code>.</li>
+                <li>Erhöhe <code>xp</code> mit dem Operator <code>+=</code>.</li>
+                <li>Setze eine Variable vom Typ String und ändere sie zu einer Zahl - was passiert?</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Projektideen</h2>
+            <ol>
+                <li><strong>Level Up Tracker</strong> - Eine kleine App, in der du Level, XP und Gold anpassen kannst.
+                </li>
+                <li><strong>Statusanzeige</strong> - Werte wie Leben, Mana, Hunger und Müdigkeit verändern sich durch
+                    Klicks.</li>
+                <li><strong>Timer</strong> - Ein Wert (Sekunden) wird jede Sekunde erhöht oder reduziert.</li>
+                <li><strong>Goldmanagement</strong> - Ausgabe, Einnahme, Lager - alles wird live berechnet.</li>
+                <li><strong>Inventarverwaltung</strong> - Werte für Items, Anzahl, Zustand werden verändert.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>3 Speed Debugging-Challenges</h2>
+            <ol>
+                <li><strong>Challenge:</strong> Was stimmt an <code>const leben = 5; leben = 6;</code>
+                    nicht?<br><strong>Tipp:</strong> Du kannst <code>const</code> nicht überschreiben!</li>
+                <li><strong>Challenge:</strong> Warum ergibt <code>"5" + 3</code> den Wert
+                    <code>"53"</code>?<br><strong>Tipp:</strong> Typen nicht durcheinanderwerfen!</li>
+                <li><strong>Challenge:</strong> Warum funktioniert <code>let punkte; punkte = punkte + 1;</code> nicht
+                    wie erwartet?<br><strong>Tipp:</strong> Du musst vorher einen Wert setzen!</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p>
+                Variablen sind nicht in Stein gemeißelt - zumindest wenn du <code>let</code> oder <code>var</code>
+                benutzt. Du kannst ihre Werte jederzeit ändern, erhöhen, verringern oder völlig austauschen - wie ein
+                Held, der sich weiterentwickelt. Nutze diese Macht weise, Padawan!
+            </p>
+        </section>
+
+        <section class="playground">
+            <textarea id="codeInput" rows="30" cols="120">// Hier kannst du deinen Code eintippen und testen
+let leben = 3;
+leben = leben + 1;
+console.log("Leben nach Heiltrank:", leben);</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Primitive_Typen.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

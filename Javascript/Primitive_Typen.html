@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="chapter">
+            <h1>Primitive Datentypen - Deine Basiszauber in JavaScript!</h1>
+            <p>
+                Willkommen, du pixel-schwingender Code-Magier! 🎮✨ In dieser Runde bekommst du dein erstes
+                **Magie-Grimoire**: die primitiven Datentypen in JavaScript. Sie sind wie die Grundzauber in einem
+                Rollenspiel - einfach, aber mächtig. Ohne sie ist jeder Code wie ein Murloc ohne Gurgelgeräusche. Lass
+                uns herausfinden, was sie draufhaben!
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Erklärung</h2>
+            <p>
+                In JavaScript gibt es <strong>7 primitive Datentypen</strong>. Diese Typen speichern nur einen einzigen,
+                unveränderlichen Wert (sie sind wie Pokébälle - nur ein Pokémon pro Ball!). Hier sind sie:
+            </p>
+            <ul>
+                <li><code>String</code> - Texte (z.B. <code>"Hallo Welt"</code>)</li>
+                <li><code>Number</code> - Zahlen (z.B. <code>42</code>)</li>
+                <li><code>Boolean</code> - Wahr/Falsch (<code>true</code> oder <code>false</code>)</li>
+                <li><code>undefined</code> - Noch nicht zugewiesen</li>
+                <li><code>null</code> - Absichtlich leer</li>
+                <li><code>BigInt</code> - Sehr große Zahlen (z.B.
+                    <code>1234567890123456789012345678901234567890n</code>)</li>
+                <li><code>Symbol</code> - Einzigartige, unveränderliche Werte (selten gebraucht, aber mächtig!)</li>
+            </ul>
+            <p>
+                🧙‍♂️ Sie sind die Bausteine deiner Logik - mit ihnen zauberst du Texte auf den Bildschirm, prüfst
+                Bedingungen und rechnest mit Goldstücken!
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices</h1>
+            <ul>
+                <li>Nutze <code>typeof</code>, um den Typ einer Variable zu prüfen: <code>typeof "Hallo"</code></li>
+                <li>Setze Variablen möglichst direkt beim Deklarieren - damit sie nicht <code>undefined</code> sind.
+                </li>
+                <li>Nutze <code>null</code> bewusst, um eine leere oder zurückgesetzte Variable zu markieren.</li>
+                <li>Vermeide wilde Typ-Mixe (z.B. <code>"5" + 1</code>) - das ergibt Chaos!</li>
+                <li>Für sehr große Zahlen, die nicht in <code>Number</code> passen, nutze <code>BigInt</code></li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel</h2>
+<pre><code>// String
+let heldenName = "Lara Codecraft";
+
+// Number
+let leben = 100;
+
+// Boolean
+let istMagisch = true;
+
+// undefined
+let geheimnis;
+
+// null
+let verloreneWaffe = null;
+
+// BigInt
+let galaktischeCredits = 999999999999999999999999999n;
+
+// Symbol
+let id = Symbol("geheim");</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Fragen mit Antworten</h2>
+            <ol>
+                <li><strong>Was ist der Unterschied zwischen <code>null</code> und <code>undefined</code>?</strong><br>
+                    <code>null</code> = bewusst leer, <code>undefined</code> = gar nicht initialisiert.
+                </li>
+                <li><strong>Was gibt <code>typeof true</code> zurück?</strong><br><code>"boolean"</code></li>
+                <li><strong>Welche Typen zählen zu den primitiven?</strong><br>
+                    String, Number, Boolean, undefined, null, BigInt, Symbol</li>
+                <li><strong>Warum <code>"5" + 1</code> = <code>"51"</code>?</strong><br>String + Zahl ergibt wieder
+                    einen String</li>
+                <li><strong>Wie speichert man eine Zahl mit mehr als 9007199254740991?</strong><br>Mit
+                    <code>BigInt</code></li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Häufige Fehler und Lösungen</h2>
+            <ul>
+                <li><strong>Fehler:</strong> Zahlen als Strings gespeichert<br><strong>Lösung:</strong> Kein
+                    <code>"100"</code>, sondern <code>100</code>!</li>
+                <li><strong>Fehler:</strong> <code>null</code> mit <code>undefined</code>
+                    verwechselt<br><strong>Lösung:</strong> <code>null</code> ist absichtlich leer!</li>
+                <li><strong>Fehler:</strong> Vergleich mit <code>==</code> statt
+                    <code>===</code><br><strong>Lösung:</strong> Immer <code>===</code> verwenden, um Typen
+                    mitzuvergleichen.</li>
+                <li><strong>Fehler:</strong> <code>BigInt</code> mit normalen Zahlen
+                    vermischt<br><strong>Lösung:</strong> Rechne nur mit <code>BigInt</code> vs. <code>BigInt</code>
+                </li>
+                <li><strong>Fehler:</strong> <code>typeof null</code> ergibt
+                    <code>"object"</code><br><strong>Lösung:</strong> Ist ein bekannter Bug in JS - ignoriere es einfach
+                    😅</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Übungen</h2>
+            <ol>
+                <li>Erstelle eine Variable <code>spielName</code> mit einem String.</li>
+                <li>Lege eine Variable <code>leben</code> mit einer Zahl an.</li>
+                <li>Erstelle eine <code>boolean</code>-Variable namens <code>istMagier</code>.</li>
+                <li>Prüfe den Typ einer Variable mit <code>typeof</code>.</li>
+                <li>Setze eine Variable auf <code>null</code> und überprüfe ihren Typ.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Projektideen</h2>
+            <ol>
+                <li><strong>Charaktergenerator</strong> - Erstelle Helden mit Name, Level, Magierstatus und mehr.</li>
+                <li><strong>Zauberspruch-Tester</strong> - Speichere Sprüche als Strings und analysiere ihre Wirkung.
+                </li>
+                <li><strong>Inventar-System</strong> - Boolean-Status ob ein Item ausgerüstet ist oder nicht.</li>
+                <li><strong>Zahlenraten-Spiel</strong> - Nutze <code>Number</code>, <code>prompt</code> und
+                    <code>Boolean</code>.</li>
+                <li><strong>Magier-Check</strong> - Ob ein Spieler zaubern darf, abhängig von seinem Boolean-Status.
+                </li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>3 Speed Debugging-Challenges</h2>
+            <ol>
+                <li><strong>Challenge:</strong> Warum ist <code>typeof null</code> gleich
+                    <code>"object"</code>?<br><strong>Lösung:</strong> Historischer JS-Bug - einfach akzeptieren!</li>
+                <li><strong>Challenge:</strong> Was ergibt
+                    <code>typeof undefinedVariable</code>?<br><strong>Lösung:</strong> <code>"undefined"</code></li>
+                <li><strong>Challenge:</strong> Warum ist <code>"10" + 5</code> gleich
+                    <code>"105"</code>?<br><strong>Lösung:</strong> Typen-Kollision! <code>"10"</code> ist ein String.
+                </li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p>
+                Primitive Datentypen sind die legendären Runensteine von JavaScript. Du brauchst sie für alles: Texte,
+                Zahlen, Logik und mehr. Lerne ihre Kräfte, beherrsche ihre Eigenarten - und dein Code wird so stark wie
+                ein epischer Raidboss!
+            </p>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">// Hier kannst du deinen Code eintippen und testen
+let name = "Zelda";
+let level = 12;
+let istHeld = true;
+
+console.log("Held:", name);
+console.log("Level:", level);
+console.log("Ist ein Held?", istHeld);</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Arrays.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

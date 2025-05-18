@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+  <meta name="author" content="CodeBloom">
+  <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+  <title>CodeBloom</title>
+  <!-- Füge hier weitere Metadaten oder Links hinzu -->
+  <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="navbar">
+        <li><a href="../../../main.html">Home</a></li>
+        <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+        <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+        <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+        <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+        <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+        <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+        <!-- Weitere Navbar-Links können hinzugefügt werden -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="chapter">
+      <h1>⚔️ HTML, CSS &amp; JavaScript - Das magische Dreieck der Webentwicklung</h1>
+
+      <p>
+        Stell dir vor, du baust ein Haus in Minecraft 🏠 - du brauchst erstmal die <strong>Grundstruktur</strong>:
+        Wände, Fenster, Türen - das ist <strong>HTML</strong>.
+      </p>
+      <p>
+        Danach willst du es hübsch machen: bunte Tapeten, coole Möbel, vielleicht ein paar Pflanzen - das ist
+        <strong>CSS</strong>.
+      </p>
+      <p>
+        Aber das Haus soll auch leben: Türen gehen auf, Lichter flackern, NPCs laufen herum - das ist
+        <strong>JavaScript</strong>! 🧠✨
+      </p>
+
+      <p>
+        Diese drei arbeiten als <strong>Dream Team</strong> zusammen - einzeln können sie was, aber erst gemeinsam
+        entfalten sie ihre volle Power:
+      </p>
+
+      <ul>
+        <li><strong>HTML</strong> = Struktur (Was ist auf der Seite?)</li>
+        <li><strong>CSS</strong> = Design (Wie sieht es aus?)</li>
+        <li><strong>JavaScript</strong> = Interaktion (Was kann ich damit tun?)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💡 Praktisches Beispiel: Interaktiver Button mit Stil</h2>
+      <p>Hier zeigen alle drei, was sie draufhaben:</p>
+
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Dreifaltigkeit des Webs&lt;/title&gt;
+  &lt;style&gt;
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;button onclick="alert('JS hat gesprochen!')"&gt;Klick mich!&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+      <p>HTML = Button-Struktur 💪, CSS = Style 💅, JavaScript = Funktion 💥.</p>
+    </section>
+
+    <section>
+      <h3>🧠 Fragen - Level up dein Wissen!</h3>
+      <ol>
+        <li>Welche Aufgabe erfüllt HTML in einer Webseite?</li>
+        <li>Wofür wird CSS verwendet?</li>
+        <li>Wie sorgt JavaScript für Interaktivität?</li>
+        <li>Warum sollten alle drei Technologien zusammen eingesetzt werden?</li>
+        <li>Was passiert, wenn man z.B. JavaScript ganz weglässt?</li>
+      </ol>
+    </section>
+
+    <section>
+      <h3>⚔️ Übungen - Der Pfad zur Meisterschaft</h3>
+      <ul>
+        <li>Erstelle eine HTML-Seite mit einer Überschrift und einem Button.</li>
+        <li>Style den Button mit CSS (z.B. Farbe, Rundung, Hover-Effekt).</li>
+        <li>Füge per JavaScript eine Nachricht hinzu, wenn der Button geklickt wird.</li>
+        <li>Füge eine CSS-Animation ein, wenn der Button angeklickt wird.</li>
+        <li>Erstelle eine "Like"-Funktion: Jeder Klick zählt Likes hoch und zeigt die Anzahl an.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>🛠️ Projektideen - Kombiniere die Macht!</h3>
+      <ul>
+        <li>Ein süßer Katzenklicker mit Zählfunktion 🐱.</li>
+        <li>Eine Mini-Blogseite mit stylischem Design und interaktiven Kommentaren.</li>
+        <li>Ein kleiner Online-Lebenslauf mit Effekten beim Scrollen.</li>
+        <li>Ein Quiz über Marvel-Helden mit Buttons und Punkten.</li>
+        <li>Ein digitales Tagebuch mit Farbschema-Wechsler und Datumsausgabe.</li>
+      </ul>
+    </section>
+
+    <section class="playground">
+      <textarea id="codeInput" rows="30" cols="120">
+// Hier kannst du den legendären Dreierpack testen:
+
+function runCode() {
+  document.getElementById("output").innerHTML = "HTML+CSS+JS = ❤️";
+}
+
+runCode();
+  </textarea><br>
+      <button onclick="runCode()">Code ausführen</button><br>
+      <pre id="output"></pre><br>
+      <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN Playground</a>
+      </p>
+    </section>
+
+    <section class="end">
+      <a href="./Tools_und_Setup.html"><button>Zum nächsten Thema</button></a>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+  </footer>
+  <script src="../../../src/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Objektmanipulation in JavaScript</h1>
+            <p>Herzlich willkommen zur nächsten Etappe deines JavaScript-Abenteuers! Heute zähmen wir die wilden Objekte
+                - und zeigen dir, wie du ihnen Eigenschaften hinzufügen, entfernen oder ändern kannst. Denk an Objekte
+                wie Inventare in RPGs - du kannst sie mit Items (Eigenschaften) befüllen, Items austauschen oder Items
+                wegwerfen. Bereit? Dann los!</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Eigenschaften hinzufügen, ändern und löschen</h2>
+            <p>Ein Objekt in JavaScript ist wie eine Schatztruhe. Du kannst jederzeit neue Schätze (Eigenschaften)
+                hinzufügen, bestehende austauschen oder alte wegwerfen.</p>
+
+            <pre><code>// Ein Objekt erstellen
+let held = {
+name: "Arthas",
+klasse: "Paladin"
+};
+
+// Eigenschaft hinzufügen
+held.level = 10;
+
+// Eigenschaft ändern
+held.name = "Arthas Menethil";
+
+// Eigenschaft löschen
+delete held.klasse;
+
+console.log(held);</code></pre>
+            <p>Und siehe da - ein Level-Up für deine Objektkenntnisse!</p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices</h1>
+            <p>
+            <ul>
+                <li>Verwende <code>const</code> für Objekte, die du nicht neu zuweisen möchtest.</li>
+                <li>Benutze <code>delete</code> sparsam - oft ist es besser, einen Wert auf <code>null</code> oder
+                    <code>undefined</code> zu setzen.</li>
+                <li>Nutze <code>hasOwnProperty</code> oder <code>in</code>, um zu prüfen, ob eine Eigenschaft existiert.
+                </li>
+                <li>Vermeide magische Strings - lieber Konstanten definieren.</li>
+                <li>Kommentiere komplexe Objekte - deine zukünftigen Ichs werden es dir danken!</li>
+                <li>Nutze <code>Object.keys(obj)</code>, um alle Eigenschaften eines Objekts zu bekommen.</li>
+                <li>Sei vorsichtig mit <code>this</code> in Methoden - es kann manchmal verwirrend sein!</li>
+                <li>Nutze <code>Object.freeze(obj)</code>, um ein Objekt unveränderlich zu machen.</li>
+                <li>Verwende <code>Object.assign(target, source)</code>, um Objekte zu kopieren oder zu kombinieren.</li>
+                <li>Nutze <code>Object.entries(obj)</code>, um ein Array von [key, value]-Paaren zu erhalten.</li>
+            </ul>
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Fragen &amp; Antworten</h2>
+            <ol>
+                <li>Wie fügt man eine neue Eigenschaft zu einem Objekt hinzu?<br><strong>A:</strong> Mit
+                    <code>objekt.neueEigenschaft = wert</code></li>
+                <li>Wie löscht man eine Eigenschaft?<br><strong>A:</strong> Mit dem <code>delete</code>-Operator</li>
+                <li>Was gibt <code>delete objekt</code> zurück?<br><strong>A:</strong> <code>false</code>, da man das
+                    gesamte Objekt nicht so löschen kann</li>
+                <li>Was ist der Unterschied zwischen <code>undefined</code> und einer gelöschten
+                    Eigenschaft?<br><strong>A:</strong> <code>undefined</code> bedeutet, dass eine Eigenschaft da ist,
+                    aber keinen Wert hat; gelöscht = komplett entfernt</li>
+                <li>Wie prüfst du, ob ein Objekt eine Eigenschaft besitzt?<br><strong>A:</strong> Mit <code>in</code>
+                    oder <code>hasOwnProperty()</code></li>
+                <li>Was ist der Unterschied zwischen <code>Object.keys()</code> und <code>Object.entries()</code>?<br><strong>A:</strong>
+                    <code>Object.keys()</code> gibt nur die Schlüssel zurück, während <code>Object.entries()</code>
+                    Paare aus Schlüssel und Wert zurückgibt.</li>
+                <li>Wie kannst du ein Objekt unveränderlich machen?<br><strong>A:</strong> Mit <code>Object.freeze()</code></li>
+                <li>Wie kannst du ein Objekt kopieren?<br><strong>A:</strong> Mit <code>Object.assign()</code> oder dem
+                    Spread-Operator <code>{...obj}</code></li>
+                <li>Wie kannst du alle Eigenschaften eines Objekts durchlaufen?<br><strong>A:</strong> Mit einer
+                    <code>for...in</code>-Schleife oder <code>Object.keys(obj).forEach()</code></li>
+                <li>Wie kannst du die Werte eines Objekts in ein Array umwandeln?<br><strong>A:</strong> Mit
+                    <code>Object.values(obj)</code></li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Häufige Fehler &amp; Lösungen</h2>
+            <ul>
+                <li><strong>Fehler:</strong> <code>Cannot set properties of undefined</code><br><strong>Lösung:</strong>
+                    Stelle sicher, dass das Objekt existiert, bevor du etwas hinzufügst.</li>
+                <li><strong>Fehler:</strong> Eigenschaften werden nicht gespeichert<br><strong>Lösung:</strong>
+                    Überprüfe Schreibfehler oder Scope-Probleme.</li>
+                <li><strong>Fehler:</strong> <code>delete</code> funktioniert nicht<br><strong>Lösung:</strong> Nur auf
+                    Objekteigenschaften anwendbar - keine Variablen löschen!</li>
+                <li><strong>Fehler:</strong> Eigenschaften überschreiben sich ungewollt<br><strong>Lösung:</strong>
+                    Nutze eindeutige Eigenschaftsnamen.</li>
+                <li><strong>Fehler:</strong> Zugriff auf gelöschte Eigenschaften<br><strong>Lösung:</strong> Mit
+                    <code>if ("key" in obj)</code> vorher prüfen.</li>
+                <li><strong>Fehler:</strong> <code>this</code> verweist nicht auf das Objekt<br><strong>Lösung:</strong>
+                    Nutze <code>bind()</code>, <code>call()</code> oder <code>apply()</code>, um den Kontext zu setzen.</li>
+                <li><strong>Fehler:</strong> <code>Object.freeze()</code> funktioniert nicht wie erwartet<br><strong>Lösung:</strong>
+                    Überprüfe, ob du das Objekt wirklich eingefroren hast.</li>
+                <li><strong>Fehler:</strong> <code>Object.assign()</code> kopiert nicht tief<br><strong>Lösung:</strong>
+                    Nutze eine tiefere Kopiermethode, wenn du verschachtelte Objekte hast.</li>
+                <li><strong>Fehler:</strong> <code>Object.entries()</code> gibt nicht das erwartete Ergebnis zurück<br><strong>Lösung:</strong>
+                    Überprüfe, ob du das richtige Objekt übergibst.</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Übungen</h2>
+            <ol>
+                <li>Erstelle ein Objekt <code>auto</code> mit Marke und Baujahr.</li>
+                <li>Füge dem Objekt eine Farbe hinzu.</li>
+                <li>Ändere das Baujahr.</li>
+                <li>Lösche die Farbe.</li>
+                <li>Prüfe mit <code>in</code>, ob das Objekt eine Eigenschaft <code>modell</code> hat.</li>
+                <li>Erstelle ein weiteres Objekt <code>auto2</code> und kopiere die Eigenschaften von <code>auto</code>
+                    hinein.</li>
+                <li>Nutze <code>Object.keys()</code>, um alle Eigenschaften von <code>auto</code> zu listen.</li>
+                <li>Nutze <code>Object.entries()</code>, um alle Schlüssel-Wert-Paare von <code>auto</code> zu listen.</li>
+                <li>Nutze <code>Object.freeze()</code>, um <code>auto</code> unveränderlich zu machen.</li>
+                <li>Versuche, eine Eigenschaft von <code>auto</code> zu ändern - was passiert?</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Projektideen</h2>
+            <ul>
+                <li>Ein Charaktereditor für ein Rollenspiel (Name, Klasse, Level etc.).</li>
+                <li>Ein Einkaufswagen-Objekt mit Produktlisten und Preisen.</li>
+                <li>Ein Musikplayer mit Track-Objekten.</li>
+                <li>Ein Haustier-Simulator mit Statuswerten als Objekt.</li>
+                <li>Ein Notizbuch-Objekt mit Titel, Inhalt und Priorität.</li>
+                <li>Ein Quiz-Objekt mit Fragen, Antworten und Punktzahlen.</li>
+                <li>Ein Rezept-Objekt mit Zutaten und Zubereitungsschritten.</li>
+                <li>Ein Wetter-Objekt mit Temperatur, Wetterzustand und Windgeschwindigkeit.</li>
+                <li>Ein Buch-Objekt mit Titel, Autor und Seitenzahl.</li>
+                <li>Ein Film-Objekt mit Titel, Regisseur und Genre.</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Speed Debugging-Challenges</h2>
+            <ol>
+                <li><code>let user = {}; user.name.firstname = "Luke";</code><br>👉 Wo liegt der Fehler?</li>
+                <li><code>delete "name";</code><br>👉 Warum passiert nichts?</li>
+                <li><code>objekt["key"] = wert;</code> funktioniert nicht.<br>👉 Warum? Tipp: Ist <code>objekt</code>
+                    wirklich ein Objekt?</li>
+                <li><code>objekt = {name: "Luke"}; objekt.name = "Leia";</code><br>👉 Warum wird <code>objekt</code
+                    > nicht aktualisiert?</li>
+                <li><code>objekt = {name: "Luke"}; objekt.name = "Leia";</code><br>👉 Warum wird <code>objekt</code>
+                    nicht aktualisiert?</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p>Objekte sind wandelbar - du kannst jederzeit neue Eigenschaften hinzufügen, ändern oder löschen. Mit ein
+                bisschen Übung wirst du zum wahren Objektdompteur! 🐯 Wenn du dein Inventar in einem Spiel verwalten
+                kannst, kannst du auch JavaScript-Objekte rocken.</p>
+            <p>Denke daran, dass Objekte wie Schatztruhen sind - du kannst sie jederzeit öffnen und neue Schätze
+                hinzufügen, aber sei vorsichtig, was du herausnimmst! Und vergiss nicht: Übung macht den Meister! 💪</p>
+            <p>Wenn du Fragen hast, schau dir die FAQs an oder kontaktiere uns über die Links in der Navigation.</p>
+            <p>Viel Spaß beim Programmieren!</p>
+        </section>
+
+        <section class="playground">
+            <textarea id="codeInput" rows="30" cols="120">// Probier hier deine Objektmanipulation aus!
+let drache = {
+  name: "Smaug",
+  alter: 500
+};
+
+drache.schatz = true;
+delete drache.alter;
+console.log(drache);</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Objekte vergleichen_und_schützen.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

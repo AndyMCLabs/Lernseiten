@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Tools &amp; Setup für JavaScript</h1>
+            <p>
+                Bevor du loslegst, brauchst du keine magischen Artefakte - nur ein paar gute Werkzeuge, die dich beim
+                Coden unterstützen. Und das Beste: Die meisten davon sind kostenlos!
+            </p>
+
+            <h2>🔧 Die Ausrüstung eines JavaScript-Helden</h2>
+            <ul>
+                <li><strong>Code-Editor:</strong> <em>Visual Studio Code (VS Code)</em> ist der König unter den
+                    Editoren. Kostenlos, leichtgewichtig und mit tausenden Erweiterungen.</li>
+                <li><strong>Browser:</strong> Chrome, Firefox oder Edge - mit integrierten Entwickler-Tools. Sie sind
+                    wie ein Zauberspiegel, der dir zeigt, was dein Code gerade treibt.</li>
+                <li><strong>Terminal (optional):</strong> Für mutige Helden, die sich auch mit der Kommandozeile
+                    anfreunden wollen - nützlich für npm, Git &amp; Co.</li>
+                <li><strong>Dateiverwaltung:</strong> Ein sauberer Projektordner mit einer HTML-, CSS- und JS-Datei.
+                    Ordnung ist das halbe Leben (und spart viele Bugs).</li>
+                <li><strong>Live Server:</strong> Eine Erweiterung für VS Code, die deine Seite bei jeder Änderung
+                    automatisch neu lädt - wie ein Zauber-Refresh!</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>⚙️ Minimales JavaScript-Setup</h2>
+            <p>Du brauchst nur drei Dateien:</p>
+<pre><code>projektordner/
+├── index.html
+├── style.css
+└── script.js</code></pre>
+
+            <p>Und hier die Verbindung der drei:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Mein erstes JS-Projekt&lt;/title&gt;
+        &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hallo JavaScript!&lt;/h1&gt;
+        &lt;script src="script.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </section>
+
+        <section>
+            <h3>🧠 Quizfragen (vom Lehrling zum Terminal-Zauberer)</h3>
+            <ol>
+                <li>Welcher Editor wird besonders für JavaScript empfohlen?</li>
+                <li>Wie bindet man eine externe JavaScript-Datei in HTML ein?</li>
+                <li>Welche Erweiterung in VS Code startet eine lokale Live-Vorschau?</li>
+                <li>Warum sind Browser-Entwicklertools hilfreich beim Coden?</li>
+                <li>Was macht die <code>console.log()</code>-Funktion?</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>🗡️ Übungen (Leveln durch Setup-Mastery)</h3>
+            <ol>
+                <li>Installiere Visual Studio Code und richte ein neues Projekt ein.</li>
+                <li>Erstelle die Dateien <code>index.html</code>, <code>style.css</code> und <code>script.js</code>.
+                </li>
+                <li>Schreibe ein <code>console.log("Hello World")</code> in die JS-Datei und öffne die Konsole im
+                    Browser.</li>
+                <li>Installiere die Live Server Extension in VS Code und nutze sie.</li>
+                <li>Füge einen Button in HTML ein, der beim Klicken eine JS-Funktion ausführt.</li>
+            </ol>
+        </section>
+        
+        <section>
+            <h3>🎯 Projektideen zum Üben deines Setups</h3>
+            <ul>
+                <li>🔁 Ein Live-Counter, der Zahlen hochzählt, sobald du die Seite lädst</li>
+                <li>🎨 Ein Farbwechsel-Knopf, der per JS den Hintergrund wechselt</li>
+                <li>📋 Ein To-Do-Feld, bei dem Eingaben im Terminal ausgegeben werden</li>
+                <li>🧙‍♀️ Ein Zufalls-Namensgenerator für Fantasy-Helden</li>
+                <li>🕹️ Eine einfache Clicker-Game-Startseite</li>
+            </ul>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">
+console.log("Willkommen zu deinem ersten JavaScript-Abenteuer!");
+
+function zauberSpruch() {
+alert("🧙‍♂️ Du hast den magischen Setup-Zauber gesprochen!");
+}</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Ordnerstruktur_und_JS-Datei.html"><button>Zum nächsten Thema</button></a>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+    <script src="../../../src/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Der mystische <code>&lt;script&gt;</code>-Tag</h1>
+            <p>Willkommen, tapfere*r Lernende*r! ✨ JavaScript wäre ohne den <code>&lt;script&gt;</code>-Tag wie ein
+                Laserschwert ohne Kyberkristall - nutzlos und traurig. In diesem Kapitel lernst du, wie du diesen
+                mächtigen HTML-Zauberstab richtig einsetzt!</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Was macht der <code>&lt;script&gt;</code>-Tag überhaupt?</h2>
+            <p>Der <code>&lt;script&gt;</code>-Tag erlaubt es dir, JavaScript-Code in deine HTML-Seite einzubetten oder
+                zu verlinken. Mit ihm kannst du Webseiten Leben einhauchen - Klicks abfangen, Elemente verändern oder
+                sogar Drachenkämpfe simulieren (na ja, fast). Er kann im <code>&lt;head&gt;</code> oder am Ende vom
+                <code>&lt;body&gt;</code> platziert werden - mit verschiedenen Auswirkungen auf das Ladeverhalten.</p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices beim Einsatz des <code>&lt;script&gt;</code>-Tags</h1>
+            <p>
+                💡 Platziere den <code>&lt;script&gt;</code>-Tag am besten <strong>am Ende des
+                    <code>&lt;body&gt;</code></strong>, damit dein HTML zuerst lädt und die Seite schneller sichtbar
+                wird.<br>
+                💡 Verwende den <strong><code>defer</code></strong>-Attribut, wenn du das Script im
+                <code>&lt;head&gt;</code> platzieren möchtest, aber das HTML zuerst laden lassen willst.<br>
+                💡 Lagere deinen Code aus - trenne HTML und JavaScript! Verwende dazu den <code>src</code>-Attribut und
+                eine eigene <code>.js</code>-Datei.
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel: Interne vs. Externe Scripts</h2>
+            <p>Hier ein kleines Beispiel aus dem Reich des magischen DOMs:</p>
+
+            <h4>Internes Script:</h4>
+<pre><code>&lt;script&gt;
+alert("Willkommen in der JavaScript-Welt!");
+&lt;/script&gt;</code></pre>
+
+            <h4>Externes Script:</h4>
+            <pre><code>&lt;script src="main.js"&gt;&lt;/script&gt;</code></pre>
+
+            <p>Und in deiner <code>main.js</code> Datei steht dann:</p>
+            <pre><code>console.log("Ready to code!");</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Quizfragen (mit Antworten)</h2>
+            <ol>
+                <li>Wofür wird der <code>&lt;script&gt;</code>-Tag verwendet?<br><strong>A:</strong> Zum Einbinden von
+                    JavaScript-Code.</li>
+                <li>Wo sollte der <code>&lt;script&gt;</code>-Tag platziert werden, damit die Seite schneller
+                    lädt?<br><strong>A:</strong> Am Ende des <code>&lt;body&gt;</code>.</li>
+                <li>Was bewirkt das <code>defer</code>-Attribut?<br><strong>A:</strong> Der Script-Code wird erst nach
+                    dem vollständigen Parsen des HTML ausgeführt.</li>
+                <li>Was ist der Vorteil von externen Skripten?<br><strong>A:</strong> Sauberer Code,
+                    Wiederverwendbarkeit und bessere Wartbarkeit.</li>
+                <li>Was passiert, wenn du ein <code>&lt;script&gt;</code> im <code>&lt;head&gt;</code> ohne
+                    <code>defer</code> einfügst?<br><strong>A:</strong> Die HTML-Verarbeitung stoppt, bis das Script
+                    geladen und ausgeführt ist.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Übungen</h2>
+            <ol>
+                <li>Füge ein einfaches <code>&lt;script&gt;</code> in dein HTML ein, das eine
+                    <code>alert()</code>-Nachricht zeigt.</li>
+                <li>Verlinke ein externes JavaScript in einer neuen Datei und gib eine Nachricht in der Konsole aus.
+                </li>
+                <li>Nutze das <code>defer</code>-Attribut und überprüfe den Unterschied im Ladeverhalten.</li>
+                <li>Greife mit JavaScript auf ein HTML-Element zu und ändere den Text (z.B. mit
+                    <code>document.getElementById().innerText</code>).</li>
+                <li>Erstelle eine Datei <code>hello.js</code>, binde sie ein, und baue ein einfaches Click-Event ein.
+                </li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Projektideen</h2>
+            <ol>
+                <li>Ein Begrüßungs-Popup beim Laden der Seite.</li>
+                <li>Ein Button, der einen witzigen Spruch anzeigt (z.B. „May the code be with you“).</li>
+                <li>Ein kleiner Tageszähler, wie viele Tage du schon JavaScript lernst.</li>
+                <li>Ein Light/Dark-Mode-Switch (JavaScript gesteuert).</li>
+                <li>Eine kleine Ladeanimation, die beim Start durch JavaScript gesteuert wird.</li>
+            </ol>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">// Probiere es aus!
+document.body.style.backgroundColor = "#121212";
+document.body.style.color = "#90cdf4";
+console.log("Hello JavaScript-Ritter!");</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Inline_vs_externes_JS.html"><button>Zum nächsten Thema</button></a>
+        </section>
+
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

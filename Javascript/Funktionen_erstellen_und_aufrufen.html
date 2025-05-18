@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Die Zauberformeln des Codes: Funktionen erstellen und aufrufen 🪄</h1>
+            <p>
+                Willkommen im hohen Rat der Code-Magierinnen, junger Padawan! Heute lernst du das mächtigste Werkzeug im
+                JavaScript-Universum kennen: Funktionen! 🧙‍♀️✨<br>
+                Eine Funktion ist wie ein Zauberspruch - du definierst ihn einmal und kannst ihn dann beliebig oft
+                aufrufen. Ob Heilzauber, Angriffscombo oder Kaffeekocher - mit Funktionen geht alles!
+            </p>
+            <p>
+                In diesem Kapitel wirst du lernen, wie du deine eigenen Funktionen erstellst, sie aufrufst und sogar mit
+                ihnen zauberst! Lass uns gleich loslegen! 🚀
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Funktionen erstellen - Deine eigene Magie schreiben ✍️</h2>
+            <p>
+                Eine Funktion wird mit dem Schlüsselwort <code>function</code> erstellt. Dann kommt der Name (dein
+                Zauberspruch), optional Parameter (Zutaten), und der Codeblock (das Rezept):
+            </p>
+            <pre><code>function begrüßeHeld() {
+console.log("Willkommen, tapferer Held! 🛡️");
+}</code></pre>
+            <p>Diese Funktion sagt jedem Held: "Hallo!" - wann immer du willst.</p>
+            <p>Hier ist ein weiteres Beispiel:</p>
+            <pre><code>function berechneMacht(stufe) {
+  return stufe * 42; // Macht ist Stufe mal 42
+}</code></pre>
+            <p>Diese Funktion berechnet die Macht eines Helden basierend auf seiner Stufe. Wenn du also
+                <code>berechneMacht(5)</code> aufrufst, bekommst du 210 zurück!</p>
+            <p>Du kannst auch Parameter hinzufügen, um deine Funktionen flexibler zu machen. Zum Beispiel:</p>
+            <pre><code>function begrüßeHeldMitName(name) {
+  console.log("Willkommen, " + name + ", tapferer Held! 🛡️");
+}</code></pre>
+            <p>Jetzt kannst du jeden Namen übergeben und die Funktion wird ihn verwenden!</p>
+            <p>Hier ist ein weiteres Beispiel:</p>
+            <pre><code>function berechneMachtMitName(stufe, name) {
+  console.log(name + " hat eine Macht von " + (stufe * 42) + "!");
+}</code></pre>
+            <p>Jetzt kannst du den Namen des Helden und seine Stufe übergeben, und die Funktion wird die Macht berechnen
+                und ausgeben!</p>
+            <p>Das ist die Magie der Funktionen! Du kannst sie immer wieder verwenden, ohne den Code neu schreiben zu
+                müssen. Das spart Zeit und macht deinen Code sauberer!</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Funktionen aufrufen - Zauberspruch aktivieren! 📣</h2>
+            <p>
+                Wenn du eine Funktion „casten“ willst, schreibst du einfach ihren Namen mit Klammern:
+            </p>
+            <pre><code>begrüßeHeld(); // Output: Willkommen, tapferer Held! 🛡️</code></pre>
+            <p>Das ist wie ein Zauberwort! Du kannst die Funktion überall im Code aufrufen, solange sie vorher definiert
+                wurde.</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Funktionen mit Parametern - Gib ihr Zutaten 🍲</h2>
+            <p>
+                Manche Zauber brauchen Zutaten - wie einen Namen oder eine Zahl:
+            </p>
+            <pre><code>function begrüße(name) {
+  console.log("Hallo, " + name + "! Willkommen im Abenteuerland!");
+}
+
+begrüße("Andreas"); // Output: Hallo, Andreas! Willkommen im Abenteuerland!</code></pre>
+            <p>Hier wird der Name „Andreas“ an die Funktion übergeben, und sie zaubert eine persönliche Begrüßung!</p>
+            <p>Du kannst auch mehrere Parameter verwenden:</p>
+            <pre><code>function berechneXP(level, bonus) {
+    return level * 100 + bonus;
+    }
+
+berechneXP(5, 50); // Output: 550</code></pre>
+            <p>Hier wird die Funktion mit zwei Parametern aufgerufen: dem Level und einem Bonus. Sie berechnet die
+                Erfahrungspunkte!</p>
+            <p>Das ist wie ein Rezept - du gibst der Funktion die Zutaten, und sie gibt dir das Ergebnis zurück!</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Rückgabewerte - Was du in den Zauberkessel wirfst, kommt zurück 🔁</h2>
+            <p>
+                Eine Funktion kann etwas zurückgeben, z.B. das Ergebnis einer Berechnung:
+            </p>
+            <pre><code>function verdopple(x) {
+  return x * 2;
+}
+
+let result = verdopple(7); // result ist jetzt 14
+console.log(result);</code></pre>
+            <p>Hier gibt die Funktion <code>verdopple</code> das Ergebnis zurück, und du kannst es in einer Variablen
+                speichern!</p>
+            <p>Das ist wie ein Zaubertrank - du gibst etwas hinein und bekommst etwas zurück!</p>
+            <p>Du kannst auch mehrere Rückgabewerte haben:</p>
+            <pre><code>function berechneMachtUndXP(level) {
+  let macht = level * 42;
+  let xp = level * 100;
+  return [macht, xp];
+}
+
+let [macht, xp] = berechneMachtUndXP(5); // macht ist 210, xp ist 500</code></pre>
+            <p>Hier gibt die Funktion ein Array mit zwei Werten zurück: Macht und Erfahrungspunkte!</p>
+            <p>Das ist wie ein Zauberbuch - du kannst mehrere Zauber auf einmal wirken!</p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices 🎯</h1>
+            <ul>
+                <li>Funktionen sollten einen klaren Namen und eine klar definierte Aufgabe haben</li>
+                <li>Verwende <code>return</code>, wenn du ein Ergebnis brauchst</li>
+                <li>Halte Funktionen kurz und verständlich</li>
+                <li>Nutze Parameter, um flexibel zu bleiben</li>
+                <li>Vermeide zu viele globale Variablen - nutze lokale Variablen in Funktionen</li>
+                <li>Teste deine Funktionen gründlich, um sicherzustellen, dass sie wie gewünscht funktionieren</li>
+                <li>Dokumentiere deine Funktionen, damit andere (und du selbst) sie später verstehen können</li>
+                <li>Verwende <code>console.log()</code>, um den Fluss deiner Funktionen zu debuggen</li>
+                <li>Nutze <code>if</code>-Bedingungen, um verschiedene Fälle zu behandeln</li>
+                <li>Verwende <code>switch</code>, wenn du viele Bedingungen hast, die auf einen Wert basieren</li>
+                <li>Nutze <code>try...catch</code>, um Fehler zu behandeln und den Code stabil zu halten</li>
+                <li>Verwende <code>setTimeout()</code> und <code>setInterval()</code>, um zeitgesteuerte Funktionen zu
+                    erstellen</li>
+                <li>Nutze <code>this</code>, um auf das aktuelle Objekt innerhalb einer Funktion zuzugreifen</li>
+                <li>Verwende <code>bind()</code>, um den Kontext einer Funktion zu ändern</li>
+                <li>Nutze <code>call()</code> und <code>apply()</code>, um Funktionen mit einem bestimmten Kontext
+                    aufzurufen</li>
+                <li>Verwende <code>arrow functions</code>, um kürzeren und lesbareren Code zu schreiben</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Praktisches Beispiel: Heiltrank-Brauer 🧪</h2>
+            <pre><code>function braueTrank(art) {
+  return "🧪 Du hast einen " + art + "-Trank gebraut!";
+}
+
+let trank = braueTrank("Heil");
+console.log(trank); // Output: 🧪 Du hast einen Heil-Trank gebraut!</code></pre>
+            <p>Hier haben wir eine Funktion, die einen Trank braut. Du kannst den Typ des Tranks angeben, und die
+                Funktion gibt dir das Ergebnis zurück!</p>
+            <p>Das ist wie ein Zaubertrank - du gibst die Zutaten und bekommst das Ergebnis!</p>
+            <p>Du kannst auch mehrere Tränke brauen:</p>
+            <pre><code>function braueTränke(arten) {
+    let trankListe = [];
+    for (let art of arten) {
+        trankListe.push(braueTrank(art));
+    }
+    return trankListe;
+    }
+
+let trankArten = ["Heil", "Mana", "Stärke"];
+let getränke = braueTränke(trankArten);
+console.log(getränke); // Output: [ '🧪 Du hast einen Heil-Trank gebraut!', '🧪 Du hast einen Mana-Trank gebraut!', '🧪 Du hast einen Stärke-Trank gebraut!' ]</code></pre>
+            <p>Hier haben wir eine Funktion, die mehrere Tränke braut. Du gibst eine Liste von Trankarten an, und die
+                Funktion gibt dir eine Liste der gebrauten Tränke zurück!</p>
+            <p>Das ist wie ein Zauberbuch - du kannst mehrere Zauber auf einmal wirken!</p>
+            <p>Das ist die Magie der Funktionen! Du kannst sie immer wieder verwenden, ohne den Code neu schreiben zu
+                müssen. Das spart Zeit und macht deinen Code sauberer!</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Fragen und Antworten 🧠</h2>
+            <ol>
+                <li><strong>Was ist eine Funktion?</strong><br>Ein wiederverwendbarer Codeblock mit optionalen
+                    Parametern.</li>
+                <li><strong>Wie ruft man eine Funktion auf?</strong><br>Mit ihrem Namen und Klammern:
+                    <code>meineFunktion()</code></li>
+                <li><strong>Was macht <code>return</code>?</strong><br>Gibt einen Wert zurück und beendet die Funktion.
+                </li>
+                <li><strong>Was sind Parameter?</strong><br>Werte, die du einer Funktion mitgeben kannst.</li>
+                <li><strong>Können Funktionen andere Funktionen aufrufen?</strong><br>Ja! Du kannst Zauber mit Zaubern
+                    kombinieren!</li>
+                <li><strong>Was ist der Unterschied zwischen <code>let</code> und
+                        <code>var</code>?</strong><br><code>let</code> hat Blockscope, <code>var</code> hat
+                    Funktionsscope.</li>
+                <li><strong>Was ist der Unterschied zwischen <code>==</code> und
+                        <code>===</code>?</strong><br><code>==</code> prüft nur den Wert, <code>===</code> auch den Typ.
+                </li>
+                <li><strong>Was ist Hoisting?</strong><br>Variablen und Funktionen werden an den Anfang des Codes
+                    verschoben.</li>
+                <li><strong>Was ist der Unterschied zwischen <code>function</code> und
+                        <code>=&gt;</code>?</strong><br><code>function</code> ist die klassische Funktionsdefinition,
+                    <code>=&gt;</code> ist eine Arrow-Funktion.</li>
+                <li><strong>Was ist der Unterschied zwischen <code>let</code> und
+                        <code>const</code>?</strong><br><code>let</code> ist veränderbar, <code>const</code> ist
+                    konstant.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Häufige Fehler &amp; Lösungen ⚠️</h2>
+            <ul>
+                <li><strong>Fehler:</strong> Funktion nicht aufgerufen<br><strong>Lösung:</strong> Vergiss die
+                    <code>()</code> beim Aufruf nicht!</li>
+                <li><strong>Fehler:</strong> <code>return</code> vergessen<br><strong>Lösung:</strong> Füge
+                    <code>return</code> hinzu, wenn du ein Ergebnis brauchst</li>
+                <li><strong>Fehler:</strong> Funktion vor der Definition aufgerufen<br><strong>Lösung:</strong> Stelle
+                    sicher, dass sie vorher deklariert ist (außer du nutzt <em>Function Hoisting</em>)</li>
+                <li><strong>Fehler:</strong> Parameter falsch übergeben<br><strong>Lösung:</strong> Prüfe, ob Anzahl und
+                    Typ der Parameter passen</li>
+                <li><strong>Fehler:</strong> Funktion zu komplex<br><strong>Lösung:</strong> In kleinere Funktionen
+                    aufteilen</li>
+                <li><strong>Fehler:</strong> Globale Variablen verwendet<br><strong>Lösung:</strong> Verwende lokale
+                    Variablen innerhalb der Funktion</li>
+                <li><strong>Fehler:</strong> <code>undefined</code> zurückgegeben<br><strong>Lösung:</strong> Überprüfe,
+                    ob du ein Ergebnis zurückgibst</li>
+                <li><strong>Fehler:</strong> Syntaxfehler<br><strong>Lösung:</strong> Überprüfe deine Klammern und
+                    Semikolons</li>
+                <li><strong>Fehler:</strong> Funktion nicht definiert<br><strong>Lösung:</strong> Stelle sicher, dass
+                    die Funktion existiert</li>
+                <li><strong>Fehler:</strong> Unendliche Rekursion<br><strong>Lösung:</strong> Überprüfe die
+                    Abbruchbedingung deiner Funktion</li>
+                <li><strong>Fehler:</strong> Falscher Rückgabewert<br><strong>Lösung:</strong> Überprüfe die Logik
+                    deiner Funktion</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Übungen mit steigendem Schwierigkeitsgrad 🧪</h2>
+            <ol>
+                <li>Erstelle eine Funktion <code>hallo()</code>, die "Hallo Welt!" ausgibt.</li>
+                <li>Erstelle eine Funktion <code>würfeln()</code>, die eine Zahl zwischen 1-6 zurückgibt.</li>
+                <li>Schreibe eine Funktion <code>begrüßung(name)</code>, die jemanden namentlich begrüßt.</li>
+                <li>Baue eine Funktion <code>istGerade(zahl)</code>, die <code>true</code> zurückgibt, wenn die Zahl
+                    gerade ist.</li>
+                <li>Erstelle eine Funktion <code>epischerLoot(level)</code>, die je nach Level einen anderen Gegenstand
+                    zurückgibt.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Projektideen 💡</h2>
+            <ol>
+                <li><strong>XP-Rechner</strong>: Gib eine Funktion, die Erfahrungspunkte berechnet</li>
+                <li><strong>Charakter-Ersteller</strong>: Funktion mit Namen, Klasse, Rasse</li>
+                <li><strong>Shop-Funktion</strong>: Gibt Itempreise zurück</li>
+                <li><strong>Dungeon-Master</strong>: Gibt je nach Raumnummer eine Herausforderung aus</li>
+                <li><strong>Zauberbuch</strong>: Eine Funktion pro Zauber - kannst du sie alle wirken?</li>
+                <li><strong>Loot-Generator</strong>: Funktion, die zufällige Beute generiert</li>
+                <li><strong>Quest-Generator</strong>: Funktion, die zufällige Quests erstellt</li>
+                <li><strong>Monster-Generator</strong>: Funktion, die zufällige Monster erstellt</li>
+                <li><strong>Charakter-Statistik</strong>: Funktion, die die Statistiken eines Charakters anzeigt</li>
+                <li><strong>Inventar-Manager</strong>: Funktion, die das Inventar eines Charakters verwaltet</li>
+                <li><strong>Wetter-Generator</strong>: Funktion, die zufälliges Wetter generiert</li>
+                <li><strong>Welt-Generator</strong>: Funktion, die eine zufällige Weltkarte erstellt</li>
+                <li><strong>NPC-Generator</strong>: Funktion, die zufällige NPCs erstellt</li>
+                <li><strong>Quest-Tracker</strong>: Funktion, die den Fortschritt einer Quest verfolgt</li>
+                <li><strong>Charakter-Editor</strong>: Funktion, die es ermöglicht, Charaktere zu bearbeiten</li>
+                <li><strong>Charakter-Viewer</strong>: Funktion, die die Details eines Charakters anzeigt</li>
+                <li><strong>Charakter-Exporter</strong>: Funktion, die Charaktere exportiert</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Speed Debugging-Challenges 🛠️</h2>
+            <ol>
+                <li><code>function() { console.log("Hi") }</code><br><strong>Fix:</strong> Es fehlt ein Name! z.B.
+                    <code>function sagHi() {...}</code></li>
+                <li><code>return x + y</code> außerhalb einer Funktion<br><strong>Fix:</strong> In eine Funktion packen!
+                </li>
+                <li><code>gibBegrüßung</code> (ohne Klammern)<br><strong>Fix:</strong> <code>gibBegrüßung()</code> zum
+                    Aufrufen</li>
+                <li><code>function berechne(x, y) { return x + y }</code><br><strong>Fix:</strong> Aufruf:
+                    <code>berechne(5, 10)</code></li>
+                <li><code>function() { console.log("Hallo") }</code><br><strong>Fix:</strong> Es fehlt ein Name! z.B.
+                    <code>function sagHallo() {...}</code></li>
+                <li><code>function berechneMacht(stufe) { return stufe * 42 }</code><br><strong>Fix:</strong> Aufruf:
+                    <code>berechneMacht(5)</code></li>
+                <li><code>function berechneXP(level, bonus) { return level * 100 + bonus }</code><br><strong>Fix:</strong>
+                    Aufruf: <code>berechneXP(5, 50)</code></li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung 📚</h2>
+            <p>
+                Funktionen sind wie Zaubersprüche - du definierst sie einmal und kannst sie jederzeit einsetzen. Ob
+                Begrüßung, Berechnung oder epischer Lootgenerator: Alles wird leichter, wenn du die Kraft der Funktionen
+                meisterst! 🧙‍♂️💫
+            </p>
+            <p>
+                Du hast gelernt, wie du Funktionen erstellst, sie aufrufst und mit Parametern arbeitest. Du weißt jetzt,
+                wie du Rückgabewerte verwendest und wie du deine Funktionen debuggen kannst. Außerdem hast du einige
+                Best Practices und häufige Fehler kennengelernt.
+            </p>
+            <p>
+                Jetzt bist du bereit, deine eigenen Funktionen zu erstellen und sie in deinen Projekten zu verwenden.
+                Lass deiner Kreativität freien Lauf und zaubere mit deinem Code! 🪄✨
+            </p>
+        </section>
+
+        <section class="playground">
+            <textarea id="codeInput" rows="30" cols="120">// Hier kannst du deinen Code eintippen und testen
+// Beispiel: Funktion zur Berechnung der Macht
+function heldenMacht(stufe) {
+return stufe * 42;
+}
+
+console.log(heldenMacht(5)); // 210</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Parameter_und_Rückgabewerte.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

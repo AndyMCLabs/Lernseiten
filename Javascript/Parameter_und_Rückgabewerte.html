@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Parameter &amp; Rückgabewerte - Die Geheimzutaten deiner Code-Zaubertränke 🧪✨</h1>
+            <p>
+                Willkommen zurück, junger Code-Alchemist! Heute geht es um die geheime Zutat jeder mächtigen Funktion:
+                <strong>Parameter</strong> und <strong>Rückgabewerte</strong>. 🌟<br>
+                Stell dir eine Funktion wie ein Kochrezept vor. Parameter sind die Zutaten - du gibst sie beim Aufruf
+                an. Rückgabewerte sind das fertige Gericht, das du am Ende bekommst. 🍝👨‍🍳
+            </p>
+            <p>
+                Lass uns gemeinsam die Geheimnisse dieser beiden Konzepte lüften und lernen, wie du sie meisterhaft
+                einsetzen kannst! 🧙‍♂️
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Was sind Parameter? 🧂</h2>
+            <p>
+                Parameter sind Werte, die du an eine Funktion übergibst, damit sie damit arbeiten kann. Du definierst
+                sie in der Klammer beim Erstellen der Funktion:
+            </p>
+<pre><code>function trankBrauen(zutat) {
+console.log("Du hast einen Trank mit " + zutat + " gebraut! 🧪");
+}
+
+trankBrauen("Einhornstaub"); // Ausgabe: Du hast einen Trank mit Einhornstaub gebraut!</code></pre>
+            <p>
+                Du kannst auch mehrere Zutaten (Parameter) verwenden:
+            </p>
+<pre><code>function mischung(zutat1, zutat2) {
+console.log("Deine Mischung enthält " + zutat1 + " und " + zutat2);
+}
+
+mischung("Feueressenz", "Wasserträne");</code></pre>
+            <p>
+                Hier sind <strong>Parameter</strong> wie Platzhalter für die Werte, die du übergibst. Sie helfen dir,
+                deine Funktionen flexibel zu gestalten! 🎨
+            </p>
+            <p>
+                Du kannst auch Standardwerte für Parameter festlegen, falls du keine Argumente übergibst:
+            </p>
+<pre><code>function potionBrauen(zutat = "Wasser") {
+    console.log("Du hast einen Trank mit " + zutat + " gebraut! 🧪");
+}
+
+potionBrauen(); // Ausgabe: Du hast einen Trank mit Wasser gebraut!</code></pre>
+            <p>
+                Hier wird "Wasser" als Standardwert verwendet, wenn kein Argument übergeben wird.
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Was ist ein Rückgabewert? 🎁</h2>
+            <p>
+                Ein Rückgabewert ist das, was eine Funktion <em>zurückliefert</em>, wenn sie fertig ist. Du benutzt das
+                Schlüsselwort <code>return</code>:
+            </p>
+            <pre><code>function berechneXP(level) {
+  return level * 100;
+}
+
+let xp = berechneXP(3); // xp ist jetzt 300
+console.log("Deine XP: " + xp);</code></pre>
+            <p>
+                Hier gibt die Funktion <code>berechneXP()</code> den Wert zurück, der dann in der Variablen <code>xp</code>
+                gespeichert wird. Du kannst den Rückgabewert auch direkt verwenden:
+            </p>
+            <pre><code>console.log("Deine XP: " + berechneXP(3));</code></pre>
+            <p>
+                Rückgabewerte sind wichtig, weil sie dir erlauben, das Ergebnis einer Funktion zu speichern und weiterzuverarbeiten! 🔄
+            </p>
+            <p>
+                Du kannst auch mehrere Rückgabewerte mit einem Objekt zurückgeben:
+            </p>
+            <pre><code>function berechneStats(stärke, geschicklichkeit) {
+    return {
+        schaden: stärke * 2,
+        ausweichchance: geschicklichkeit * 0.5
+    };
+}
+
+let stats = berechneStats(10, 5);
+console.log("Schaden: " + stats.schaden); // Ausgabe: Schaden: 20
+console.log("Ausweichchance: " + stats.ausweichchance); // Ausgabe: Ausweichchance: 2.5</code></pre>
+            <p>
+                Hier gibt die Funktion ein Objekt mit mehreren Werten zurück, die du dann einzeln abrufen kannst.
+            </p>
+            <p>
+                Rückgabewerte sind wie die Belohnung nach einem Abenteuer - sie zeigen dir, was du erreicht hast! 🏆
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices 🧙‍♂️</h1>
+            <ul>
+                <li>Verwende sprechende Namen für Parameter (z.B. <code>name</code> statt <code>x</code>)</li>
+                <li>Nutze nur so viele Parameter wie nötig (weniger ist mehr!)</li>
+                <li>Gib einen Wert mit <code>return</code> zurück, statt direkt <code>console.log()</code> zu benutzen -
+                    das macht Funktionen vielseitiger</li>
+                <li>Dokumentiere deine Parameter, damit andere (und du selbst) den Code verstehen</li>
+                <li>Rückgabewerte sollten klar definiert und sinnvoll benannt werden</li>
+                <li>Teste deine Funktionen gründlich, um sicherzustellen, dass sie die richtigen Werte zurückgeben</li>
+                <li>Vermeide globale Variablen in Funktionen, um Namenskonflikte zu vermeiden</li>
+                <li>Nutze Standardwerte für Parameter, um Funktionen flexibler zu machen</li>
+                <li>Verwende <code>console.log()</code> für Debugging, aber achte darauf, dass du <code>return</code>
+                    verwendest, um Werte zurückzugeben</li>
+                <li>Halte deine Funktionen kurz und prägnant - eine Funktion sollte eine Aufgabe erledigen</li>
+                <li>Vermeide zu viele verschachtelte Funktionen - das macht den Code schwer lesbar</li>
+                <li>Nutze <code>let</code> oder <code>const</code> für Variablen, um den Geltungsbereich zu kontrollieren</li>
+                <li>Verwende <code>===</code> statt <code>==</code>, um Typkonvertierungen zu vermeiden</li>
+                <li>Nutze <code>try...catch</code>, um Fehler abzufangen und zu behandeln</li>
+                <li>Verwende <code>console.error()</code>, um Fehler im Code zu protokollieren</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Praktisches Beispiel: Loot-Berechnung 🧤</h2>
+<pre><code>function berechneLoot(monsterLevel, spielerLevel) {
+let loot = (monsterLevel * 50) - (spielerLevel * 10);
+return loot &gt; 0 ? loot : 0;
+}
+
+console.log("Du erhältst " + berechneLoot(5, 2) + " Goldstücke! 💰");</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h2>Fragen und Antworten 🧠</h2>
+            <ol>
+                <li><strong>Was ist ein Parameter?</strong><br>Ein Platzhalter für einen Wert, den eine Funktion beim
+                    Aufruf bekommt.</li>
+                <li><strong>Was ist ein Argument?</strong><br>Der konkrete Wert, den du an einen Parameter übergibst.
+                </li>
+                <li><strong>Was macht <code>return</code>?</strong><br>Gibt einen Wert aus der Funktion zurück.</li>
+                <li><strong>Kann eine Funktion ohne Parameter sein?</strong><br>Ja, wenn sie keine Eingaben braucht.
+                </li>
+                <li><strong>Können Funktionen ohne Rückgabewert sein?</strong><br>Ja, sie führen dann nur Code aus,
+                    z.B. <code>console.log()</code>.</li>
+                <li><strong>Wie viele Parameter kann eine Funktion haben?</strong><br>So viele, wie du brauchst, aber
+                    weniger ist oft mehr!</li>
+                <li><strong>Was ist der Unterschied zwischen <code>let</code> und <code>var</code>?</strong><br>
+                    <code>let</code> hat einen Block-Scope, <code>var</code> hat einen Funktions-Scope.</li>
+                <li><strong>Was ist der Unterschied zwischen <code>==</code> und <code>===</code>?</strong><br>
+                    <code>==</code> prüft nur den Wert, <code>===</code> prüft auch den Typ.</li>
+                <li><strong>Was ist der Unterschied zwischen <code>return</code> und <code>console.log()</code>?</strong><br>
+                    <code>return</code> gibt einen Wert zurück, <code>console.log()</code> gibt nur eine Ausgabe in der
+                    Konsole aus.</li>
+                <li><strong>Wie kann ich mehrere Rückgabewerte zurückgeben?</strong><br>Mit einem Objekt oder Array.</li>
+                <li><strong>Was ist der Unterschied zwischen <code>undefined</code> und <code>null</code>?</strong><br>
+                    <code>undefined</code> bedeutet, dass eine Variable deklariert, aber nicht initialisiert wurde,
+                    <code>null</code> ist ein absichtlich gesetzter leerer Wert.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Häufige Fehler und Lösungen 🛠️</h2>
+            <ul>
+                <li><strong>Fehler:</strong> Zu viele oder falsche Argumente übergeben<br><strong>Lösung:</strong>
+                    Parameteranzahl checken!</li>
+                <li><strong>Fehler:</strong> <code>return</code> vergessen<br><strong>Lösung:</strong> Ohne
+                    <code>return</code> kommt kein Wert raus</li>
+                <li><strong>Fehler:</strong> Rückgabewert nicht gespeichert<br><strong>Lösung:</strong> Weise ihn z.B.
+                    einer Variablen zu</li>
+                <li><strong>Fehler:</strong> Parameter überschrieben<br><strong>Lösung:</strong> Nutze lokale Variablen
+                    und keine Namenskonflikte</li>
+                <li><strong>Fehler:</strong> console.log() statt return<br><strong>Lösung:</strong> Nur
+                    <code>return</code> gibt einen Wert zurück</li>
+                <li><strong>Fehler:</strong> Falscher Rückgabewert<br><strong>Lösung:</strong> Überprüfe die Logik in der
+                    Funktion</li>
+                <li><strong>Fehler:</strong> Typfehler bei Rückgabewerten<br><strong>Lösung:</strong> Typen prüfen und
+                    konvertieren</li>
+                <li><strong>Fehler:</strong> Parameter nicht definiert<br><strong>Lösung:</strong> Parameter in der
+                    Funktionsdefinition angeben</li>
+                <li><strong>Fehler:</strong> Rückgabewert nicht genutzt<br><strong>Lösung:</strong> Rückgabewert in einer
+                    Variablen speichern oder direkt verwenden</li>
+                <li><strong>Fehler:</strong> Parameter nicht genutzt<br><strong>Lösung:</strong> Parameter in der
+                    Funktionsdefinition verwenden</li>
+                <li><strong>Fehler:</strong> Rückgabewert nicht erwartet<br><strong>Lösung:</strong> Funktion so
+                    gestalten, dass sie den richtigen Typ zurückgibt</li>
+                <li><strong>Fehler:</strong> Parameter nicht übergeben<br><strong>Lösung:</strong> Überprüfe, ob alle
+                    benötigten Parameter übergeben wurden</li>
+                <li><strong>Fehler:</strong> Rückgabewert nicht gespeichert<br><strong>Lösung:</strong> Rückgabewert in
+                    einer Variablen speichern</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Übungen mit steigendem Schwierigkeitsgrad 🧗</h2>
+            <ol>
+                <li>Schreibe eine Funktion <code>verdopple(x)</code>, die das Doppelte zurückgibt.</li>
+                <li>Schreibe eine Funktion <code>begrüßung(name)</code>, die "Hallo [Name]!" zurückgibt.</li>
+                <li>Erstelle eine Funktion <code>addiere(a, b)</code>, die zwei Zahlen addiert und zurückgibt.</li>
+                <li>Erstelle <code>kampfkraft(str, agi, int)</code>, die Werte zusammenzählt.</li>
+                <li>Schreibe <code>kuchenBacken(zutatenArray)</code>, das ein Rezept basierend auf Zutaten zurückgibt.
+                </li>
+                <li>Erstelle eine Funktion <code>berechneAlter(geburtsjahr)</code>, die das Alter zurückgibt.</li>
+                <li>Schreibe eine Funktion <code>berechneDurchschnitt(werteArray)</code>, die den Durchschnittswert
+                    zurückgibt.</li>
+                <li>Erstelle eine Funktion <code>berechneKampfwert(stärke, geschicklichkeit)</code>, die den Kampfwert
+                    zurückgibt.</li>
+                <li>Schreibe eine Funktion <code>berechneZauber(stärke, mana)</code>, die den Zauberwert zurückgibt.</li>
+                <li>Erstelle eine Funktion <code>berechneLoot(monsterLevel, spielerLevel)</code>, die Loot zurückgibt.
+                </li>
+                <li>Schreibe eine Funktion <code>berechneXP(level)</code>, die XP zurückgibt.</li>
+                <li>Erstelle eine Funktion <code>berechneSchaden(stärke, wut)</code>, die den Schaden zurückgibt.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Projektideen 💡</h2>
+            <ol>
+                <li><strong>Level-Up Rechner:</strong> Rückgabe der nächsten XP-Stufe</li>
+                <li><strong>Mana-Kalkulator:</strong> Berechnung der Mana-Kosten eines Zaubers</li>
+                <li><strong>Beziehungsrechner:</strong> Kombiniere zwei Namen zu einer “Kompatibilitätsquote”</li>
+                <li><strong>NPC-Dialog Generator:</strong> Übergib Name und Rolle, gib Dialog zurück</li>
+                <li><strong>Magischer Namensgenerator:</strong> Basierend auf Vorname und Lieblingsfarbe</li>
+                <li><strong>Loot-Generator:</strong> Erstelle zufällige Loot-Items basierend auf Monsterlevel</li>
+                <li><strong>Quest-Generator:</strong> Erstelle Quests basierend auf Spielerlevel</li>
+                <li><strong>Charakter-Statistik-Tracker:</strong> Verfolge Charakterwerte und Rückgabe der besten Werte</li>
+                <li><strong>Inventar-Manager:</strong> Erstelle eine Funktion, die das Inventar eines Spielers zurückgibt</li>
+                <li><strong>Zauberbuch:</strong> Erstelle eine Funktion, die Zauber basierend auf Level zurückgibt</li>
+                <li><strong>Monster-Generator:</strong> Erstelle zufällige Monster basierend auf Spielerlevel</li>
+                <li><strong>Quest-Tracker:</strong> Verfolge Quests und Rückgabe des Fortschritts</li>
+                <li><strong>Charakter-Generator:</strong> Erstelle zufällige Charaktere basierend auf Vorlieben</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Speed Debugging Challenges ⚡</h2>
+            <ol>
+                <li><code>function summe(a, b) { a + b }</code><br><strong>Fix:</strong> <code>return a + b;</code></li>
+                <li><code>berechneAlter("Bob")</code>, aber Funktion erwartet Zahl<br><strong>Fix:</strong> Typ prüfen
+                    oder konvertieren</li>
+                <li><code>function lohn() { return }</code><br><strong>Fix:</strong> Rückgabewert fehlt, z. B.
+                    <code>return 1000;</code></li>
+                <li><code>function berechneXP(level) { return level * 100 }</code><br><strong>Fix:</strong> <code>return
+                    level * 100;</code></li>
+                <li><code>function potionBrauen(zutat) { console.log(zutat) }</code><br><strong>Fix:</strong> <code>return
+                    zutat;</code></li>
+                <li><code>function berechneLoot(monsterLevel, spielerLevel) { return monsterLevel * 50 }</code><br><strong>Fix:</strong>
+                    <code>return (monsterLevel * 50) - (spielerLevel * 10);</code></li>
+                <li><code>function berechneStats(stärke, geschicklichkeit) { return { schaden: stärke * 2 } }</code><br><strong>Fix:</strong>
+                    <code>return { schaden: stärke * 2, ausweichchance: geschicklichkeit * 0.5 };</code></li>
+                <li><code>function berechneZauber(stärke, mana) { return mana / 2 }</code><br><strong>Fix:</strong> <code>return
+                    stärke * mana;</code></li>
+                <li><code>function berechneKampfwert(stärke, geschicklichkeit) { return stärke + geschicklichkeit }</code><br><strong>Fix:</strong>
+                    <code>return stärke * geschicklichkeit;</code></li>
+                <li><code>function berechneLoot(monsterLevel, spielerLevel) { return monsterLevel * 50 - spielerLevel }</code><br><strong>Fix:</strong>
+                    <code>return (monsterLevel * 50) - (spielerLevel * 10);</code></li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung 📚</h2>
+            <p>
+                Parameter sind wie Zauberzutaten, Rückgabewerte das Ergebnis deiner Zauberei. Mit ihnen machst du deine
+                Funktionen flexibel, mächtig und wiederverwendbar. 🧙‍♀️🌈<br>
+                Und denk immer dran: Wer klug parametriert, gewinnt das Abenteuer!
+            </p>
+            <p>
+                Jetzt bist du bereit, deine Funktionen mit Parametern und Rückgabewerten zu verzaubern! 🪄✨<br>
+                Viel Spaß beim Programmieren! 🎉
+            </p>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">// Beispiel: Berechnung des epischen Schadens
+function epischerSchaden(stärke, wut) {
+return (stärke * 2) + (wut * 3);
+}
+
+console.log(epischerSchaden(5, 10)); // Output: 40</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Arrow_Functions.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

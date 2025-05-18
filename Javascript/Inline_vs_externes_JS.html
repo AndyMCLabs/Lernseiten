@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Inline vs. Externes JavaScript - Das Duell der Codeformen</h1>
+            <p>Stell dir vor, dein JavaScript wäre ein Superheld. Inline-JS ist wie der Typ, der mitten im Kampf noch
+                sein Cape anzieht - er ist da, aber es ist... unordentlich. Externes JS dagegen kommt ausgerüstet,
+                organisiert und bereit für alles - wie Batman mit Utility-Belt. 🦸‍♂️</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Was ist Inline-JavaScript?</h2>
+            <p>Inline-JS bedeutet: Du schreibst JavaScript **direkt in dein HTML**, meist innerhalb von Event-Attributen
+                oder einem <code>&lt;script&gt;</code>-Tag direkt in der Seite.</p>
+            <pre><code>&lt;button onclick="alert('Hallo Held!')"&gt;Klick mich!&lt;/button&gt;</code></pre>
+            <p>Das ist schnell, aber schnell wird's auch unübersichtlich. Wie ein Inventar voller Items ohne Sortierung.
+                😵‍💫</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Was ist Externes JavaScript?</h2>
+            <p>Hier wird dein Code **in einer eigenen Datei** gespeichert - sauber, wartbar, wiederverwendbar. Du
+                bindest die Datei dann mit <code>&lt;script src="main.js"&gt;&lt;/script&gt;</code> ein. Bäm, Ordnung!
+            </p>
+<pre><code>// main.js
+alert('Organisierter Held meldet sich!');</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practises</h1>
+            <p>
+                ✅ Verwende **externes JS**, um Code sauber zu halten und zu trennen.<br>
+                ✅ Nutze **Inline-JS** nur für schnelle Tests oder Mini-Demos.<br>
+                ✅ Lagere Event-Handler aus und verwende <code>addEventListener</code> statt <code>onclick</code> direkt
+                im HTML.<br>
+                ✅ Trenne Struktur (HTML), Präsentation (CSS) und Verhalten (JS) - das ist der
+                Dreifaltigkeits-Code-Glaube! ✝️💻✨
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel zum Nachmachen</h2>
+            <p>HTML-Datei:</p>
+            <pre><code>&lt;button id="heroBtn"&gt;Sag Hallo!&lt;/button&gt;
+&lt;script src="main.js" defer&gt;&lt;/script&gt;</code></pre>
+
+            <p>main.js:</p>
+<pre><code>document.getElementById("heroBtn").addEventListener("click", () =&gt; {
+alert("Hallo, mutiger Coder!");
+});</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Quizfragen (mit Antworten)</h2>
+            <ol>
+                <li>Was ist Inline-JavaScript?<br><strong>A:</strong> JavaScript direkt im HTML.</li>
+                <li>Was ist externer JavaScript-Code?<br><strong>A:</strong> JavaScript in einer ausgelagerten Datei.
+                </li>
+                <li>Warum ist externes JS besser wartbar?<br><strong>A:</strong> Weil es übersichtlicher und
+                    wiederverwendbar ist.</li>
+                <li>Was bedeutet Separation of Concerns?<br><strong>A:</strong> HTML, CSS und JS sollen getrennt sein.
+                </li>
+                <li>Was ist sicherer: Inline oder externes JS?<br><strong>A:</strong> Externes JS - leichter zu
+                    kontrollieren und auditieren.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Übungen</h2>
+            <ol>
+                <li>Erstelle einen Button mit Inline-JS, der eine Nachricht zeigt.</li>
+                <li>Schreibe die gleiche Funktion in einer externen <code>main.js</code>-Datei.</li>
+                <li>Füge <code>defer</code> hinzu und beobachte, wann der Code ausgeführt wird.</li>
+                <li>Ersetze Inline-Eventhandler durch <code>addEventListener</code>.</li>
+                <li>Organisiere deinen Code in Module - z.B. für Buttons, Inputs und Animationen (Fortgeschritten).</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Projektideen</h2>
+            <ol>
+                <li>Ein „Klick mich!“-Button, der bei jedem Klick etwas anderes sagt.</li>
+                <li>Eine To-Do-Liste mit externem Script und DOM-Manipulation.</li>
+                <li>Ein Light/Dark-Mode-Toggle mit externer Datei.</li>
+                <li>Ein Emoji-Würfler mit zufälliger Ausgabe per externem JS.</li>
+                <li>Ein Minispiel: „Fang den Button“ - bewegt sich weg, wenn du drüberfährst.</li>
+            </ol>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">
+// Teste hier externen JS-Code imitiert
+const btn = document.createElement("button");
+btn.innerText = "Klick mich, wenn du dich traust!";
+btn.onclick = () =&gt; alert("Bäm! Inline? Nope, dynamisch erzeugt!");
+document.body.appendChild(btn);</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Reihenfolge_und_Timing.html"><button>Zum nächsten Thema</button></a>
+        </section>
+
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

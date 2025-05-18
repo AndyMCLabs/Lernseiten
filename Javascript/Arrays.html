@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Arrays - Deine epische Abenteurer-Gruppe in JavaScript!</h1>
+            <p>
+                Willkommen zurück, Codeheld! 🎮✨ Stell dir ein Array wie deine Heldentruppe in einem RPG vor - Krieger,
+                Magier, Heiler, Schurke - alle gemeinsam in einem praktischen Inventarbeutel. Arrays helfen dir, mehrere
+                Werte unter einem Namen zu speichern und flexibel zu verwalten. Ob Items, Quests oder Highscores -
+                Arrays sind dein Werkzeug für Ordnung im Chaos!
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Erklärung</h2>
+            <p>
+                Ein <strong>Array</strong> ist ein spezieller Datentyp in JavaScript, der eine Sammlung von Werten
+                enthält. Diese Werte können Zahlen, Strings, Booleans, Objekte oder sogar andere Arrays sein. Du
+                erkennst ein Array an den <code>[eckigen Klammern]</code>.
+            </p>
+<pre><code>// Ein einfaches Array mit Waffen
+let waffen = ["Schwert", "Bogen", "Zauberstab"];</code></pre>
+            <p>
+                Auf einzelne Elemente greifst du mit einem Index zu (beginnend bei 0!):<br>
+                <code>waffen[1]</code> ergibt <code>"Bogen"</code> 🏹
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices</h1>
+            <ul>
+                <li>Gib Arrays sinnvolle Namen im Plural: <code>items</code>, <code>quests</code>, <code>zauber</code>
+                </li>
+                <li>Greife nicht auf nicht existierende Indizes zu - das ergibt <code>undefined</code></li>
+                <li>Nutze Methoden wie <code>push()</code>, <code>pop()</code>, <code>shift()</code> oder
+                    <code>unshift()</code> zur Manipulation</li>
+                <li>Nutze <code>for</code> oder <code>forEach</code> zum Durchlaufen</li>
+                <li>Mische nicht wild verschiedene Datentypen im selben Array - bleib strukturiert</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel</h2>
+<pre><code>let helden = ["Link", "Aloy", "Geralt", "Commander Shepard"];
+
+console.log("Erster Held:", helden[0]); // "Link"
+
+// Einen neuen Helden hinzufügen
+helden.push("Kratos");
+
+// Das letzte Element entfernen
+helden.pop();
+
+// Durch das Array iterieren
+helden.forEach(function(held, index) {
+console.log("Held Nr." + (index + 1) + ": " + held);
+});</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Fragen mit Antworten</h2>
+            <ol>
+                <li><strong>Wie erstellt man ein Array mit drei Zahlen?</strong><br>
+                    <code>let zahlen = [1, 2, 3];</code>
+                </li>
+                <li><strong>Was ergibt <code>tiere[0]</code>, wenn
+                        <code>let tiere = ["Katze", "Hund"];</code>?</strong><br><code>"Katze"</code></li>
+                <li><strong>Wie fügt man ein Element ans Ende eines Arrays?</strong><br><code>array.push("Neu")</code>
+                </li>
+                <li><strong>Was ist der Index des letzten Elements in einem Array mit 5
+                        Elementen?</strong><br><code>4</code></li>
+                <li><strong>Wie entfernt man das erste Element eines Arrays?</strong><br><code>array.shift()</code></li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Häufige Fehler und ihre Lösungen</h2>
+            <ul>
+                <li><strong>Fehler:</strong> Zugriff auf <code>array[10]</code> bei nur 3
+                    Elementen<br><strong>Lösung:</strong> Immer prüfen, wie lang das Array ist mit
+                    <code>array.length</code></li>
+                <li><strong>Fehler:</strong> <code>array.length()</code> statt
+                    <code>array.length</code><br><strong>Lösung:</strong> <code>length</code> ist eine Eigenschaft, kein
+                    Funktionsaufruf</li>
+                <li><strong>Fehler:</strong> Schleifen laufen zu lange<br><strong>Lösung:</strong> Nutze
+                    <code>i &lt; array.length</code>, nicht <code>i &lt;= array.length</code></li>
+                <li><strong>Fehler:</strong> Leeres Array wird nicht überprüft<br><strong>Lösung:</strong> Mit
+                    <code>array.length === 0</code> auf Leerheit prüfen</li>
+                <li><strong>Fehler:</strong> Werte mit <code>=</code> statt <code>push()</code>
+                    hinzufügen<br><strong>Lösung:</strong> <code>array.push("Neuer Eintrag")</code> verwenden</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Übungen</h2>
+            <ol>
+                <li>Erstelle ein Array mit deinen 3 Lieblingsspielen.</li>
+                <li>Füge deinem Array ein weiteres Spiel hinzu.</li>
+                <li>Entferne das erste Spiel mit <code>shift()</code>.</li>
+                <li>Zeige alle Spiele mit <code>forEach()</code> an.</li>
+                <li>Schreibe eine Funktion, die die Anzahl deiner Spiele im Array zurückgibt.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Projektideen</h2>
+            <ol>
+                <li><strong>To-Do-Liste</strong> - Nutzer kann Aufgaben hinzufügen/löschen.</li>
+                <li><strong>Inventarsystem</strong> - Items hinzufügen, entfernen, auflisten.</li>
+                <li><strong>Highscore-Liste</strong> - Zeige Spieler und Punkte sortiert an.</li>
+                <li><strong>Namensgenerator</strong> - Kombiniere Arrays zu Fantasynamen.</li>
+                <li><strong>Playlist-Verwaltung</strong> - Songs abspielen, hinzufügen, löschen.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>3 Speed Debugging-Challenges</h2>
+            <ol>
+                <li><strong>Fehler:</strong> <code>heroes.length()</code> gibt einen Fehler<br><strong>Lösung:</strong>
+                    Richtig ist <code>heroes.length</code></li>
+                <li><strong>Fehler:</strong> Letzter Index eines 3er-Arrays ist
+                    <code>3</code><br><strong>Lösung:</strong> Index beginnt bei <code>0</code> - letzter ist
+                    <code>2</code></li>
+                <li><strong>Fehler:</strong> Schleife läuft bis
+                    <code>i &lt;= array.length</code><br><strong>Lösung:</strong> Nur <code>&lt;</code> verwenden</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p>
+                Arrays sind deine treue Party aus Daten-Abenteurern. Sie halten alles zusammen, was zusammengehört - in
+                Reihenfolge, bereit zur Manipulation. Mit Arrays kannst du komplexe Datenmengen elegant bändigen und
+                zauberhafte Dinge bauen. Nutze sie weise, Champion!
+            </p>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">// Hier kannst du deinen Code eintippen und testen
+let spiele = ["Zelda", "Cyberpunk 2077", "Hollow Knight"];
+spiele.push("Stardew Valley");
+
+spiele.forEach(function(spiel, index) {
+console.log("Spiel " + (index + 1) + ": " + spiel);
+});</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Objekte.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Objekte - Die Schatztruhen deines Codes!</h1>
+            <p>
+                Willkommen, edler Codekrieger! 🧙‍♂️ Während Arrays deine Party sind, sind <strong>Objekte</strong> die
+                epischen Schatztruhen, in denen du strukturierte Daten speicherst - wie ein Charakterbogen bei D&D! Du
+                willst einem Helden Namen, Klasse, Level und Spezialattacken zuweisen? Dann brauchst du:
+                <code>{ Objekte }</code> - der Schlüssel zu komplexen Datenstrukturen in JavaScript!
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Erklärung</h2>
+            <p>
+                Objekte bestehen aus sogenannten <strong>Schlüssel-Wert-Paaren</strong>. Der <em>Schlüssel</em> (Key)
+                ist wie der Name eines Fachs, der <em>Wert</em> (Value) ist der Inhalt dieses Fachs. Du erkennst ein
+                Objekt an den <code>{geschweiften Klammern}</code>.
+            </p>
+            <pre><code>// Ein Held als Objekt
+let held = {
+  name: "Zelda",
+  klasse: "Magierin",
+  level: 42,
+  spezialAttacke: "Lichtpfeil"
+};</code></pre>
+            <p>
+                Auf die Werte greifst du zu mit:<br>
+                <code>held.name</code> oder <code>held["name"]</code> → "Zelda"
+            </p>
+            <p>
+                Du kannst Objekte auch verschachteln, um komplexe Strukturen zu erstellen. Zum Beispiel ein Held mit
+                Inventar: 
+<pre><code>held.inventar = {waffen: ["Schwert", "Bogen"], rüstung: "Leder"}</code></pre>.
+Hier ist <pre><code>held.inventar</code></pre> ein weiteres Objekt mit seinen eigenen Schlüsseln und Werten.
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices</h1>
+            <ul>
+                <li>Verwende sinnvolle, sprechende Schlüssel (z.B. <code>level</code>, <code>hp</code>,
+                    <code>mana</code>)</li>
+                <li>Nutze <code>const</code> für Objekte, wenn du nur deren Inhalt ändern willst</li>
+                <li>Strukturiere verschachtelte Objekte übersichtlich</li>
+                <li>Verwende Punktnotation (<code>obj.key</code>) statt Klammernotation, wo möglich</li>
+                <li>Nutze Objekte, wenn du Eigenschaften benennen willst (statt anonyme Werte wie bei Arrays)</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel</h2>
+<pre><code>// Objekt "waffe"
+let waffe = {
+name: "Drachentöter",
+schaden: 120,
+haltbarkeit: 80,
+element: "Feuer"
+};
+
+console.log(waffe.name); // "Drachentöter"
+
+// Wert ändern
+waffe.schaden = 150;
+
+// Neue Eigenschaft hinzufügen
+waffe.seltenheit = "legendär";
+
+console.log(waffe);</code></pre>
+            <p>
+                Hier siehst du, wie du ein Objekt erstellst, Werte änderst und neue Eigenschaften hinzufügst. Objekte
+                sind super flexibel und helfen dir, deine Daten zu organisieren!
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Fragen mit Antworten</h2>
+            <ol>
+                <li><strong>Wie erstellt man ein leeres Objekt?</strong><br>
+                    <code>let obj = {};</code>
+                </li>
+                <li><strong>Wie greift man auf <code>held.name</code> zu?</strong><br>
+                    <code>mit Punktnotation: held.name</code>
+                </li>
+                <li><strong>Wie fügt man dem Objekt <code>held</code> einen Schlüssel <code>mana</code> mit dem Wert 50
+                        hinzu?</strong><br>
+                    <code>held.mana = 50;</code>
+                </li>
+                <li><strong>Wie entfernt man eine Eigenschaft?</strong><br>
+                    <code>delete held.mana;</code>
+                </li>
+                <li><strong>Wie iteriert man durch ein Objekt?</strong><br>
+                    <code>for (let key in obj) { console.log(obj[key]); }</code>
+                </li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Häufige Fehler und ihre Lösungen</h2>
+            <ul>
+                <li><strong>Fehler:</strong> Zugriff auf nicht vorhandene Eigenschaft<br>
+                    <strong>Lösung:</strong> Prüfen mit <code>if ("key" in obj)</code>
+                </li>
+                <li><strong>Fehler:</strong> Objekt wird mit <code>[]</code> statt <code>{}</code> erstellt<br>
+                    <strong>Lösung:</strong> Arrays = <code>[]</code>, Objekte = <code>{}</code>
+                </li>
+                <li><strong>Fehler:</strong> Punktnotation bei Variablen-Schlüssel<br>
+                    <strong>Lösung:</strong> Bei dynamischen Keys: <code>obj[variable]</code>
+                </li>
+                <li><strong>Fehler:</strong> Key enthält Leerzeichen<br>
+                    <strong>Lösung:</strong> In Anführungszeichen schreiben: <code>{"first name": "Link"}</code>
+                </li>
+                <li><strong>Fehler:</strong> Objekt überschrieben statt erweitert<br>
+                    <strong>Lösung:</strong> Neue Eigenschaften mit <code>obj.neu = wert</code> ergänzen
+                </li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Übungen</h2>
+            <ol>
+                <li>Erstelle ein Objekt <code>spielCharakter</code> mit den Eigenschaften: <code>name</code>,
+                    <code>klasse</code> und <code>level</code>.</li>
+                <li>Füge eine neue Eigenschaft <code>waffe</code> hinzu.</li>
+                <li>Ändere den <code>level</code>-Wert.</li>
+                <li>Gib alle Werte mit <code>console.log()</code> aus.</li>
+                <li>Schreibe eine Funktion <code>zeigeCharakter(objekt)</code>, die alle Eigenschaften ausgibt.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Projektideen</h2>
+            <ol>
+                <li><strong>Charakter-Editor</strong> - Erstelle, bearbeite und speichere Helden mit Objekten</li>
+                <li><strong>Monster-Datenbank</strong> - Liste von Monstern mit Typ, HP, Schwächen</li>
+                <li><strong>Item-Lexikon</strong> - Beschreibe Items mit Objekten inkl. seltener Eigenschaften</li>
+                <li><strong>Settings-Konfigurator</strong> - Einstellungen als Objekt speichern und ändern</li>
+                <li><strong>NPC-Generator</strong> - Zufällige Namen, Rollen und Sprüche</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>3 Speed Debugging-Challenges</h2>
+            <ol>
+                <li><strong>Fehler:</strong> <code>let obj = [];</code><br><strong>Lösung:</strong>
+                    <code>let obj = {};</code></li>
+                <li><strong>Fehler:</strong> Zugriff mit <code>obj."name"</code><br><strong>Lösung:</strong>
+                    <code>obj["name"]</code> oder <code>obj.name</code></li>
+                <li><strong>Fehler:</strong> Schleife: <code>for (let i in obj) { console.log(i); }</code> zeigt nur
+                    Keys<br><strong>Lösung:</strong> <code>console.log(obj[i]);</code> nutzen für Werte</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p>
+                Objekte sind wie Zauberbücher - voller Informationen, die du jederzeit abrufen, erweitern und
+                manipulieren kannst. Sie machen deinen Code lesbarer, organisierter und sind ein Must-Have in deinem
+                Toolbelt. Egal ob du Helden, Items oder Gegner beschreibst - mit Objekten wird's richtig strukturiert!
+            </p>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">// Hier kannst du deinen Code eintippen und testen
+let npc = {
+name: "Gandalf",
+rolle: "Weiser",
+spruch: "Du kommst nicht vorbei!"
+};
+
+npc.alter = 2019;
+
+for (let key in npc) {
+console.log(key + ": " + npc[key]);
+}</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Typprüfung_und_Umwandlung.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

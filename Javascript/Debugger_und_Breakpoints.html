@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Debugger und Breakpoints - Der Zeitzauber deiner Codewelt ⏱️🔍</h1>
+            <p>
+                Willkommen in der Zauberschule der Programmierkunst, wo wir heute lernen, wie man die Zeit anhält! 🧙‍♀️
+                Mit <code>debugger</code> und Breakpoints kannst du deinem Code beim Denken zusehen - wie ein Jedi, der
+                die Macht spürt oder Doctor Strange, der durch Zeitlinien wandert. Bereit, den Debugging-Zauber zu
+                meistern?
+            </p>
+            <p>
+                In diesem Kapitel erfährst du, wie du mit dem Debugger und Breakpoints deine Codeabenteuer meistern
+                kannst. Egal, ob du ein Anfänger oder ein erfahrener Entwickler bist, diese Techniken helfen dir, Bugs
+                zu finden und deinen Code zu optimieren. Lass uns loslegen! 🚀
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Was sind Breakpoints? 🧷</h2>
+            <p>
+                Breakpoints sind magische Haltestellen im Code. Du platzierst sie im Browser-DevTool (meist im
+                „Sources“-Tab), und der Code stoppt genau dort. Du kannst dann jede Variable inspizieren, Schritt für
+                Schritt weitermachen und verstehen, was dein Code tut - oder eben nicht tut. 😅
+            </p>
+            <pre><code>function heldenprüfung() {
+    let gold = 100;
+    let trank = "Heiltrank";
+    console.log(`Du kaufst einen ${trank} für 50 Gold.`);
+    gold -= 50;
+    console.log(`Gold übrig: ${gold}`);
+}
+
+heldenprüfung();</code></pre>
+                <p>
+                    Um einen Breakpoint zu setzen, klicke einfach auf die Zeilennummer im DevTool. Ein blauer Punkt erscheint
+                    und der Code stoppt dort, wenn du ihn ausführst. Du kannst dann den Code Schritt für Schritt
+                    durchgehen, indem du „Step Over“ oder „Step Into“ wählst. So kannst du sehen, was in deinem Code
+                    passiert und wo es vielleicht hakt. 🐛
+                </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Was macht das <code>debugger</code> Keyword? 🧙‍♂️</h2>
+            <p>
+                Schreibe <code>debugger;</code> in deinen Code, und wenn DevTools geöffnet sind, hält der Browser genau
+                an dieser Stelle an - so, als hättest du einen Breakpoint dort gesetzt. Praktisch für spontane
+                Gedankenkontrolle! 😄
+            </p>
+<pre><code>function rufDerWilden() {
+let ork = "Grunzer";
+debugger;
+console.log(ork + " stürmt los!");
+}
+
+rufDerWilden();</code></pre>
+            <p>
+                Das ist besonders nützlich, wenn du nicht immer im DevTool bist, aber trotzdem einen Stopp einlegen
+                möchtest. Es ist wie ein magischer Zauberstab, der dir hilft, den Code zu verstehen, ohne ständig die
+                DevTools zu öffnen. Aber Vorsicht: Vergiss nicht, <code>debugger;</code> vor dem Veröffentlichen zu
+                entfernen! Sonst wird dein Code zum Debugging-Abenteuer für alle! 🕵️‍♂️
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices ✨</h1>
+            <ul>
+                <li>Setze Breakpoints gezielt vor komplexen Codeabschnitten</li>
+                <li>Nutze <code>debugger</code> nur in der Entwicklung - niemals in der Produktion!</li>
+                <li>Erforsche Variablen im Scope und beobachte ihre Entwicklung</li>
+                <li>Nutze „Step Over“ und „Step Into“, um Funktionen zu verfolgen</li>
+                <li>Halte Ausschau nach unerwarteten Werten in Loops</li>
+                <li>Verwende „Watch“ für Variablen, die du im Auge behalten möchtest</li>
+                <li>Nutze „Call Stack“, um den Aufrufverlauf zu sehen</li>
+                <li>Teste deinen Code regelmäßig mit Breakpoints</li>
+                <li>Entferne alle Debugger-Statements vor dem Deployment</li>
+                <li>Halte deinen Code sauber und lesbar, um das Debugging zu erleichtern</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Fragen und Antworten 📚</h2>
+            <ol>
+                <li><strong>Was bewirkt ein Breakpoint?</strong><br>Er hält den Code an einer bestimmten Stelle an.</li>
+                <li><strong>Wie aktiviert man einen Breakpoint?</strong><br>Durch Klick auf die Zeilennummer in den
+                    DevTools.</li>
+                <li><strong>Was macht das <code>debugger</code> Keyword?</strong><br>Es funktioniert wie ein Breakpoint
+                    - wenn DevTools offen sind.</li>
+                <li><strong>Was bedeutet „Step Over“?</strong><br>Eine Funktion wird ausgeführt, aber du steigst nicht
+                    in sie ein.</li>
+                <li><strong>Wann sollte man <code>debugger</code> entfernen?</strong><br>Vor dem Veröffentlichen deines
+                    Codes!</li>
+                <li><strong>Was ist der „Call Stack“?</strong><br>Eine Liste der Funktionen, die aufgerufen wurden.</li>
+                <li><strong>Wie kann ich Variablen beobachten?</strong><br>Im „Watch“-Tab der DevTools.</li>
+                <li><strong>Was ist der Unterschied zwischen „Step Into“ und „Step Over“?</strong><br>„Step Into“ geht in
+                    die Funktion hinein, „Step Over“ überspringt sie.</li>
+                <li><strong>Wie kann ich den Wert einer Variablen ändern?</strong><br>Im „Scope“-Tab der DevTools.</li>
+                <li><strong>Was ist der „Scope“?</strong><br>Der Bereich, in dem eine Variable definiert ist.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Häufige Fehler &amp; Lösungen ⚠️</h2>
+            <ul>
+                <li><strong>Debugger greift nicht:</strong> ➤ Sind die DevTools offen?</li>
+                <li><strong>Zu viele Breakpoints:</strong> ➤ Setze nur, was du brauchst.</li>
+                <li><strong>Vergessene <code>debugger;</code> im Code:</strong> ➤ Vor dem Deploy entfernen!</li>
+                <li><strong>Breakpoints greifen nicht im Minified Code:</strong> ➤ Nutze die originale Source Map.</li>
+                <li><strong>Kein Verständnis vom Scope:</strong> ➤ Erkunde Variablen in „Scope“ Tab!</li>
+                <li><strong>Unklare Fehlerursache:</strong> ➤ Nutze „Call Stack“, um den Ursprung zu finden.</li>
+                <li><strong>Unnötige Variablen im Watch:</strong> ➤ Entferne, was du nicht brauchst.</li>
+                <li><strong>Falsche Werte in Variablen:</strong> ➤ Überprüfe den Codefluss und die Zuweisungen.</li>
+                <li><strong>Unklare Funktionsaufrufe:</strong> ➤ Nutze „Step Into“, um den Aufruf zu verfolgen.</li>
+                <li><strong>Unbekannte Fehler:</strong> ➤ Nutze „Console“ für Fehlermeldungen und Debugging-Hinweise.</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Übungen für Debugger &amp; Breakpoints 🧪</h2>
+            <ol>
+                <li>Setze einen Breakpoint vor eine <code>console.log()</code>-Ausgabe und inspiziere Variablen</li>
+                <li>Füge <code>debugger;</code> in eine Funktion und führe sie aus</li>
+                <li>Nutze Step Over, um zu sehen, wie der Code Zeile für Zeile abläuft</li>
+                <li>Nutze Step Into, um eine Funktion von innen zu sehen</li>
+                <li>Beobachte ein Objekt im „Watch“-Tab der DevTools</li>
+                <li>Ändere den Wert einer Variablen im „Scope“-Tab</li>
+                <li>Nutze den „Call Stack“, um die Aufrufhistorie zu sehen</li>
+                <li>Finde den Fehler in einem vorgegebenen Code-Snippet</li>
+                <li>Erstelle ein einfaches Spiel, bei dem du Breakpoints setzen musst</li>
+                <li>Debugge ein kleines Projekt mit mehreren Funktionen</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Projektideen 💡</h2>
+            <ol>
+                <li><strong>Debugging Adventure:</strong> App mit Absicht eingebauten Bugs</li>
+                <li><strong>Log vs. Debug:</strong> Vergleichstool für beide Techniken</li>
+                <li><strong>Bug Memory Game:</strong> Lerne mit Visualisierung, wo Breakpoints gesetzt werden</li>
+                <li><strong>Debugger-Tutorial:</strong> Webapp, die erklärt und anleitet</li>
+                <li><strong>Break the Bug:</strong> Minigame, bei dem man gezielt Fehler stoppen muss</li>
+                <li><strong>Debugger-Quiz:</strong> Interaktive Fragen zu Debugging-Techniken</li>
+                <li><strong>Code-Visualisierung:</strong> Tool, das den Codefluss grafisch darstellt</li>
+                <li><strong>Debugging-Community:</strong> Plattform für den Austausch von Debugging-Tipps</li>
+                <li><strong>Debugger-Tool:</strong> Browser-Plugin, das den Debugging-Prozess vereinfacht</li>
+                <li><strong>Debugging-Story:</strong> Interaktive Geschichte, bei der du Entscheidungen treffen musst</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Speed Debugging Challenges ⚡</h2>
+            <ol>
+                <li>Finde die Zeile mit dem Fehler: <code>let x = y + 1;</code> (Tipp: y ist nicht definiert)</li>
+                <li>Setze <code>debugger;</code> in eine Schleife und beobachte den Wert</li>
+                <li>Entferne <code>debugger;</code> nach dem Debugging - vergiss es nicht!</li>
+                <li>Debugge eine Funktion, die immer 0 zurückgibt</li>
+                <li>Finde den Fehler in einem Code-Snippet mit mehreren Variablen</li>
+                <li>Debugge eine Funktion, die ein Array sortieren soll</li>
+                <li>Setze Breakpoints in einer rekursiven Funktion</li>
+                <li>Debugge eine Funktion, die ein Objekt manipuliert</li>
+                <li>Finde den Fehler in einer Funktion, die einen API-Call macht</li>
+                <li>Debugge eine Funktion, die ein Formular validiert</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung 🎯</h2>
+            <p>
+                Der Debugger und Breakpoints sind deine Zeitstopper und Röntgenbrillen in der Codewelt! Sie helfen dir,
+                den Ablauf deiner Funktionen zu verstehen und unerwartetes Verhalten zu entdecken. Nutze sie regelmäßig,
+                um Bugs zu fangen, bevor sie dich fangen! 🐛⚔️
+            </p>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">function heldenprüfung() {
+  let gold = 100;
+  let trank = "Heiltrank";
+  debugger;
+  console.log(`Du kaufst einen ${trank} für 50 Gold.`);
+  gold -= 50;
+  console.log(`Gold übrig: ${gold}`);
+}
+
+heldenprüfung();</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Objekte_erstellen.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

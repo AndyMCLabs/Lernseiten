@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Array Grundlagen</h1>
+            <p>Willkommen in der Welt der Arrays! Stell dir ein Array vor wie einen magischen Beutel in deinem Inventar:
+                Du kannst dort alle möglichen Dinge aufbewahren - Tränke, Items, Zahlen, Texte oder sogar andere Beutel!
+                🎒✨</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Was ist ein Array?</h2>
+            <p>Ein Array ist eine geordnete Sammlung von Werten. Es ist wie eine Liste, bei der jedes Element eine
+                Position (Index) hat. In JavaScript beginnt der Index immer bei 0. Das erste Element ist also an
+                Position 0, das zweite an 1, usw.</p>
+
+            <pre><code class="language-js">// Unser Helden-Inventar als Array
+const inventar = ["Schwert", "Heiltrank", "Gold", "Zauberbuch"];
+console.log(inventar[0]); // "Schwert"
+console.log(inventar[2]); // "Gold"
+</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h2>Arrays erstellen</h2>
+            <p>Es gibt zwei Möglichkeiten, ein Array zu erstellen:</p>
+            <pre><code class="language-js">// Mit eckigen Klammern (empfohlen)
+const zahlen = [1, 2, 3];
+
+// Mit dem Array-Konstruktor (selten verwendet)
+const andereZahlen = new Array(1, 2, 3);
+</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h2>Elemente lesen und ändern</h2>
+            <pre><code class="language-js">const held = ["Name", 100, "Krieger"];
+console.log(held[1]); // 100 (Leben)
+
+// Wir rüsten den Helden auf!
+held[1] = 150; // Mehr Lebenspunkte
+console.log(held); // ["Name", 150, "Krieger"]
+</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h2>Länge eines Arrays</h2>
+            <pre><code class="language-js">const skills = ["Feuerball", "Blitz", "Heilen"];
+console.log(skills.length); // 3
+</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices</h1>
+            <h1>Best Practices</h1>
+            <p>
+                ✅ Nutze sprechende Namen für deine Arrays<br>
+                ✅ Verwende <code>const</code>, wenn sich das Array selbst nicht ändern soll<br>
+                ✅ Indexe immer mit Bedacht nutzen - denk daran, sie starten bei 0!<br>
+                ✅ Nicht über das Ende des Arrays hinausgreifen - das ergibt <code>undefined</code><br>
+                ✅ Benutze <code>.length</code>, um Array-Längen dynamisch zu nutzen<br>
+                ✅ Nutze Array-Methoden wie <code>map()</code>, <code>filter()</code> und <code>reduce()</code>, um Code
+                eleganter und funktionaler zu gestalten<br>
+                ✅ Vermeide "magische Zahlen" im Code - verwende aussagekräftige Variablen für Array-Längen oder
+                Grenzen<br>
+                ✅ Wenn du nur prüfen willst, ob ein Element vorhanden ist, nimm <code>includes()</code> - das liest sich
+                wie ein Zauberspruch! 🪄<br>
+                ✅ Nutze <code>for...of</code> oder <code>forEach()</code> statt klassischer Schleifen, wenn du nicht mit
+                Indexen arbeitest - das macht deinen Code lesbarer<br>
+                ✅ Kommentiere komplexe Array-Manipulationen - besonders wenn du mit verschachtelten Arrays (Arrays in
+                Arrays) arbeitest, damit dein künftiges Ich nicht flucht! 😅
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Fragen mit Antworten</h2>
+            <ol>
+                <li>Was ist der Index des ersten Elements in einem Array?<br><strong>A:</strong> 0</li>
+                <li>Wie viele Elemente hat das Array <code>[1,2,3,4]</code>?<br><strong>A:</strong> 4</li>
+                <li>Wie kann man das zweite Element eines Arrays ändern?<br><strong>A:</strong> Mit
+                    <code>array[1] = neuerWert</code>
+                </li>
+                <li>Was gibt <code>array[100]</code> zurück, wenn das Array nur 3 Elemente hat?<br><strong>A:</strong>
+                    undefined</li>
+                <li>Wie kann man ein leeres Array erstellen?<br><strong>A:</strong> <code>const leer = [];</code></li>
+                <li>Wie fügt man ein Element am Ende eines Arrays hinzu?<br><strong>A:</strong> Mit
+                    <code>array.push(element)</code>
+                </li>
+                <li>Wie entfernt man das letzte Element eines Arrays?<br><strong>A:</strong> Mit
+                    <code>array.pop()</code>
+                </li>
+                <li>Wie kann man überprüfen, ob ein Wert im Array enthalten ist?<br><strong>A:</strong> Mit
+                    <code>array.includes(wert)</code>
+                </li>
+                <li>Wie erhält man die Länge eines Arrays?<br><strong>A:</strong> Mit <code>array.length</code></li>
+                <li>Wie kann man ein Array umdrehen?<br><strong>A:</strong> Mit <code>array.reverse()</code></li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Häufige Fehler und Lösungen</h2>
+            <ul>
+                <li><strong>Fehler:</strong> Zugriff auf ein Element mit einem negativen Index → <em>Lösung:</em> Nur
+                    positive Zahlen oder 0 nutzen</li>
+                <li><strong>Fehler:</strong> Element außerhalb der Länge aufrufen → <em>Lösung:</em> Immer prüfen mit
+                    <code>.length</code>
+                </li>
+                <li><strong>Fehler:</strong> Array mit falschem Konstruktor erstellen → <em>Lösung:</em> Nutze
+                    <code>[]</code> statt <code>new Array()</code>
+                </li>
+                <li><strong>Fehler:</strong> Änderung mit <code>const</code> nicht möglich → <em>Lösung:</em> Du kannst
+                    die Inhalte ändern, nur nicht die Referenz</li>
+                <li><strong>Fehler:</strong> Mix aus Datentypen macht Verarbeitung schwierig → <em>Lösung:</em> Wenn
+                    möglich, gleichartige Datentypen nutzen</li>
+                <li><strong>Fehler:</strong> Methode auf ein leeres Array anwenden →
+                    <em>Lösung:</em> Vorher mit <code>array.length &gt; 0</code> prüfen
+                </li>
+                <li><strong>Fehler:</strong> <code>for...in</code> für Arrays verwenden →
+                    <em>Lösung:</em> Nutze <code>for</code>, <code>forEach()</code> oder <code>for...of</code> für
+                    Arrays
+                </li>
+                <li><strong>Fehler:</strong> Array versehentlich kopiert mit Referenz →
+                    <em>Lösung:</em> Für echte Kopien <code>[...array]</code> oder <code>array.slice()</code> verwenden
+                </li>
+                <li><strong>Fehler:</strong> Methoden wie <code>push()</code> mit falscher Syntax →
+                    <em>Lösung:</em> Immer runde Klammern nutzen, z.B. <code>array.push(42)</code>
+                </li>
+                <li><strong>Fehler:</strong> <code>undefined</code> bei nicht existierenden Indizes →
+                    <em>Lösung:</em> Vor dem Zugriff prüfen: <code>if (array[index] !== undefined)</code>
+                </li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Übungen</h2>
+            <ol>
+                <li>Erstelle ein Array mit 5 deiner Lieblingsgames</li>
+                <li>Greife auf das dritte Spiel zu und gib es in der Konsole aus</li>
+                <li>Ändere das zweite Spiel zu "Zelda: Breath of the Wild"</li>
+                <li>Ermittle die Länge deines Arrays</li>
+                <li>Füge ein weiteres Spiel an die letzte Position hinzu</li>
+                <li>Entferne das erste Spiel aus dem Array (denk an <code>shift()</code>)</li>
+                <li>Füge ein neues Spiel am Anfang des Arrays hinzu (<code>unshift()</code> ist dein Zauberspruch!)</li>
+                <li>Durchlaufe das Array mit einer Schleife und gib jedes Spiel in der Konsole aus (Bonus: Nutze
+                    <code>forEach()</code>)
+                </li>
+                <li>Prüfe, ob "The Witcher 3" im Array enthalten ist (<code>includes()</code> oder
+                    <code>indexOf()</code> können helfen)
+                </li>
+                <li>Erstelle eine Kopie des Arrays und sortiere es alphabetisch - ohne das Original zu verändern
+                    (<code>slice()</code> + <code>sort()</code>)</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Projektideen</h2>
+            <ul>
+                <li>🎮 Inventarsystem für ein Rollenspiel</li>
+                <li>📝 Einkaufsliste mit interaktiver Anzeige</li>
+                <li>📅 Terminplaner mit Wochentagen im Array</li>
+                <li>🎧 Playlist mit deinen Lieblingssongs</li>
+                <li>💡 To-Do-App mit Array als Speicher</li>
+                <li>📱 Social Media Post Scheduler - plane deine Beiträge im Voraus</li>
+                <li>🕹️ Highscore-Liste für dein eigenes kleines Clicker-Game</li>
+                <li>🔍 Filterbares Best-of-Film- und Serienarchiv - perfekt für den Nerd in dir</li>
+                <li>📊 Fitness-Tracker mit wöchentlichen Trainingsdaten (Cardio &amp Kraft!)</li>
+                <li>🎲 Würfelgenerator für Brettspiele - digital &amp fair</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Speed Debugging Challenges</h2>
+            <ol>
+                <li>Ein Array gibt <code>undefined</code> zurück - was wurde falsch gemacht?</li>
+                <li>Ein Spiel soll ersetzt werden, aber <code>array[2]</code> funktioniert nicht - warum?</li>
+                <li>Die Länge ist falsch - wurde das Array richtig erstellt?</li>
+                <li>Warum lässt sich der Wert im Array nicht ändern? (Ist das Array eventuell konstant?)</li>
+                <li>Ein Array-Element ist plötzlich <code>null</code> - wo könnte der Fehler im Code liegen?</li>
+                <li>Beim Zugriff auf das Array kommt ein Fehler: <code>TypeError: array is not iterable</code> - was ist
+                    passiert?</li>
+                <li>Die Schleife läuft zu oft oder zu selten - wurde die Array-Länge korrekt verwendet?</li>
+                <li>Ein Array wird als leer angezeigt, obwohl Elemente drin sein sollten - wann passiert das?</li>
+                <li>Ein Array enthält unerwartete Daten - wo könnte eine falsche Zuweisung stattgefunden haben?</li>
+                <li>Warum wird ein Objekt im Array nicht richtig dargestellt? Liegt es an der Referenz oder Kopie?</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p>Arrays sind magische Listen, die alles speichern können. Mit Indexen kannst du gezielt auf Inhalte
+                zugreifen. Sie sind der Schlüssel zu vielen spannenden Features - von Inventaren bis zu To-Do-Apps. Leg
+                los, dein Abenteuer mit Arrays beginnt jetzt! 🗡️📚</p>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">
+const spiele = ["Witcher 3", "Skyrim", "Cyberpunk 2077"];
+console.log(spiele[2]); // Cyberpunk 2077
+spiele[1] = "Zelda";
+console.log(spiele);
+console.log(spiele.length);</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Durchlaufen_und_Sortieren.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

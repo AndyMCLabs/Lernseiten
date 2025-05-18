@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Namen und Konventionen - Der Stil deiner Variablen!</h1>
+            <p>Ah, du bist also bereit, die geheime Kunst des „Benennt-ismus“ zu meistern! 🧙‍♀️ Denn so wie ein Held
+                einen ehrenvollen Namen braucht, brauchen auch Variablen, Funktionen und Co. in JavaScript Namen, die
+                ihren Zweck klar machen - für dich, deine Mitstreiter und dein zukünftiges Ich (das beim Code-Lesen
+                flucht oder feiert 😅).</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Erklärung</h2>
+            <p>Gute Namen in der Programmierung sind Gold wert! Sie machen den Code lesbar, wartbar und geben sofort
+                eine Vorstellung davon, was passiert. In JavaScript (und fast jeder modernen Sprache) gelten bestimmte
+                **Konventionen**, also „Stilregeln“ für die Namensvergabe:</p>
+
+            <h3>1. camelCase für Variablen und Funktionen</h3>
+            <ul>
+                <li><code>spielStarten</code>, <code>anzahlLeben</code>, <code>berechnePunkte</code></li>
+                <li>Erster Buchstabe klein, jedes neue Wort mit großem Anfangsbuchstaben.</li>
+            </ul>
+
+            <h3>2. PascalCase für Konstruktoren &amp; Klassen</h3>
+            <ul>
+                <li><code>Spieler</code>, <code>ZauberTrank</code></li>
+                <li>Jedes Wort beginnt mit einem Großbuchstaben - wie bei Heldennamen!</li>
+            </ul>
+
+            <h3>3. GROSSBUCHSTABEN_UND_UNDERSCORES für Konstanten (optional)</h3>
+            <ul>
+                <li><code>MAX_LEBEN</code>, <code>API_URL</code></li>
+                <li>Nur bei Werten, die sich nie ändern - wie Naturgesetze 🧪</li>
+            </ul>
+
+            <h3>4. Keine Sonderzeichen, keine Umlaute</h3>
+            <ul>
+                <li><code>größe</code>, <code>anzahl-der-leben</code> = ❌</li>
+                <li>Nur Buchstaben, Zahlen, <code>$</code> und <code>_</code> sind erlaubt.</li>
+            </ul>
+
+            <h3>5. Namen sollen beschreibend, nicht kryptisch sein</h3>
+            <ul>
+                <li><code>let x = 42;</code> = 🤔</li>
+                <li><code>let punkteProLevel = 42;</code> = 👍</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices</h1>
+            <ul>
+                <li>Vermeide zu kurze Namen (<code>x</code>, <code>abc</code>), es sei denn für temporäre Zähler.</li>
+                <li>Nutze sprechende Namen - der Code erklärt sich dann fast von selbst.</li>
+                <li>Vermeide Sonderzeichen und Leerzeichen - das gibt sonst Fehler.</li>
+                <li>Keine Umlaute - auch wenn's deutsch ist. 😉</li>
+                <li>Verwende eine einheitliche Schreibweise im ganzen Projekt!</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel</h2>
+<pre><code>// ❌ Schlechte Beispiele:
+let x = 5;
+const y = "Spieler";
+function z() {
+return x * 2;
+}
+
+// ✅ Gute Beispiele:
+let anzahlLeben = 5;
+const SPIELER_NAME = "Zelda";
+function berechneMultiplikator(wert) {
+return wert * 2;
+}</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Fragen mit Antworten</h2>
+            <ol>
+                <li><strong>Was ist camelCase?</strong><br><em>Ein Stil, bei dem der erste Buchstabe klein ist und jedes
+                        neue Wort mit Großbuchstaben beginnt, z. B. <code>spielStarten</code>.</em></li>
+                <li><strong>Warum sollte man keine Umlaute in Variablennamen verwenden?</strong><br><em>Weil sie in
+                        vielen Programmierumgebungen Probleme machen können.</em></li>
+                <li><strong>Wann benutzt man PascalCase?</strong><br><em>Für Klassen oder Konstruktorfunktionen wie
+                        <code>NeuerSpieler</code>.</em></li>
+                <li><strong>Ist <code>let Leben = 3;</code> ein guter Name?</strong><br><em>Fast! Der Anfangsbuchstabe
+                        sollte klein sein: <code>leben</code>.</em></li>
+                <li><strong>Was ist an <code>let x = 42;</code> problematisch?</strong><br><em>Der Name sagt nichts über
+                        den Zweck der Variable aus.</em></li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Häufige Fehler und Lösungen</h2>
+            <ul>
+                <li><strong>Fehler:</strong> Umlaute in Variablennamen<br><strong>Lösung:</strong> Verwende „ae“, „oe“,
+                    „ue“ statt „ä“, „ö“, „ü“.</li>
+                <li><strong>Fehler:</strong> Namen mit Leerzeichen<br><strong>Lösung:</strong> Verwende camelCase oder
+                    <code>_</code>.</li>
+                <li><strong>Fehler:</strong> Gemischte Namensstile im Projekt<br><strong>Lösung:</strong> Halte dich an
+                    einheitliche Konventionen!</li>
+                <li><strong>Fehler:</strong> Verwendung von reservierten Wörtern wie
+                    <code>let let = 3;</code><br><strong>Lösung:</strong> Nutze keine Schlüsselwörter als Namen.</li>
+                <li><strong>Fehler:</strong> Knappe, kryptische Namen wie <code>tmp</code><br><strong>Lösung:</strong>
+                    Schreibe lieber <code>zwischenSpeicher</code> oder <code>tempDatei</code>.</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Übungen</h2>
+            <ol>
+                <li>Benenne drei Variablen sinnvoll für ein Rollenspiel: Spielername, Lebenspunkte, Magielevel.</li>
+                <li>Schreibe eine Funktion mit dem Namen <code>berechneSchaden</code> und gib darin einen festen Wert
+                    zurück.</li>
+                <li>Erstelle eine Klasse <code>Held</code> mit einem Konstruktor, der <code>name</code> und
+                    <code>level</code> als Parameter nimmt.</li>
+                <li>Erstelle eine <code>const</code>-Variable für den maximalen Mana-Wert mit richtigem Stil.</li>
+                <li>Versuche, eine Variable mit einem reservierten Wort zu deklarieren - was passiert?</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Projektideen</h2>
+            <ol>
+                <li><strong>Charakterblatt-Generator</strong> - Spieler gibt Namen und Werte ein, alles wird ordentlich
+                    benannt und angezeigt.</li>
+                <li><strong>Item-Benennungsmaschine</strong> - Namen und Eigenschaften von Items nach festen
+                    Namenskonventionen erstellen.</li>
+                <li><strong>Konventionen-Checker</strong> - Ein Tool, das deinen Code auf gute Benennungen prüft.</li>
+                <li><strong>Namens-Konverter</strong> - Gib einen Namen ein, der wird automatisch in camelCase oder
+                    PascalCase umgewandelt.</li>
+                <li><strong>Variablen-Ratespiel</strong> - Nutzer rät anhand des Namens, was die Variable wohl tut.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>3 Speed Debugging-Challenges</h2>
+            <ol>
+                <li><strong>Challenge:</strong> Warum funktioniert <code>let zauber-trank = 3;</code>
+                    nicht?<br><strong>Tipp:</strong> Minuszeichen sind nicht erlaubt in Namen!</li>
+                <li><strong>Challenge:</strong> Was ist an <code>let Rückgabe = 42;</code>
+                    gefährlich?<br><strong>Tipp:</strong> Umlaute vermeiden - lieber <code>rueckgabe</code>!</li>
+                <li><strong>Challenge:</strong> Warum gibt <code>console.log(SPIELERname)</code> einen Fehler, wenn
+                    <code>const spielerName = "Link";</code> ist?<br><strong>Tipp:</strong> JavaScript ist
+                    case-sensitive!</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p>Gute Namen sind wie legendäre Schwerter - sie helfen dir, besser zu kämpfen (äh, zu coden) ⚔️. Halte dich
+                an Konventionen wie camelCase und benutze beschreibende Namen, die auch nach Wochen noch Sinn ergeben.
+                So machst du dir (und deinem Team) das Leben leichter!</p>
+        </section>
+
+        <section class="playground">
+            <textarea id="codeInput" rows="30" cols="120">// Hier kannst du deinen Code eintippen und testen
+let spielerName = "Zelda";
+const MAX_LEBEN = 100;
+function begruessung(name) {
+  console.log("Willkommen, " + name + "!");
+}
+begruessung(spielerName);</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Werte_ändern.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

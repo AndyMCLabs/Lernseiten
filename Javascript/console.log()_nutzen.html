@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Die mächtige <code>console.log()</code> Funktion</h1>
+            <p>Die <code>console.log()</code> Funktion ist wie ein magisches Fenster in dein Programm. Sie gibt dir
+                Einblicke in den Code, indem sie Informationen in der Konsole anzeigt. Du kannst damit fast alles im
+                Code sichtbar machen - Variablen, Berechnungen oder einfach nur Nachrichten. 🚀</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Was ist <code>console.log()</code>?</h2>
+            <p>Stell dir vor, du bist ein Zauberer, der durch ein Labyrinth aus Code navigiert. Wenn du die
+                <code>console.log()</code> Funktion verwendest, erhältst du eine Karte des Labyrinths - du siehst genau,
+                was im Inneren passiert! 💡</p>
+            <pre><code>console.log("Hallo, Magier! 🎉");</code></pre>
+            <p>Dieser Zauber zeigt einfach den Text „Hallo, Magier!“ in der Konsole an. Wenn du es im Browser
+                ausprobierst, öffne die Entwicklertools (meistens mit <code>F12</code> oder
+                <code>Ctrl + Shift + I</code>) und gehe zum Tab „Konsole“. Dort kannst du die Nachrichten sehen.</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Praktisches Beispiel: Wie man <code>console.log()</code> nutzt</h2>
+            <p>Die mächtige Funktion <code>console.log()</code> ist ideal, um den Verlauf von Variablen zu verfolgen,
+                Fehler zu finden und mehr. Hier ist ein Beispiel, das den „magischen“ Verlauf eines Zaubers zeigt: 🎩
+            </p>
+<pre><code>let zahl1 = 5;
+let zahl2 = 3;
+let ergebnis = zahl1 + zahl2;
+
+console.log("Das Ergebnis des Zaubers ist:", ergebnis);</code></pre>
+            <p>Dieses Beispiel zeigt, wie du zwei Zahlen addierst und das Ergebnis mit <code>console.log()</code> in der
+                Konsole anzeigst.</p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practises</h1>
+            <ul>
+                <li><strong>Nutze <code>console.log()</code> zum Debuggen:</strong> Wenn etwas nicht funktioniert, schau
+                    dir den Verlauf der Variablen mit <code>console.log()</code> an. So kannst du Fehler schnell finden,
+                    bevor der Drache dich erwischt! 🐉</li>
+                <li><strong>Vermeide es in Produktionsumgebungen:</strong> Vergewissere dich, dass du
+                    <code>console.log()</code> nicht in den fertigen Code einbaust, da es den Code verlangsamen und die
+                    Konsole verstopfen kann. ⚡</li>
+                <li><strong>Nutze Variablen in <code>console.log()</code>:</strong> Du kannst nicht nur Strings
+                    ausgeben, sondern auch Variablen, Objekte und Arrays! 🧙‍♀️</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel zum Nachmachen</h2>
+            <p>Erstelle ein Beispiel, das den Benutzer nach seinem Namen fragt und das Ergebnis mit
+                <code>console.log()</code> ausgibt:</p>
+<pre><code>let name = prompt("Wie heißt du, tapferer Held?");
+console.log("Der Name des Helden ist:", name);</code></pre>
+            <p>Testen kannst du es, indem du deinen Namen eingibst und die Ausgabe in der Konsole siehst. ✨</p>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Quizfragen (mit Antworten)</h2>
+            <ol>
+                <li>Was passiert, wenn du <code>console.log()</code> in deinem Code verwendest?<br><strong>A:</strong>
+                    Es zeigt eine Nachricht oder den Wert einer Variablen in der Konsole an.</li>
+                <li>Wie kannst du mehrere Dinge gleichzeitig mit <code>console.log()</code>
+                    ausgeben?<br><strong>A:</strong> Du kannst mehrere Argumente an <code>console.log()</code>
+                    übergeben: <code>console.log("Ergebnis:", 10);</code></li>
+                <li>Kannst du ein Objekt mit <code>console.log()</code> ausgeben?<br><strong>A:</strong> Ja, du kannst
+                    Objekte ausgeben, um ihre Struktur und Werte zu sehen.</li>
+                <li>Warum solltest du <code>console.log()</code> nach dem Debuggen aus deinem Code
+                    entfernen?<br><strong>A:</strong> Zu viele Logs können die Konsole überladen und die Leistung
+                    beeinträchtigen.</li>
+                <li>Wo siehst du die Ausgaben von <code>console.log()</code> im Browser?<br><strong>A:</strong> In den
+                    Entwicklertools, im Tab „Konsole“.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Übungen</h2>
+            <ol>
+                <li>Erstelle eine Variable mit deinem Namen und gebe sie mit <code>console.log()</code> aus.</li>
+                <li>Berechne das Alter einer Person basierend auf ihrem Geburtsjahr und gebe das Ergebnis in der Konsole
+                    aus.</li>
+                <li>Erstelle ein Array mit deinen Lieblingsfilmen und gebe es mit <code>console.log()</code> aus.</li>
+                <li>Nutze <code>console.log()</code>, um den Verlauf einer Berechnung oder eines Spiels anzuzeigen.</li>
+                <li>Erstelle ein Objekt mit verschiedenen Eigenschaften (z. B. Name, Alter, Beruf) und gebe es mit
+                    <code>console.log()</code> aus.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Projektideen</h2>
+            <ol>
+                <li>Erstelle ein Quiz-Spiel, bei dem jede Frage und Antwort mit <code>console.log()</code> angezeigt
+                    wird.</li>
+                <li>Erstelle eine Anwendung zur Berechnung der Körpermasseindex (BMI), die den Wert mit
+                    <code>console.log()</code> ausgibt.</li>
+                <li>Erstelle ein einfaches "Zufallszahl-Generator"-Spiel, bei dem der Benutzer mit
+                    <code>console.log()</code> Rückmeldungen bekommt.</li>
+                <li>Erstelle eine To-Do-Liste und benutze <code>console.log()</code> um alle Aufgaben anzuzeigen.</li>
+                <li>Erstelle ein Countdown-Timer, der mit <code>console.log()</code> die verbleibende Zeit ausgibt.</li>
+            </ol>
+        </section>
+
+        <section class="playground">
+            <textarea id="codeInput" rows="30" cols="120">// Beispiel: Debugge deine Berechnungen
+let a = 10;
+let b = 5;
+let ergebnis = a * b;
+console.log("Das Ergebnis der Multiplikation ist:", ergebnis);</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./UI_dynamisch_manipulieren.html"><button>Zum nächsten Thema</button></a>
+        </section>
+
+        <script src="../../../src/js/main.js" defer></script>
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Die mächtigen Zauber: alert, prompt, confirm</h1>
+            <p>In der Welt von JavaScript gibt es diese magischen Zauber, die dich sofort mit dem Benutzer verbinden -
+                fast wie ein Zaubertrank, der dir in einem Dungeons &amp; Dragons-Spiel sofort einen Buff gibt! 🧙‍♂️🪄
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Was ist ein <code>alert()</code>?</h2>
+            <p><code>alert()</code> ist ein Pop-up-Dialog, der eine Nachricht anzeigt und den Benutzer dazu zwingt,
+                diese zu bestätigen, bevor er weiter machen kann. Es ist wie ein Bosskampf, bei dem der User erst
+                gewinnen muss, um weiterzugehen. 💥</p>
+            <pre><code>alert("Hey! Du hast den Zauber 'alert' geworfen! 🎉")</code></pre>
+            <p>Der Dialog blockiert die weitere Ausführung des Skripts, bis der Benutzer auf "OK" klickt. Vorsicht - du
+                willst nicht zu oft damit zaubern, sonst fühlt sich der User wie in einem endlosen Dialog-Wald!</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Was ist ein <code>prompt()</code>?</h2>
+            <p><code>prompt()</code> ist der Zauber, mit dem du dem Benutzer eine Frage stellst und eine Antwort
+                erhältst. Es öffnet ein Eingabefeld, in das der User seine Antwort eintippen kann. Der Dialog wartet
+                darauf, dass der Benutzer auf "OK" oder "Abbrechen" klickt. 🧙‍♀️</p>
+            <pre><code>let name = prompt("Wie heißt du, Abenteurer?");</code></pre>
+            <p>Der Benutzer gibt seine Antwort ein, und du kannst sie in einer Variablen speichern. Vorsicht: Wenn der
+                Benutzer auf „Abbrechen“ klickt, wird die Antwort <code>null</code> sein!</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Was ist ein <code>confirm()</code>?</h2>
+            <p><code>confirm()</code> ist der Zauber, der eine Entscheidung verlangt: „Ja“ oder „Nein“. Es zeigt ein
+                Dialogfeld an, in dem der Benutzer wählen kann, ob er zustimmt oder nicht. Wie ein Schwur, den du
+                abgibst - ein magisches „Ja, ich will!“ oder „Nein, ich lehne ab!“ 🏰💍</p>
+            <pre><code>let confirmation = confirm("Bist du sicher, dass du diesen Zauber wirken möchtest?");</code></pre>
+            <p>Der Wert, den der Benutzer zurückgibt, ist <code>true</code> (für „Ja“) oder <code>false</code> (für
+                „Nein“). Nutze dies, um Entscheidungen basierend auf der Benutzerantwort zu treffen. 🔮</p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practises</h1>
+            <ul>
+                <li><strong>Vermeide den übermäßigen Einsatz:</strong> Zu viele Popups können die User-Experience
+                    stören. Nutze diese Zauber mit Bedacht!</li>
+                <li><strong>Gib klare Anweisungen:</strong> Sei deutlich, was du von deinem Benutzer erwartest. Wie in
+                    einer Questbeschreibung! (z. B. „Gib deinen Namen ein, tapferer Held!“)</li>
+                <li><strong>Sei freundlich:</strong> Deine Nachricht sollte positiv und einladend sein. Lass den
+                    Benutzer nicht mit einem bösen Popup überfordert zurück!</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel zum Nachmachen</h2>
+            <p>Hier ein kleines Beispiel, wie du diese drei Zauber in einem JavaScript-Block kombinieren kannst:</p>
+<pre><code>// Alert Zauber
+alert("Willkommen, tapferer Held! 🎉");
+
+// Prompt Zauber
+let userName = prompt("Wie heißt du, Abenteurer?");
+alert("Es freut mich, dich kennenzulernen, " + userName + "!");
+
+// Confirm Zauber
+let confirmMessage = confirm("Möchtest du die epische Quest annehmen?");
+if (confirmMessage) {
+alert("Hervorragend, deine Reise beginnt jetzt!");
+} else {
+alert("Du hast die Reise abgebrochen. Bis zum nächsten Mal!");
+}</code></pre>
+            <p>Teste es selbst und sieh, wie du die Magie in Gang bringst!</p>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Quizfragen (mit Antworten)</h2>
+            <ol>
+                <li>Was passiert, wenn du in einem <code>prompt()</code>-Dialog „Abbrechen“
+                    klickst?<br><strong>A:</strong> Der Wert ist <code>null</code>.</li>
+                <li>Was gibt ein <code>confirm()</code> Dialog zurück?<br><strong>A:</strong> <code>true</code> oder
+                    <code>false</code>, je nachdem, ob der Benutzer „Ja“ oder „Nein“ klickt.</li>
+                <li>Kannst du mehrere <code>alert()</code> hintereinander verwenden?<br><strong>A:</strong> Ja, aber sei
+                    vorsichtig, zu viele könnten nervig sein!</li>
+                <li>Wann würdest du <code>confirm()</code> nutzen?<br><strong>A:</strong> Um eine wichtige Entscheidung
+                    zu bestätigen, z. B. das Löschen von Daten.</li>
+                <li>Warum sind <code>prompt()</code> und <code>confirm()</code> nicht ideal für alle
+                    Szenarien?<br><strong>A:</strong> Sie unterbrechen den Fluss der Seite und können die
+                    Benutzererfahrung stören.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Übungen</h2>
+            <ol>
+                <li>Erstelle ein einfaches <code>alert()</code> mit einer Begrüßungsnachricht.</li>
+                <li>Nutze <code>prompt()</code>, um den Namen des Benutzers zu erfragen und gebe eine Begrüßung aus.
+                </li>
+                <li>Verwende <code>confirm()</code>, um den Benutzer zu fragen, ob er sich zu einem Abenteuer melden
+                    möchte.</li>
+                <li>Kombiniere alle drei Zauber in einem Skript, das eine einfache „Quest“ darstellt.</li>
+                <li>Erstelle ein Spiel, bei dem der Benutzer mit <code>prompt()</code> seinen Highscore eingibt und mit
+                    <code>confirm()</code> entscheidet, ob er weiterspielen möchte.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Projektideen</h2>
+            <ol>
+                <li>Ein interaktives Quiz, bei dem der Benutzer mit <code>prompt()</code> seine Antworten eingibt und
+                    mit <code>confirm()</code> seine Wahl bestätigt.</li>
+                <li>Ein "Abenteuer starten"-Button, der den Benutzer mit <code>alert()</code> begrüßt und mit
+                    <code>confirm()</code> fragt, ob er fortfahren möchte.</li>
+                <li>Ein interaktives Feedback-Formular, bei dem der Benutzer seine Meinung in einem
+                    <code>prompt()</code> eingibt und mit einem <code>confirm()</code> seine Zustimmung gibt.</li>
+                <li>Eine einfache To-Do-Liste, bei der der Benutzer mit <code>prompt()</code> neue Aufgaben hinzufügt
+                    und mit <code>confirm()</code> Aufgaben als erledigt markiert.</li>
+                <li>Ein "Lesezeichen"-Feature, bei dem der Benutzer mit <code>prompt()</code> den Titel seiner
+                    Lieblings-Webseite eingibt und mit <code>confirm()</code> sie speichern kann.</li>
+            </ol>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">// Beispiel: Kombiniere alert, prompt und confirm
+alert("Willkommen, tapferer Held!");
+
+let name = prompt("Wie heißt du?");
+alert("Hallo " + name + ", bereit für dein Abenteuer?");
+
+let confirmation = confirm("Möchtest du die Quest beginnen?");
+if (confirmation) {
+alert("Viel Glück! Deine Reise beginnt jetzt.");
+} else {
+alert("Kein Problem! Die Quest wartet.");
+}</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./console.log()_nutzen.html"><button>Zum nächsten Thema</button></a>
+        </section>
+
+        <script src="../../../src/js/main.js" defer></script>
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Mathematische Operatoren - Der Taschenrechner des Codemagiers 🧙‍♀️➕➖✖️➗</h1>
+            <p>
+                Willkommen, Zahlenschwinger! Heute zaubern wir mit den mathematischen Grundregeln in JavaScript - von
+                Addition bis Restwert, von Level 1 „1 + 1“ bis hin zu Bosskämpfen mit Klammern und Kombos! 🎮💥
+                Du wirst lernen, wie du Werte elegant berechnest - und nebenbei den Zaubertrank „Modulo“ entdeckst!
+            </p>
+            <p>
+                Lass uns gleich loslegen! Du bist bereit, dein Wissen zu erweitern und deine Programmierfähigkeiten auf
+                das nächste Level zu bringen! 🚀
+            </p>
+        </section>
+
+        <section class="chapter">
+            <h2>Erklärung</h2>
+            <p>
+                Mathematische Operatoren sind die Grundattacken deines JavaScript-Charakters. Hier sind die wichtigsten:
+            </p>
+            <ul>
+                <li><code>+</code> Addition</li>
+                <li><code>-</code> Subtraktion</li>
+                <li><code>*</code> Multiplikation</li>
+                <li><code>/</code> Division</li>
+                <li><code>%</code> Modulo (Restwert)</li>
+                <li><code>**</code> Potenzierung (z.B. 2 ** 3 = 8)</li>
+                <li><code>++</code> Inkrement (z.B. <code>a++</code> erhöht <code>a</code> um 1)</li>
+                <li><code>--</code> Dekrement (z.B. <code>a--</code> verringert <code>a</code> um 1)</li>
+                <li><code>+=</code> Zuweisung mit Addition (z.B. <code>a += b</code> ist gleich <code>a = a + b</code>)</li>
+                <li><code>-=</code> Zuweisung mit Subtraktion (z.B. <code>a -= b</code> ist gleich <code>a = a - b</code>)</li>
+                <li><code>*=</code> Zuweisung mit Multiplikation (z.B. <code>a *= b</code> ist gleich <code>a = a * b</code>)</li>
+                <li><code>/=</code> Zuweisung mit Division (z.B. <code>a /= b</code> ist gleich <code>a = a / b</code>)</li>
+                <li><code>%=</code> Zuweisung mit Modulo (z.B. <code>a %= b</code> ist gleich <code>a = a % b</code>)</li>
+                <li><code>**=</code> Zuweisung mit Potenzierung (z.B. <code>a **= b</code> ist gleich <code>a = a ** b</code>)</li>
+                <li><code>++a</code> und <code>a++</code> - Unterschied zwischen Prä- und Post-Inkrement</li>
+                <li><code>--a</code> und <code>a--</code> - Unterschied zwischen Prä- und Post-Dekrement</li>
+                <li><code>Math.random()</code> - Zufallszahlen generieren</li>
+                <li><code>Math.floor()</code> - Abrunden auf die nächste ganze Zahl</li>
+                <li><code>Math.ceil()</code> - Aufrunden auf die nächste ganze Zahl</li>
+                <li><code>Math.round()</code> - Runden auf die nächste ganze Zahl</li>
+                <li><code>Math.abs()</code> - Absoluter Wert</li>
+                <li><code>Math.max()</code> - Größter Wert aus einer Liste</li>
+                <li><code>Math.min()</code> - Kleinster Wert aus einer Liste</li>
+                <li><code>Math.sqrt()</code> - Quadratwurzel</li>
+                <li><code>Math.pow()</code> - Potenzierung (z.B. <code>Math.pow(2, 3)</code> ist gleich <code>2 ** 3</code>)</li>
+                <li><code>Math.PI</code> - Wert von Pi (3.14159...)</li>
+                <li><code>Math.E</code> - Wert von e (2.71828...)</li>
+                <li><code>Math.sin()</code>, <code>Math.cos()</code>, <code>Math.tan()</code> - Trigonometrische
+                    Funktionen</li>
+                <li><code>Math.log()</code> - Natürlicher Logarithmus</li>
+                <li><code>Math.exp()</code> - Exponentialfunktion</li>
+            </ul>
+
+            <p>Ein Beispiel für verschiedene Aktionen:</p>
+<pre><code>let a = 10;
+let b = 3;
+
+console.log(a + b);  // 13
+console.log(a - b);  // 7
+console.log(a * b);  // 30
+console.log(a / b);  // 3.333...
+console.log(a % b);  // 1 (Rest von 10 / 3)
+console.log(a ** b); // 1000 (10 hoch 3)
+console.log(a++);    // 10 (Post-Inkrement, a wird danach 11)
+console.log(++a);    // 12 (Prä-Inkrement, a wird sofort erhöht)
+console.log(a--);    // 12 (Post-Dekrement, a wird danach 11)
+console.log(--a);    // 10 (Prä-Dekrement, a wird sofort verringert)
+console.log(Math.random()); // Zufallszahl zwischen 0 und 1
+console.log(Math.floor(Math.random() * 10)); // Zufallszahl zwischen 0 und 9
+console.log(Math.ceil(Math.random() * 10)); // Zufallszahl zwischen 1 und 10
+console.log(Math.round(4.7)); // 5 (auf die nächste ganze Zahl gerundet)
+console.log(Math.abs(-5)); // 5 (absoluter Wert)
+console.log(Math.max(1, 2, 3)); // 3 (größter Wert)
+console.log(Math.min(1, 2, 3)); // 1 (kleinster Wert)
+console.log(Math.sqrt(16)); // 4 (Quadratwurzel von 16)
+console.log(Math.pow(2, 3)); // 8 (2 hoch 3)
+console.log(Math.PI); // 3.14159... (Wert von Pi)
+console.log(Math.E); // 2.71828... (Wert von e)
+console.log(Math.sin(Math.PI / 2)); // 1 (Sinus von 90 Grad)
+console.log(Math.cos(Math.PI)); // -1 (Kosinus von 180 Grad)
+console.log(Math.tan(Math.PI / 4)); // 1 (Tangens von 45 Grad)
+console.log(Math.log(Math.E)); // 1 (natürlicher Logarithmus von e)
+console.log(Math.exp(1)); // 2.71828... (Exponentialfunktion von 1)
+console.log(Math.floor(4.7)); // 4 (abgerundet)
+console.log(Math.ceil(4.7)); // 5 (aufgerundet)
+console.log(Math.round(4.7)); // 5 (gerundet)
+console.log(Math.abs(-5)); // 5 (absoluter Wert)
+console.log(Math.max(1, 2, 3)); // 3 (größter Wert)
+console.log(Math.min(1, 2, 3)); // 1 (kleinster Wert)
+console.log(Math.sqrt(16)); // 4 (Quadratwurzel von 16)</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices</h1>
+            <ul>
+                <li>Verwende Klammern <code>()</code> für klare Prioritäten, wie ein guter Stratege</li>
+                <li>Nutze <code>Math.round()</code>, <code>Math.floor()</code> und <code>Math.ceil()</code> für
+                    Rundungen</li>
+                <li>Sei vorsichtig mit Ganzzahl-Divisionen - JS liefert oft Nachkommastellen!</li>
+                <li>Modulo ist ideal für Aufgaben wie "gerade oder ungerade?" oder "jede x-te Runde"</li>
+                <li>Verwende <code>++</code> und <code>--</code> (Inkrement/Dekrement) mit Bedacht - sie verändern
+                    Werte!</li>
+                <li>Teste deine Berechnungen gründlich - Fehler sind wie Monster in Dungeons!</li>
+                <li>Nutze <code>Math.random()</code> für Zufallszahlen - perfekt für Loot-Boxen!</li>
+                <li>Vermeide magische Zahlen - benutze Konstanten oder Variablen für Klarheit</li>
+                <li>Dokumentiere deinen Code - so weiß jeder, was du tust!</li>
+                <li>Verwende <code>parseInt()</code> und <code>parseFloat()</code>, um Strings in Zahlen zu
+                    konvertieren</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Beispiel</h2>
+<pre><code>// Einfache Mathe
+let level = 5;
+let bonus = 3;
+let gesamtXP = (level * 10) + (bonus * 2);
+
+console.log("Gesamt-XP:", gesamtXP); // 56
+
+// Gerade oder ungerade?
+let runde = 7;
+if (runde % 2 === 0) {
+console.log("Gerade Runde!");
+} else {
+console.log("Ungerade Runde!");
+}</code></pre>
+        </section>
+
+        <section class="chapter">
+            <h2>Fragen &amp; Antworten</h2>
+            <ol>
+                <li><strong>Was ist das Ergebnis von <code>7 % 2</code>?</strong><br>1 (Rest)</li>
+                <li><strong>Was ergibt <code>3 ** 2</code>?</strong><br>9</li>
+                <li><strong>Wie rundet man 4.7 auf?</strong><br><code>Math.ceil(4.7)</code> → 5</li>
+                <li><strong>Was ist das Ergebnis von <code>10 / 2 * 3</code>?</strong><br>15 (Reihenfolge beachten!)
+                </li>
+                <li><strong>Wie erhöhst du <code>xp</code> um 1?</strong><br><code>xp++</code> oder
+                    <code>xp = xp + 1</code></li>
+                <li><strong>Wie berechnest du die Quadratwurzel von 16?</strong><br><code>Math.sqrt(16)</code> → 4</li>
+                <li><strong>Wie berechnest du den Restwert von 10 / 3?</strong><br><code>10 % 3</code> → 1</li>
+                <li><strong>Wie kannst du eine Zufallszahl zwischen 1 und 10 generieren?</strong><br><code>Math.floor(Math.random() * 10) + 1</code></li>
+                <li><strong>Wie kannst du eine Zahl auf die nächste ganze Zahl runden?</strong><br><code>Math.round(4.5)</code> → 5</li>
+                <li><strong>Wie kannst du den größten Wert aus einer Liste finden?</strong><br><code>Math.max(1, 2, 3)</code> → 3</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Häufige Fehler und ihre Lösungen</h2>
+            <ul>
+                <li><strong>Fehler:</strong> <code>"5" + 3</code> ergibt "53"<br><strong>Lösung:</strong>
+                    <code>Number("5") + 3</code></li>
+                <li><strong>Fehler:</strong> Kein Unterschied zwischen <code>/</code> und
+                    <code>%</code><br><strong>Lösung:</strong> <code>/</code> teilt, <code>%</code> gibt den Rest!</li>
+                <li><strong>Fehler:</strong> Kein Klammern bei komplexen Berechnungen<br><strong>Lösung:</strong>
+                    Klammern setzen: <code>(a + b) * c</code></li>
+                <li><strong>Fehler:</strong> <code>--</code> statt <code>-</code> verwendet<br><strong>Lösung:</strong>
+                    <code>--</code> verändert die Variable, <code>-</code> zieht nur ab!</li>
+                <li><strong>Fehler:</strong> Division durch 0<br><strong>Lösung:</strong> Immer prüfen, ob der Nenner ≠
+                    0 ist!</li>
+                <li><strong>Fehler:</strong> <code>Math.random()</code> gibt immer 0 zurück<br><strong>Lösung:</strong>
+                    <code>Math.random()</code> gibt eine Zufallszahl zwischen 0 und 1 zurück, multipliziere mit der
+                    gewünschten Obergrenze!</li>
+                <li><strong>Fehler:</strong> <code>Math.floor()</code> rundet nicht richtig<br><strong>Lösung:</strong>
+                    <code>Math.floor()</code> rundet immer ab, benutze <code>Math.round()</code> für normales Runden!</li>
+                <li><strong>Fehler:</strong> <code>Math.abs()</code> gibt negative Werte zurück<br><strong>Lösung:</strong>
+                    <code>Math.abs()</code> gibt immer den absoluten Wert zurück!</li>
+                <li><strong>Fehler:</strong> <code>Math.max()</code> gibt immer 0 zurück<br><strong>Lösung:</strong>
+                    Überprüfe, ob du die Werte richtig übergibst!</li>
+                <li><strong>Fehler:</strong> <code>Math.min()</code> gibt immer 0 zurück<br><strong>Lösung:</strong>
+                    Überprüfe, ob du die Werte richtig übergibst!</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Übungen</h2>
+            <ol>
+                <li>Berechne <code>5 + 3 * 2</code> - und danach mit Klammern</li>
+                <li>Schreibe eine Funktion, die prüft, ob eine Zahl durch 4 teilbar ist</li>
+                <li>Erstelle eine Level-Funktion: <code>levelUp(xp)</code> → XP * 2 + 10</li>
+                <li>Runde 7.89 ab, auf und normal</li>
+                <li>Schreibe eine Funktion, die den Unterschied zweier Werte absolut zurückgibt</li>
+                <li>Berechne die Fläche eines Kreises mit <code>Math.PI</code></li>
+                <li>Erstelle eine Funktion, die eine Zufallszahl zwischen 1 und 100 generiert</li>
+                <li>Berechne die Potenz von 2 hoch 5</li>
+                <li>Erstelle eine Funktion, die prüft, ob eine Zahl gerade oder ungerade ist</li>
+                <li>Berechne den Restwert von 20 / 6</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Projektideen</h2>
+            <ol>
+                <li><strong>XP-Rechner</strong> - Berechne Level basierend auf gesammelter XP</li>
+                <li><strong>Loot-Chance-Anzeige</strong> - Zeigt mit % den Loot-Wahrscheinlichkeiten</li>
+                <li><strong>Zufallswürfel</strong> - Simuliere einen W6 oder W20 mit <code>Math.random()</code></li>
+                <li><strong>Trainingsplan</strong> - Rechne Kalorienverbrauch und Zeitpläne aus</li>
+                <li><strong>Bosskampf-Rechner</strong> - Simuliere Schaden, Rüstung und Heilung!</li>
+                <li><strong>Mathe-Rätsel</strong> - Erstelle ein Spiel, bei dem Spieler Mathe-Rätsel lösen müssen</li>
+                <li><strong>Fitness-Tracker</strong> - Berechne Schritte, Kalorien und Fortschritt</li>
+                <li><strong>Wetter-App</strong> - Berechne Temperaturumwandlungen (Celsius, Fahrenheit)</li>
+                <li><strong>Finanzrechner</strong> - Berechne Zinsen, Kredite und Rückzahlungen</li>
+                <li><strong>Quiz-App</strong> - Erstelle ein Quiz mit Mathefragen und Punkten</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Speed Debugging-Challenges</h2>
+            <ol>
+                <li><strong>Code:</strong> <code>let x = "10" * 2;</code><br><strong>Fix?</strong> Funktioniert, ergibt
+                    20! Aber beachte: implizite Umwandlung!</li>
+                <li><strong>Code:</strong> <code>let rest = 10 / 3;</code><br><strong>Fix:</strong> Wenn du den Rest
+                    willst, nutze <code>10 % 3</code></li>
+                <li><strong>Code:</strong> <code>let a = 5 + 2 * 3;</code><br><strong>Fix:</strong> Rechenreihenfolge
+                    korrekt? Ergebnis = 11!</li>
+                <li><strong>Code:</strong> <code>let b = 10 / 0;</code><br><strong>Fix:</strong> Division durch 0? Gib
+                    <code>Infinity</code> zurück!</li>
+                <li><strong>Code:</strong> <code>let c = Math.random() * 10;</code><br><strong>Fix:</strong> Zufallszahl
+                    zwischen 0 und 10? Richtig! Aber wie rundest du sie?</li>
+                <li><strong>Code:</strong> <code>let d = Math.floor(Math.random() * 10) + 1;</code><br><strong>Fix:</strong>
+                    Zufallszahl zwischen 1 und 10? Richtig! Aber wie rundest du sie?</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p>
+                Mathematische Operatoren sind dein Code-Schwert ⚔️ - ob du Erfahrungspunkte sammelst, Lebenspunkte
+                verlierst oder Würfel simulierst: Mit <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>,
+                <code>%</code> und <code>**</code> bist du bestens gerüstet. Wende sie mit Bedacht an und du wirst der
+                Mathematikmeister von Azeroth! 💪📊
+            </p>
+            <p>
+                Denke daran, dass Klammern und die richtige Reihenfolge der Operatoren entscheidend sind. Und vergiss
+                nicht, deine Berechnungen zu testen - denn auch der beste Zauberer kann mal einen Fehler machen! 🧙‍♂️✨
+            </p>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">// Hier kannst du deinen Code eintippen und testen
+let level = 4;
+let bonus = 2;
+
+let xp = (level * 10) + (bonus ** 2);
+console.log("Deine XP:", xp);
+
+let runde = 9;
+console.log("Gerade?", runde % 2 === 0);</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Vergleichs-_und_logische_Operatoren.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

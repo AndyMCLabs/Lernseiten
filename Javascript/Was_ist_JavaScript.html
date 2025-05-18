@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Was ist JavaScript?</h1>
+            <p>
+                JavaScript ist die <strong>Magie hinter der Bewegung</strong> im Web. Während HTML das Skelett deiner
+                Seite bildet und CSS ihr schicke Rüstung verpasst, ist JavaScript der Zauberstab, der alles lebendig
+                macht - von klickbaren Buttons bis zu epischen Animationen und sprechenden Toast-Messages.
+            </p>
+            <p>
+                Entwickelt wurde JavaScript 1995 von Brendan Eich - in gerade einmal 10 Tagen (True Story!). Heute ist
+                es eine der <strong>wichtigsten Programmiersprachen</strong> der Welt, wenn’s ums Web geht. Du willst
+                Formulare prüfen, auf Klicks reagieren oder ein Mini-Spiel im Browser zaubern? JavaScript ist dein
+                treuer Begleiter.
+            </p>
+            <p>
+                Und nein, JavaScript hat nix mit Java zu tun - so wie ein Donut auch nix mit einem Donau-Dampfschiff zu
+                tun hat. 😅
+            </p>
+        </section>
+
+        <section>
+            <h2>🧪 Einfaches Beispiel</h2>
+            <p>Hier siehst du ein kleines Beispiel: Ein Button, der beim Klicken eine Nachricht zaubert!</p>
+
+<pre><code>&lt;button onclick="sagHallo()"&gt;Klick mich!&lt;/button&gt;
+
+&lt;script&gt;
+function sagHallo() {
+alert("Hallo, du mutiger JavaScript-Held!");
+}
+&lt;/script&gt;</code></pre>
+
+            <p>➡️ Kopiere das in deinen Editor oder nutze den Playground unten!</p>
+        </section>
+        <section>
+        <h3>🧠 Quizfragen (Level 1 bis Raid-Boss)</h3>
+        <ol>
+            <li>Was macht JavaScript im Vergleich zu HTML und CSS?</li>
+            <li>In welchem Jahr wurde JavaScript erfunden?</li>
+            <li>Was passiert, wenn man <code>alert()</code> in JavaScript verwendet?</li>
+            <li>Ist JavaScript das gleiche wie Java? Begründe.</li>
+            <li>Wie könnte man mit JavaScript den Inhalt einer Webseite dynamisch verändern?</li>
+        </ol>
+        </section>
+        <section>
+            <h3>⚔️ Übungen (vom Lehrling zum Meister)</h3>
+            <ol>
+                <li>Füge ein <code>&lt;script&gt;</code>-Tag in deine HTML-Datei ein.</li>
+                <li>Schreibe eine Funktion, die eine Nachricht in der Konsole anzeigt.</li>
+                <li>Lass einen Button beim Klicken den Text auf der Seite ändern.</li>
+                <li>Erstelle ein Formular mit einem "Absenden"-Button und überprüfe mit JavaScript, ob das Eingabefeld
+                    leer ist.</li>
+                <li>Baue ein kleines Pop-up-Menü, das sich mit einem Button ein- und ausklappen lässt.</li>
+            </ol>
+        </section>
+        <section>
+            <h3>🎯 Projektideen für JavaScript-Einsteiger</h3>
+            <ul>
+                <li>👾 Ein Klick-Spiel mit Punkten und Levelaufstieg</li>
+                <li>📅 Ein Mini-Terminplaner mit Datumseingabe</li>
+                <li>🧙‍♂️ Ein Zufalls-Zitat-Generator mit Gaming-Weisheiten</li>
+                <li>🍕 Ein Pizza-Bestellformular mit Preisberechnung</li>
+                <li>🧠 Ein JavaScript-Quiz mit Punkten und Auswertung</li>
+            </ul>
+        </section>
+
+        <section class="playground">
+            <textarea id="codeInput" rows="30" cols="120">
+<button onclick="sagHallo()">Klick mich!</button>
+
+<script>
+    function sagHallo() {
+        alert("Hallo, du mutiger JavaScript-Held!");
+    }
+</script>
+  </textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Historie_und_Einsatzgebiete.html"><button>Zum nächsten Thema</button></a>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+    <script src="../../../src/js/main.js"></script>
+</body>
+
+</html>

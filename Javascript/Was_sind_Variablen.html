@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Was sind Variablen? - Deine magischen Container für Daten!</h1>
+            <p>Willkommen im Land der Variablen! 🌟 Stell dir vor, du hast einen Zaubertrank, den du in einem Becher
+                aufbewahren musst. Dieser Becher ist wie eine Variable in JavaScript. Sie speichert Werte, damit du sie
+                später verwenden kannst. Alles, was du tun musst, ist der Variablen einen Namen zu geben und den Wert
+                hineinzufüllen. 🧪✨</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Was sind Variablen?</h2>
+            <p>In JavaScript ist eine Variable ein benannter Container, der Daten speichert. Du kannst dieser Variable
+                alles Mögliche zuweisen: Zahlen, Text, Wahrheitswerte und sogar Funktionen! 💥 Eine Variable ermöglicht
+                es dir, mit diesen Daten zu arbeiten und sie zu ändern, ohne jedes Mal den ursprünglichen Wert neu
+                schreiben zu müssen. Einfach magisch, oder?</p>
+
+            <h3>Beispiel:</h3>
+<pre><code>let alter = 30; // Hier speichern wir eine Zahl (Alter) in der Variable "alter"
+console.log(alter); // Ausgabe: 30</code></pre>
+            <p>In diesem Beispiel haben wir die Variable <code>alter</code> mit einem Wert von 30 erstellt. Und mit
+                <code>console.log()</code> haben wir diesen Wert im Browser ausgegeben. 🖥️</p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practices: So gehst du richtig mit Variablen um!</h1>
+            <ul>
+                <li><strong>Benutze aussagekräftige Namen:</strong> Nenne deine Variablen nach dem, was sie speichern,
+                    z. B. <code>benutzername</code> statt <code>x</code>.</li>
+                <li><strong>Vermeide globale Variablen:</strong> Halte deine Variablen innerhalb von Funktionen oder
+                    Blöcken, um den globalen Namespace sauber zu halten. 💡</li>
+                <li><strong>Konstanten für feste Werte:</strong> Wenn du weißt, dass sich ein Wert nie ändern wird,
+                    benutze <code>const</code> statt <code>let</code>.</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Praktisches Beispiel: Variablen erstellen und verwenden</h2>
+            <p>Schau dir an, wie du Variablen in JavaScript einsetzen kannst:</p>
+<pre><code>let benutzername = "Andreas"; // Ein String
+let alter = 43; // Eine Zahl
+let istVater = true; // Ein Wahrheitswert (Boolean)
+
+console.log(benutzername); // Gibt den Benutzernamen aus
+console.log(alter); // Gibt das Alter aus
+console.log(istVater); // Gibt "true" aus</code></pre>
+            <p>Hier haben wir drei Variablen: einen String, eine Zahl und einen Wahrheitswert. Das Tolle daran ist, dass
+                du mit diesen Variablen überall im Code arbeiten kannst. 🔧💻</p>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Fragen mit Antworten (steigend im Schwierigkeitsgrad)</h2>
+            <ol>
+                <li><strong>Was ist eine Variable in JavaScript?</strong><br>Eine Variable ist ein benannter Container,
+                    der Daten speichert, die später verwendet oder geändert werden können.</li>
+                <li><strong>Wie kannst du eine Variable in JavaScript erstellen?</strong><br>Du kannst eine Variable mit
+                    <code>let</code>, <code>const</code> oder <code>var</code> erstellen, gefolgt von einem Namen und
+                    einem Wert: <code>let x = 5;</code></li>
+                <li><strong>Was ist der Unterschied zwischen <code>let</code> und
+                        <code>const</code>?</strong><br><code>let</code> ermöglicht es dir, den Wert einer Variablen zu
+                    ändern, während <code>const</code> einen konstanten Wert bedeutet, der nicht mehr verändert werden
+                    kann.</li>
+                <li><strong>Wie kannst du den Wert einer Variablen ändern?</strong><br>Mit einer einfachen Zuweisung:
+                    <code>alter = 44;</code> (setzt die Variable <code>alter</code> auf den Wert 44).</li>
+                <li><strong>Kannst du eine Variable ohne einen Wert erstellen?</strong><br>Ja, du kannst eine Variable
+                    ohne Wert initialisieren, z. B. <code>let name;</code>. Der Wert ist dann <code>undefined</code>.
+                </li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Häufige Fehler und Lösungen</h2>
+            <ul>
+                <li><strong>Fehler:</strong> Du versuchst, eine Variable zu ändern, die mit <code>const</code>
+                    deklariert wurde.<br><strong>Lösung:</strong> Verwende <code>let</code> statt <code>const</code>,
+                    wenn du den Wert der Variablen ändern möchtest.</li>
+                <li><strong>Fehler:</strong> Du vergisst, eine Variable zu deklarieren und verwendest sie ohne
+                    <code>let</code> oder <code>const</code>.<br><strong>Lösung:</strong> Stelle sicher, dass du alle
+                    Variablen richtig deklarierst, um unerwartete Fehler zu vermeiden.</li>
+                <li><strong>Fehler:</strong> Du verwendest einen ungültigen Variablennamen (z. B. beginnend mit einer
+                    Zahl).<br><strong>Lösung:</strong> Variablen müssen mit einem Buchstaben, Unterstrich (_) oder
+                    Dollarzeichen ($) beginnen.</li>
+                <li><strong>Fehler:</strong> Du versuchst, eine Variable mehrfach mit dem gleichen Namen zu
+                    deklarieren.<br><strong>Lösung:</strong> Achte darauf, dass du Variablen nur einmal im selben
+                    Gültigkeitsbereich deklarierst, um Überschreibungen zu vermeiden.</li>
+                <li><strong>Fehler:</strong> Du hast vergessen, den Wert einer Variable zu
+                    initialisieren.<br><strong>Lösung:</strong> Initialisiere immer deine Variablen mit einem sinnvollen
+                    Wert, bevor du sie verwendest, um Fehler zu vermeiden.</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Übungen</h2>
+            <ol>
+                <li>Erstelle eine Variable, die deinen Lieblingsfilm speichert, und gib den Wert mit
+                    <code>console.log()</code> aus.</li>
+                <li>Erstelle eine Variable, die das Alter einer Person speichert, und gib den Wert mit
+                    <code>console.log()</code> aus.</li>
+                <li>Ändere den Wert einer bestehenden Variable und gib den neuen Wert aus.</li>
+                <li>Erstelle eine Konstante für deinen Geburtsort und versuche, den Wert zu ändern (was natürlich nicht
+                    geht!).</li>
+                <li>Erstelle eine Variable, die einen Wahrheitswert speichert, und verwende sie in einer einfachen
+                    <code>if</code>-Bedingung.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>5 Projektideen</h2>
+            <ol>
+                <li>Erstelle ein "Alter in Tagen"-Programm, bei dem der Benutzer sein Geburtsdatum eingibt und das Alter
+                    in Tagen berechnet wird.</li>
+                <li>Baue ein interaktives Umfrage-Tool, das die Antworten des Benutzers in Variablen speichert und
+                    anzeigt.</li>
+                <li>Erstelle einen "Mein erstes Spiel", bei dem du Variablen verwendest, um Punkte und Leben zu zählen.
+                </li>
+                <li>Erstelle einen Taschenrechner, der zwei Zahlen in Variablen speichert und die Ergebnisse von
+                    Grundrechenarten berechnet.</li>
+                <li>Erstelle eine dynamische To-Do-Liste, bei der du die Aufgaben in Variablen speicherst und sie
+                    anzeigt.</li>
+            </ol>
+        </section>
+
+        <section class="chapter">
+            <h2>3 Speed Debugging-Challenges</h2>
+            <ul>
+                <li>Debugge ein Programm, bei dem der Wert einer Variablen nicht richtig angezeigt wird.</li>
+                <li>Behebe einen Fehler, bei dem der Wert einer Variablen überschrieben wird, obwohl er nicht
+                    überschrieben werden sollte.</li>
+                <li>Debugge ein Problem, bei dem die Variablenwerte nicht korrekt an Funktionen übergeben werden.</li>
+            </ul>
+        </section>
+
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p>Variablen sind die Basis deines Codes! Sie speichern Werte und ermöglichen es dir, mit diesen Werten zu
+                arbeiten. Denke daran, aussagekräftige Namen zu wählen und den richtigen Typ von Variablen (z. B.
+                <code>let</code>, <code>const</code>) je nach Bedarf zu verwenden. Mit dieser Macht kannst du deine
+                Code-Welt beherrschen! 💪🌍</p>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">// Hier kannst du deinen Code eintippen und testen
+let alter = 25;
+console.log(alter);</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./let_const_var.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>

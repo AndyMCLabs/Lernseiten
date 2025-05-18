@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine universelle Lernplattform, um HTML, CSS und JavaScript zu lernen.">
+    <meta name="author" content="CodeBloom">
+    <meta name="keywords" content="Programmieren, HTML, CSS, JavaScript, Lernen, Webentwicklung">
+    <title>CodeBloom</title>
+    <!-- Füge hier weitere Metadaten oder Links hinzu -->
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../../../main.html">Home</a></li>
+                <li><a href="../../../src/html/wichtigeLinks.html">Links</a></li>
+                <li><a href="../../../src/html/buecher.html">Bücher</a></li>
+                <li><a href="../../../src/html/projekte.html">Projekte</a></li>
+                <li><a href="../../../src/html/HTML/htmlindex.html">HTML</a></li>
+                <li><a href="../../../src/html/CSS/cssindex.html">CSS</a></li>
+                <li><a href="../../../src/html/JavaScript/javascriptindex.html">JavaScript</a></li>
+                <!-- Weitere Navbar-Links können hinzugefügt werden -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="chapter">
+            <h1>Eigenschaften und Methoden - Die Zaubertricks der Objekte</h1>
+            <p>Objekte sind nicht nur passive Datenspeicher, sie können auch zaubern - äh, ich meine: Sie haben
+                *Eigenschaften* (Daten) und *Methoden* (Funktionen)! Eigenschaften sind wie Rucksäcke voller
+                Informationen und Methoden sind Fähigkeiten, mit denen das Objekt Dinge tun kann. 🧙‍♂️</p>
+            <p>In diesem Kapitel lernst du, wie du Objekte mit Eigenschaften und Methoden ausstattest, damit sie
+                nicht nur still dastehen, sondern auch aktiv werden können. Objekte sind wie die Helden deiner
+                Programmiergeschichte - sie haben ihre eigenen Eigenschaften und Fähigkeiten!</p>
+            <p>Wir werden uns anschauen, wie du Objekte erstellst, ihnen Eigenschaften und Methoden hinzufügst und wie du sie
+                in deinem Code verwenden kannst. Lass uns gleich loslegen!</p>
+        </section>
+
+        <section class="chapter">
+            <h2>Wie wir Eigenschaften und Methoden nutzen</h2>
+            <p>Stell dir ein Objekt vor, z.B. ein sprechendes Schwert aus einem Rollenspiel. Es hat Eigenschaften wie
+                <code>name</code> oder <code>schaden</code>, und Methoden wie <code>angreifen()</code>.</p>
+            <pre><code class="language-js">const schwert = {
+  name: "Drachenschneide",
+  schaden: 42,
+  anzeigen: function() {
+    console.log(`Name: ${this.name}, Schaden: ${this.schaden}`);
+  },
+  angreifen: function(ziel) {
+    console.log(`${this.name} greift ${ziel} an und verursacht ${this.schaden} Schaden!`);
+  }
+};
+
+schwert.anzeigen();
+schwert.angreifen("Goblin");</code></pre>
+            <p>Hier haben wir ein Objekt <code>schwert</code> mit Eigenschaften und Methoden. Die Methode <code>anzeigen()</code>
+                gibt die Eigenschaften des Schwerts aus, und <code>angreifen()</code> führt eine Aktion aus.</p>
+            <p>Wir verwenden <code>this</code>, um auf die Eigenschaften des Objekts zuzugreifen. Das ist wie ein
+                Zauberwort, das dem Objekt sagt: "Hey, schau mal, hier bin ich!"</p>
+            <p>Wenn du die Methode <code>angreifen()</code> aufrufst, wird das Schwert aktiv und greift ein Ziel an. Das
+                ist wie ein Held, der seine Fähigkeiten im Kampf einsetzt!</p>
+            <p>Das ist die Magie der Objekte! Sie sind nicht nur Daten, sondern auch aktive Teilnehmer in deinem
+                Code.</p>
+            <p>Jetzt bist du dran! Erstelle dein eigenes Objekt mit Eigenschaften und Methoden. Lass deiner Kreativität freien Lauf!</p>
+        </section>
+
+        <section class="chapter">
+            <h1>Best Practises - Der Ehrenkodex der Objekte</h1>
+            <p>
+            <ul>
+                <li>Eigenschaftsnamen sollten sprechend sein: <code>leben</code> statt <code>x</code>.</li>
+                <li>Verwende <code>this</code>, um auf andere Eigenschaften im selben Objekt zuzugreifen.</li>
+                <li>Schreib Methoden kurz und prägnant - kein Bosskampf in einer Methode!</li>
+                <li>Methoden gehören zum Objekt, wenn sie zu dessen Verhalten passen.</li>
+                <li>Nutze Funktionen für komplexere Logik außerhalb des Objekts.</li>
+                <li>Vermeide globale Variablen - sie sind wie die dunkle Magie der Programmierung!</li>
+                <li>Teste deine Methoden gründlich - sie sind wie die Helden deiner Geschichte!</li>
+                <li>Dokumentiere deine Objekte und Methoden - sie sind wie die Chroniken deiner Abenteuer!</li>
+                <li>Verwende <code>const</code> oder <code>let</code>, um Objekte zu deklarieren, nicht <code>var</code>.</li>
+                <li>Nutze <code>Object.freeze()</code>, um Objekte vor Änderungen zu schützen.</li>
+                <li>Verwende <code>Object.keys()</code>, um alle Eigenschaften eines Objekts zu erhalten.</li>
+                <li>Nutze <code>Object.values()</code>, um alle Werte eines Objekts zu erhalten.</li>
+                <li>Verwende <code>Object.entries()</code>, um ein Array von Schlüssel-Wert-Paaren zu erhalten.</li>
+                <li>Nutze <code>Object.assign()</code>, um Objekte zu kombinieren.</li>
+                <li>Verwende <code>Object.create()</code>, um Objekte mit Prototypen zu erstellen.</li>
+            </ul>
+            </p>
+        </section>
+
+        <!-- Fragen mit steigendem Schwierigkeitsgrad -->
+        <section class="chapter">
+            <h2>Fragen &amp; Antworten</h2>
+            <ol>
+                <li>Wie greift man auf eine Eigenschaft eines Objekts zu? <br><strong>A:</strong> Mit
+                    <code>objekt.eigenschaft</code> oder <code>objekt["eigenschaft"]</code></li>
+                <li>Was ist eine Methode? <br><strong>A:</strong> Eine Funktion, die zu einem Objekt gehört.</li>
+                <li>Was macht <code>this</code> in einer Methode? <br><strong>A:</strong> Es verweist auf das Objekt
+                    selbst.</li>
+                <li>Wie kann man einer Methode einen Parameter übergeben? <br><strong>A:</strong> Wie bei normalen
+                    Funktionen: <code>objekt.methode(parameter)</code></li>
+                <li>Wie kann man Methoden dynamisch hinzufügen? <br><strong>A:</strong>
+                    <code>objekt.neueMethode = function() { ... }</code></li>
+                <li>Wie kann man ein Objekt einfrieren, um Änderungen zu verhindern? <br><strong>A:</strong>
+                    <code>Object.freeze(objekt)</code></li>
+            </ol>
+        </section>
+
+        <!-- Häufige Fehler -->
+        <section class="chapter">
+            <h2>Häufige Fehler &amp; Lösungen</h2>
+            <ul>
+                <li><strong>Fehler:</strong> <code>this</code> verweist nicht auf das Objekt.
+                    <br><strong>Lösung:</strong> Verwende keine Arrow Function, sondern normale Funktionen für Methoden.
+                </li>
+                <li><strong>Fehler:</strong> Vertipper bei Eigenschaftsnamen. <br><strong>Lösung:</strong>
+                    Autovervollständigung im Editor nutzen.</li>
+                <li><strong>Fehler:</strong> Methoden überschreiben versehentlich andere Methoden.
+                    <br><strong>Lösung:</strong> Auf eindeutige Namen achten.</li>
+                <li><strong>Fehler:</strong> Methoden greifen auf nicht existierende Eigenschaften zu.
+                    <br><strong>Lösung:</strong> Existenz vorher prüfen mit <code>if (this.xyz)</code>.</li>
+                <li><strong>Fehler:</strong> Methode fehlt im Objekt. <br><strong>Lösung:</strong> Sicherstellen, dass
+                    sie korrekt definiert wurde.</li>
+                <li><strong>Fehler:</strong> Objekt wird nicht richtig erstellt. <br><strong>Lösung:</strong> Überprüfen,
+                    ob die Syntax korrekt ist und das Objekt richtig initialisiert wurde.</li>
+            </ul>
+        </section>
+
+        <!-- Übungen -->
+        <section class="chapter">
+            <h2>Übungen</h2>
+            <ol>
+                <li>Erstelle ein Objekt <code>auto</code> mit den Eigenschaften <code>marke</code> und <code>ps</code>.
+                </li>
+                <li>Füge dem Objekt <code>auto</code> eine Methode <code>starten()</code> hinzu, die eine Nachricht in
+                    die Konsole schreibt.</li>
+                <li>Nutze <code>this</code> in der Methode, um den Namen des Autos auszugeben.</li>
+                <li>Erweitere das Objekt um eine Methode <code>beschleunigen(geschwindigkeit)</code>, die einen Wert
+                    ausgibt.</li>
+                <li>Schreibe eine Methode, die prüft, ob <code>ps</code> über 300 ist, und das Ergebnis zurückgibt.</li>
+                <li>Erstelle ein weiteres Objekt <code>motorrad</code> mit ähnlichen Eigenschaften und Methoden.</li>
+                <li>Vergleiche die beiden Objekte und finde heraus, welches schneller ist.</li>
+                <li>Erstelle eine Methode <code>beschleunigen(geschwindigkeit)</code>, die die Geschwindigkeit des Autos
+                    erhöht.</li>
+                <li>Füge eine Methode <code>bremsen()</code> hinzu, die die Geschwindigkeit verringert.</li>
+                <li>Erstelle eine Methode <code>reset()</code>, die die Geschwindigkeit auf 0 zurücksetzt.</li>
+                <li>Erstelle eine Methode <code>anzeigen()</code>, die alle Eigenschaften des Autos in der Konsole ausgibt.</li>
+                <li>Erstelle eine Methode <code>updateEigenschaft(eigenschaft, wert)</code>, die eine Eigenschaft des Autos
+                    aktualisiert.</li>
+            </ol>
+        </section>
+
+        <!-- Projektideen -->
+        <section class="chapter">
+            <h2>Projektideen</h2>
+            <ul>
+                <li>Ein Charaktergenerator für ein Fantasy-Rollenspiel (Name, Klasse, Level, Angriffsmethode).</li>
+                <li>Ein Haustier-Objekt mit Eigenschaften wie <code>name</code>, <code>hunger</code> und Methoden wie
+                    <code>füttern()</code>.</li>
+                <li>Ein virtueller Getränkeautomat mit Methoden <code>auswählen()</code>, <code>bezahlen()</code> und
+                    <code>ausgeben()</code>.</li>
+                <li>Ein Musikplayer-Objekt mit Play-, Pause- und Skip-Methoden.</li>
+                <li>Ein Raumschiff mit Eigenschaften wie <code>energie</code>, <code>crew</code> und
+                    <code>hyperSprung()</code>.</li>
+                <li>Ein Quiz-Objekt mit Fragen, Antworten und Methoden zur Überprüfung der Antworten.</li>
+                <li>Ein To-Do-Listen-Objekt mit Methoden zum Hinzufügen, Entfernen und Anzeigen von Aufgaben.</li>
+                <li>Ein Wetter-Objekt mit Eigenschaften wie <code>temperatur</code>, <code>luftfeuchtigkeit</code> und
+                    Methoden zur Vorhersage des Wetters.</li>
+                <li>Ein Spielzeug-Objekt mit Eigenschaften wie <code>farbe</code>, <code>material</code> und Methoden
+                    wie <code>spielen()</code>.</li>
+                <li>Ein Rezept-Objekt mit Zutaten, Zubereitungsschritten und Methoden zur Anzeige des Rezepts.</li>
+                <li>Ein Fitness-Tracker-Objekt mit Eigenschaften wie <code>schritte</code>, <code>kalorien</code> und
+                    Methoden zur Berechnung des Kalorienverbrauchs.</li>
+                <li>Ein Buch-Objekt mit Eigenschaften wie <code>titel</code>, <code>autor</code> und Methoden zur
+                    Anzeige der Buchdetails.</li>
+            </ul>
+        </section>
+
+        <!-- Debugging Challenges -->
+        <section class="chapter">
+            <h2>Speed Debugging - Finde den Bug!</h2>
+            <ol>
+                <li><code>const tier = {name: "Katze", miauen: () =&gt; console.log(this.name + " miaut!")};</code><br><strong>Was
+                        passiert?</strong></li>
+                <li><code>const spiel = {start: function() {console.log("Spiel gestartet")}}; spiel.starte();</code><br><strong>Fehlermeldung?</strong>
+                </li>
+                <li><code>const taschenlampe = {}; taschenlampe.an = true; taschenlampe.schalten = function() {console.log("An: " + an);};</code><br><strong>Warum
+                        geht das nicht?</strong></li>
+                <li><code>const auto = {marke: "BMW", fahren: function() {console.log("Das Auto fährt!")};}</code><br><strong>Fehlermeldung?</strong></li>
+                <li><code>const hund = {name: "Bello", bellen: function() {console.log(this.name + " bellt!")};}</code><br><strong>Warum
+                        funktioniert das nicht?</strong></li>
+                <li><code>const person = {name: "Max", alter: 30}; person.sagen = function() {console.log("Ich heiße " + this.name)};</code><br><strong>Was
+                        passiert, wenn ich <code>person.sagen()</code> aufrufe?</strong></li>
+                <li><code>const auto = {marke: "Audi", fahren: function() {console.log("Das Auto fährt!")};}</code><br><strong>Warum
+                        funktioniert das nicht?</strong></li>
+                <li><code>const hund = {name: "Bello", bellen: function() {console.log(this.name + " bellt!")};}</code><br><strong>Warum
+                        funktioniert das nicht?</strong></li>
+                <li><code>const person = {name: "Max", alter: 30}; person.sagen = function() {console.log("Ich heiße " + this.name)};</code><br><strong>Was
+                        passiert, wenn ich <code>person.sagen()</code> aufrufe?</strong></li>
+                <li><code>const auto = {marke: "Audi", fahren: function() {console.log("Das Auto fährt!")};}</code><br><strong>Warum
+                        funktioniert das nicht?</strong></li>
+                <li><code>const hund = {name: "Bello", bellen: function() {console.log(this.name + " bellt!")};}</code><br><strong>Warum
+                        funktioniert das nicht?</strong></li>
+            </ol>
+        </section>
+
+        <!-- Zusammenfassung -->
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p>Eigenschaften beschreiben ein Objekt, Methoden lassen es handeln. Mit <code>this</code> bekommen Methoden
+                Zugriff auf andere Eigenschaften im Objekt. So wird aus einer Sammlung von Daten ein echter Akteur im
+                JavaScript-Universum!</p>
+            <p>Wir haben gelernt, wie wir Objekte erstellen, ihnen Eigenschaften und Methoden hinzufügen und wie wir sie in unserem Code verwenden
+                können. Objekte sind wie die Helden unserer Programmiergeschichte - sie haben ihre eigenen Eigenschaften
+                und Fähigkeiten!</p>
+            <p>Wir haben auch Best Practices für die Arbeit mit Objekten besprochen, häufige Fehler und Lösungen
+                behandelt und einige spannende Projektideen vorgestellt, die du umsetzen kannst.</p>
+        </section>
+
+        <section class="playground">
+<textarea id="codeInput" rows="30" cols="120">// Hier kannst du deinen Code eintippen und testen
+// Beispielcode:
+const auto = {
+marke: "BMW",
+ps: 300,
+starten: function() {
+console.log("Das Auto startet!");
+},
+beschleunigen: function(geschwindigkeit) {
+console.log(`Das Auto beschleunigt auf ${geschwindigkeit} km/h!`);
+},
+bremsen: function() {
+console.log("Das Auto bremst!");
+},
+reset: function() {
+console.log("Das Auto wird zurückgesetzt!");
+},
+anzeigen: function() {
+console.log(`Marke: ${this.marke}, PS: ${this.ps}`);
+},
+updateEigenschaft: function(eigenschaft, wert) {
+this[eigenschaft] = wert;
+console.log(`Eigenschaft ${eigenschaft} aktualisiert auf ${wert}`);
+}
+};
+
+auto.starten();
+auto.beschleunigen(100);
+auto.bremsen();
+auto.reset();
+auto.anzeigen();
+auto.updateEigenschaft("ps", 350);
+auto.anzeigen(); // Zeigt die aktualisierten Eigenschaften an</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+        </section>
+
+        <section class="end">
+            <a href="./Objektmanipulation.html"><button>Zum nächsten Thema</button></a>
+        </section>
+        <script src="../../../src/js/main.js"></script>
+
+    </main>
+
+    <footer>
+        &copy; 2025 CodeBloom. Alle Rechte vorbehalten.
+    </footer>
+</body>
+
+</html>
