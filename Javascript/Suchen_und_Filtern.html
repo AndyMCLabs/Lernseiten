@@ -29,33 +29,133 @@
     </header>
 
     <main>
-        <section class="section1">
-            <h1>Muster-Seite</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos cupiditate consequatur pariatur,
-                adipisci quo cum laudantium. Adipisci qui, delectus et perspiciatis ipsa cumque facere nisi, ut error
-                facilis nemo veritatis.</p>
+        <section class="chapter">
+            <h1>Suchen und Filtern - Finde die Nadel im Heuhaufen (aka Array)</h1>
+            <p> Willkommen, Abenteurerin der Arrays! Heute lernst du, wie du mit der Präzision eines Jedi und dem
+                Spürsinn eines Hexers gezielt Elemente aus einem Array aufspürst oder gefilterte Listen zauberst. Wir
+                sprechen über die Methoden <code>find()</code>, <code>filter()</code>, <code>includes()</code> und
+                <code>indexOf()</code> - mächtige Zauber für jede Inventarsuche! </p>
         </section>
+        <section class="chapter">
+            <h2>Erklärung der Methoden</h2>
+            <ul>
+                <li><strong><code>find()</code></strong>: Gibt das **erste** Element zurück, das einem Kriterium
+                    entspricht.</li>
+                <li><strong><code>filter()</code></strong>: Gibt **alle** passenden Elemente als neues Array zurück.
+                </li>
+                <li><strong><code>includes()</code></strong>: Prüft, ob ein bestimmter Wert **im Array enthalten** ist -
+                    true oder false.</li>
+                <li><strong><code>indexOf()</code></strong>: Gibt den **Index** des ersten Vorkommens zurück - oder
+                    <code>-1</code>, wenn nichts gefunden wurde.</li>
+            </ul>
+            <pre><code>const helden = ["Arthas", "Jaina", "Thrall", "Sylvanas"]; // find() const heldin = helden.find(name =&gt; name.startsWith("J")); console.log(heldin); // "Jaina" // filter() const rebellen = helden.filter(name =&gt; name.includes("a")); console.log(rebellen); // ["Arthas", "Jaina", "Sylvanas"] // includes() console.log(helden.includes("Illidan")); // false // indexOf() console.log(helden.indexOf("Thrall")); // 2 </code></pre>
+        </section>
+        <section class="chapter">
+            <h1>Best Practices</h1>
+            <p> ✅ Verwende <code>find()</code>, wenn du **nur ein** Element suchst.<br> ✅ Verwende
+                <code>filter()</code>, wenn du eine neue Gruppe willst.<br> ✅ <code>includes()</code> ist perfekt für
+                schnelle Prüfungen.<br> ✅ <code>indexOf()</code> hilft dir, Positionen zu finden - für spätere
+                Manipulationen.<br> ✅ Nutze Pfeilfunktionen für elegante, kurze Bedingungen. </p>
+        </section>
+        <section class="chapter">
+            <h2>Praktisches Beispiel zum Nachmachen</h2>
+            <p>Ein Inventarsystem für einen magischen Rucksack:</p>
+            <pre><code>const inventar = [ { name: "Heiltrank", typ: "Trank" }, { name: "Feuerball-Zauberrolle", typ: "Zauber" }, { name: "Schild der Stärke", typ: "Ausrüstung" } ];
+// Finde das erste Zauber-Item
+const zauber = inventar.find(item =&gt; item.typ === "Zauber");
+console.log("Zauber gefunden:", zauber);
 
-        <section class="section2">
-            <h2>Überschrift</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque illum quas quos eius
-                necessitatibus in voluptate aperiam perspiciatis ad ab dolorem eos quae error, voluptatibus provident
-                qui a omnis!</p>
-        </section>
+// Filtere alle Tränke
+const tränke = inventar.filter(item =&gt; item.typ === "Trank");
+console.log("Tränke im Inventar:", tränke);
+</code></pre>
 
-        <section class="section3">
-            <h3>Überschrift</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur aut vitae animi dolore voluptatem
-                nihil facilis iusto iure nesciunt soluta, atque dolorum ducimus accusantium perspiciatis ab. Eius illo
-                excepturi eaque!</p>
         </section>
+        <section class="chapter">
+            <h2>5 Fragen mit Antworten</h2>
+            <ol>
+                <li><strong>Was macht <code>find()</code>?</strong><br>Es gibt das erste passende Element zurück.</li>
+                <li><strong>Worin liegt der Unterschied zu <code>filter()</code>?</strong><br><code>filter()</code> gibt
+                    ein Array mit allen passenden Werten zurück, <code>find()</code> nur das erste.</li>
+                <li><strong>Was passiert, wenn <code>includes()</code> nichts findet?</strong><br>Es gibt
+                    <code>false</code> zurück.</li>
+                <li><strong>Wann bekommst du bei <code>indexOf()</code> eine <code>-1</code>?</strong><br>Wenn das
+                    gesuchte Element nicht im Array enthalten ist.</li>
+                <li><strong>Kann man auch nach Objekten mit <code>includes()</code> suchen?</strong><br>Nur wenn du
+                    exakt das gleiche Objekt referenzierst - nicht mit Vergleich auf Inhalt.</li>
+            </ol>
+        </section>
+        <section class="chapter">
+            <h2>5 häufige Fehler und Lösungen</h2>
+            <ol>
+                <li><strong>Fehler:</strong> <code>find()</code> gibt <code>undefined</code>
+                    zurück.<br><strong>Lösung:</strong> Prüfe dein Filterkriterium - vielleicht stimmt der Ausdruck
+                    nicht.</li>
+                <li><strong>Fehler:</strong> <code>includes()</code> findet ein Objekt
+                    nicht.<br><strong>Lösung:</strong> Objekte können nur mit derselben Referenz gefunden werden.</li>
+                <li><strong>Fehler:</strong> <code>filter()</code> verändert das ursprüngliche
+                    Array.<br><strong>Lösung:</strong> Nein, tut es nicht! Aber wenn du das neue Array nicht speicherst,
+                    ist es weg.</li>
+                <li><strong>Fehler:</strong> Vergessen, den Rückgabewert zu verwenden.<br><strong>Lösung:</strong>
+                    Wechsle zu <code>return</code> bei der Bedingung in <code>find()</code> oder <code>filter()</code>.
+                </li>
+                <li><strong>Fehler:</strong> Zugriff auf eine Eigenschaft von <code>undefined</code> nach
+                    <code>find()</code>.<br><strong>Lösung:</strong> Prüfe, ob das Ergebnis existiert
+                    (<code>if (result)</code>).</li>
+            </ol>
+        </section>
+        <section class="chapter">
+            <h2>5 Übungen</h2>
+            <ol>
+                <li>Nutze <code>find()</code>, um aus einem Array von Zahlen die erste Zahl über 100 zu finden.</li>
+                <li>Filtere ein Array mit Benutzernamen nach allen Namen, die mit "A" beginnen.</li>
+                <li>Prüfe mit <code>includes()</code>, ob das Element "Legendäres Schwert" in deinem Array ist.</li>
+                <li>Finde den Index von „Heiltrank“ in einer Inventarliste.</li>
+                <li>Kombiniere <code>filter()</code> mit <code>map()</code>, um die Namen aller magischen Items in
+                    Großbuchstaben auszugeben.</li>
+            </ol>
+        </section>
+        <section class="chapter">
+            <h2>5 Projektideen</h2>
+            <ol>
+                <li>Suchfunktion für eine Online-Shop-Produktliste.</li>
+                <li>Filter für Aufgaben nach Status (offen, erledigt, wichtig).</li>
+                <li>Charakterauswahl: Zeige nur Kämpfer oder Magier.</li>
+                <li>Filtern von Chatnachrichten nach Schlüsselwörtern.</li>
+                <li>Favoritensystem: Mit <code>includes()</code> prüfen, ob ein Artikel markiert ist.</li>
+            </ol>
+        </section>
+        <section class="chapter">
+            <h2>3 Speed Debugging-Challenges</h2>
+            <ol>
+                <li><code>const item = inventar.find(i =&gt; i.typ = "Trank");</code> → Was ist hier falsch?</li>
+                <li><code>inventar.includes({ name: "Heiltrank" })</code> gibt <code>false</code> zurück - warum?</li>
+                <li><code>indexOf("Zauber")</code> gibt <code>-1</code>, obwohl "Zauber" drinsteht - was prüfen?</li>
+            </ol>
+        </section>
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p> Ob du nach einem legendären Item oder dem verlorenen Charakter „Bob“ suchst - mit <code>find()</code>,
+                <code>filter()</code>, <code>includes()</code> und <code>indexOf()</code> hast du magische Suchwerkzeuge
+                in der Tasche. Wähle mit Bedacht, wie du suchst: Einzeltreffer, Listen, Prüfung oder Position - es gibt
+                für alles das passende Tool. </p>
+        </section>
+        <section class="playground"> <textarea id="codeInput" rows="30" cols="120"> // Teste das Filtern und Finden von Helden! 
+const helden = [ { name: "Jaina", klasse: "Magier" }, { name: "Thrall", klasse: "Schamane" }, { name: "Valeera", klasse: "Schurke" } ];
+const magier = helden.find(h =&gt; h.klasse === "Magier");
+console.log("Gefundener Magier:", magier);
 
-        <section class="section4">
-            <h4>Überschrift</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam perferendis molestiae, ea ipsam mollitia
-                alias ratione expedita officia enim illo quas sequi esse dignissimos, voluptatum, quos dolores accusamus
-                beatae amet!</p>
+const schurken = helden.filter(h =&gt; h.klasse === "Schurke");
+console.log("Alle Schurken:", schurken);
+</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
         </section>
+        <section class="end"> <a href="./Stacks_und_Queues.html"><button>Zum nächsten Thema</button></a> </section>
+        <script src="../../../src/js/main.js"></script>
     </main>
 
     <footer>

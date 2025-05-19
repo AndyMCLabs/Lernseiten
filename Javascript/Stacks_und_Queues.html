@@ -29,33 +29,234 @@
     </header>
 
     <main>
-        <section class="section1">
-            <h1>Muster-Seite</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos cupiditate consequatur pariatur,
-                adipisci quo cum laudantium. Adipisci qui, delectus et perspiciatis ipsa cumque facere nisi, ut error
-                facilis nemo veritatis.</p>
-        </section>
 
-        <section class="section2">
-            <h2>Überschrift</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque illum quas quos eius
-                necessitatibus in voluptate aperiam perspiciatis ad ab dolorem eos quae error, voluptatibus provident
-                qui a omnis!</p>
+        <section class="chapter">
+            <h1>Stacks und Queues - Die VIP-Schlangen deiner Daten</h1>
+            <p> Willkommen im Dungeon der Datenstrukturen! Heute bekommst du zwei mächtige Begleiter an die Seite
+                gestellt: den <strong>Stack</strong> und die <strong>Queue</strong>. Beide helfen dir, Daten effizient
+                zu organisieren - wie eine Warteschlange beim Raid-Check-in oder dein Zauberbuch, das sich zuletzt
+                geöffnet wieder schließt. </p>
         </section>
+        <section class="chapter">
+            <h2>Was sind Stacks (LIFO)?</h2>
+            <p> Ein <strong>Stack</strong> funktioniert nach dem Prinzip <strong>Last In, First Out (LIFO)</strong>.
+                Stell dir einen Stapel Teller vor. Der letzte Teller, den du oben drauf legst, ist auch der erste, den
+                du wieder runternehmen kannst. </p>
+            <p>JavaScript-Methoden für Stacks:</p>
+            <ul>
+                <li><code>push()</code> - Fügt ein Element oben drauf.</li>
+                <li><code>pop()</code> - Entfernt das oberste Element.</li>
+            </ul>
 
-        <section class="section3">
-            <h3>Überschrift</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur aut vitae animi dolore voluptatem
-                nihil facilis iusto iure nesciunt soluta, atque dolorum ducimus accusantium perspiciatis ab. Eius illo
-                excepturi eaque!</p>
-        </section>
+            <pre><code>const zauberbuch = [];
+zauberbuch.push("Heilzauber");
+zauberbuch.push("Feuerball");
+zauberbuch.push("Teleport");
 
-        <section class="section4">
-            <h4>Überschrift</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam perferendis molestiae, ea ipsam mollitia
-                alias ratione expedita officia enim illo quas sequi esse dignissimos, voluptatum, quos dolores accusamus
-                beatae amet!</p>
+console.log(zauberbuch.pop()); // "Teleport"</code></pre>
+
         </section>
+        <section class="chapter">
+            <h2>Was sind Queues (FIFO)?</h2>
+            <p> Eine <strong>Queue</strong> arbeitet nach dem Prinzip <strong>First In, First Out (FIFO)</strong>. Wie
+                in einer Warteschlange in Azeroth: Wer zuerst kommt, mahlt zuerst. </p>
+            <p>JavaScript-Methoden für Queues:</p>
+            <ul>
+                <li><code>push()</code> - Fügt ein Element hinten an.</li>
+                <li><code>shift()</code> - Entfernt das erste Element (ganz vorne).</li>
+            </ul>
+
+            <pre><code>const dungeonQueue = [];
+dungeonQueue.push("Spieler 1");
+dungeonQueue.push("Spieler 2");
+dungeonQueue.push("Spieler 3");
+
+console.log(dungeonQueue.shift()); // "Spieler 1"</code></pre>
+
+        </section>
+        <section class="chapter">
+            <h1>Best Practices</h1>
+            <p> - Nutze <code>push()</code> und <code>pop()</code> für Stack-Verhalten.<br> - Nutze <code>push()</code>
+                und <code>shift()</code> für Queue-Verhalten.<br> - Wenn du eine performantere Queue brauchst, verwende
+                ein Double-Ended Queue (Deque) oder eigene Implementierung mit Zeigern.<br> - Verändere das
+                Original-Array bewusst und gezielt.<br> - Kommentiere deine Datenstruktur-Absicht im Code für bessere
+                Lesbarkeit. </p>
+        </section>
+        <section class="chapter">
+            <h2>Praktisches Beispiel zum Nachmachen</h2>
+            <p>Ein kleiner Stack-Simulator für Zaubersprüche:</p>
+
+            <pre><code>const spells = [];
+function zauberWirkung(spell) {
+spells.push(spell);
+console.log(Du wirkst: ${spell});
+}
+
+function letzterZauberRueckgaengig() {
+const spell = spells.pop();
+console.log(Letzter Zauber rückgängig gemacht: ${spell});
+}
+
+zauberWirkung("Feuerball");
+zauberWirkung("Eislanze");
+letzterZauberRueckgaengig();</code></pre>
+
+        </section>
+        <section class="chapter">
+            <h2>Fragen mit Antworten</h2>
+            <ol>
+                <li><strong>Was bedeutet LIFO?</strong><br>Last In, First Out - das zuletzt hinzugefügte Element wird
+                    zuerst entfernt (Stack).</li>
+                <li><strong>Was bedeutet FIFO?</strong><br>First In, First Out - das zuerst hinzugefügte Element wird
+                    zuerst entfernt (Queue).</li>
+                <li><strong>Welche Methoden nutzt du für einen Stack?</strong><br><code>push()</code> und
+                    <code>pop()</code>
+                </li>
+                <li><strong>Welche Methoden nutzt du für eine Queue?</strong><br><code>push()</code> und
+                    <code>shift()</code>
+                </li>
+                <li><strong>Wie würdest du einen Stack nutzen, um einen Text umzukehren?</strong><br>Zeichen einzeln
+                    pushen, dann per <code>pop()</code> wieder herausnehmen und zusammensetzen.</li>
+                <li><strong>Was ist der Hauptunterschied zwischen Stack und Queue?</strong><br>
+                    Stack: LIFO (Last In, First Out), Queue: FIFO (First In, First Out). Es geht also darum, ob das
+                    letzte oder das erste Element zuerst wieder rausfliegt.
+                </li>
+                <li><strong>Was passiert, wenn du bei einem leeren Stack <code>pop()</code> aufrufst?</strong><br>
+                    Du bekommst <code>undefined</code> zurück - der Stack ist leer und hat nichts mehr zum Entfernen.
+                </li>
+                <li><strong>Wie kannst du prüfen, ob ein Stack leer ist?</strong><br>
+                    Entweder per <code>stack.length === 0</code> oder <code>!stack.length</code>.
+                </li>
+                <li><strong>Wie lässt sich eine Queue in JavaScript mit einem Array umsetzen?</strong><br>
+                    Durch <code>push()</code> zum Hinzufügen am Ende und <code>shift()</code> zum Entfernen vom Anfang.
+                </li>
+                <li><strong>Welche Alltagsbeispiele passen zu Stack und Queue?</strong><br>
+                    Stack: Bücherstapel - du nimmst das oberste Buch zuerst weg.<br>
+                    Queue: Warteschlange - wer zuerst kommt, wird zuerst bedient.
+                </li>
+            </ol>
+        </section>
+        <section class="chapter">
+            <h2>Häufige Fehler und Lösungen</h2>
+            <ol>
+                <li><strong>Fehler:</strong> Mit <code>shift()</code> einen Stack bauen
+                    wollen.<br><strong>Lösung:</strong> Verwende <code>pop()</code> statt <code>shift()</code>.</li>
+                <li><strong>Fehler:</strong> <code>pop()</code> auf ein leeres Array
+                    anwenden.<br><strong>Lösung:</strong> Vorher Länge checken: <code>if (array.length &gt; 0)</code>
+                </li>
+                <li><strong>Fehler:</strong> Queue falsch implementiert mit
+                    <code>pop()</code>.<br><strong>Lösung:</strong> Für FIFO unbedingt <code>shift()</code> verwenden.
+                </li>
+                <li><strong>Fehler:</strong> Originaldaten versehentlich manipuliert.<br><strong>Lösung:</strong>
+                    Kopiere Arrays mit <code>slice()</code> bei Bedarf.</li>
+                <li><strong>Fehler:</strong> Stack als Queue nutzen (und umgekehrt).<br><strong>Lösung:</strong> Klar
+                    trennen, wann du welche Datenstruktur brauchst.</li>
+                <li><strong>Fehler:</strong> Ein Array mit <code>for...in</code> durchlaufen.<br>
+                    <strong>Lösung:</strong> Nutze stattdessen <code>for</code>, <code>forEach()</code> oder
+                    <code>for...of</code>, um saubere Indizes und Werte zu erhalten.
+                </li>
+                <li><strong>Fehler:</strong> <code>slice()</code> mit einem Argument falsch verstehen.<br>
+                    <strong>Lösung:</strong> <code>array.slice(n)</code> startet bei Index <code>n</code> und nimmt
+                    alles bis zum Ende - also kein "n Elemente" sondern "ab Element n".
+                </li>
+                <li><strong>Fehler:</strong> Methoden wie <code>push()</code> und <code>pop()</code> bei Objekten statt
+                    Arrays nutzen wollen.<br>
+                    <strong>Lösung:</strong> Diese Methoden sind nur für Arrays gedacht - Objekte brauchen eigene Logik
+                    (z.B. mit <code>Object.keys()</code> oder <code>delete</code>).
+                </li>
+                <li><strong>Fehler:</strong> Arrays mit <code>=</code> kopieren und dann ungewollt das Original
+                    verändern.<br>
+                    <strong>Lösung:</strong> Für echte Kopien: <code>const copy = [...original]</code> oder
+                    <code>original.slice()</code>.
+                </li>
+                <li><strong>Fehler:</strong> Vergleich von Arrays mit <code>==</code> oder <code>===</code>.<br>
+                    <strong>Lösung:</strong> Arrays sind Referenztypen - vergleiche Inhalte z.B. mit
+                    <code>JSON.stringify()</code> oder einer Vergleichsfunktion.
+                </li>
+            </ol>
+        </section>
+        <section class="chapter">
+            <h2>Übungen</h2>
+            <ol>
+                <li>Baue einen Stack mit <code>push</code> und <code>pop</code>.</li>
+                <li>Simuliere eine Warteschlange mit <code>push</code> und <code>shift</code>.</li>
+                <li>Schreibe eine Funktion, die einen Stack verwendet, um einen String rückwärts auszugeben.</li>
+                <li>Simuliere eine Call-Center-Queue: Neue Anrufer rein, vorderster raus.</li>
+                <li>Erstelle eine Undo-Funktion für einen Editor mithilfe eines Stacks.</li>
+                <li>Simuliere einen Browser-Verlauf: <code>visit(url)</code> fügt Seiten zum Stack hinzu,
+                    <code>back()</code> geht zur vorherigen Seite zurück.
+                </li>
+                <li>Baue eine Funktion <code>isPalindrome(str)</code>, die prüft, ob ein Wort ein Palindrom ist,
+                    mithilfe eines Stacks.</li>
+                <li>Simuliere ein Supermarkt-Kassensystem mit mehreren Queues (z.B. für normale und Express-Kassen).
+                </li>
+                <li>Implementiere eine Funktion <code>evaluatePostfix(expr)</code>, die einen postfix Ausdruck mithilfe
+                    eines Stacks berechnet.</li>
+                <li>Erstelle ein Druckwarteschlangen-System: Druckaufträge kommen rein, werden FIFO abgearbeitet und mit
+                    Zeitstempel versehen.</li>
+            </ol>
+        </section>
+        <section class="chapter">
+            <h2>Projektideen</h2>
+            <ol>
+                <li>Browser-Verlauf mit Zurück-Funktion (Stack).</li>
+                <li>Undo/Redo-System in einem Texteditor (zwei Stacks).</li>
+                <li>Dungeon-Warteschlange für Spieler mit Fortschrittsanzeige (Queue).</li>
+                <li>Backtracking-Spiel (Labyrinth mit Stack).</li>
+                <li>Print-Warteschlange: Druckjobs FIFO verwalten.</li>
+                <li>Rezept-Verwaltung mit „Zurück zur letzten Zutat“-Funktion (Stack).</li>
+                <li>Support-Ticketsystem mit Priorität nach Eingangsreihenfolge (Queue).</li>
+                <li>Browser-Tabs mit „Zuletzt geschlossen wieder öffnen“-Feature (Stack).</li>
+                <li>Kundenschlange im Freizeitpark mit VIP-Einlassoption (Priority Queue optional).</li>
+                <li>Musik-Playlist mit „Aktuellen Song zurückspringen“-Funktion (Stack &amp; Queue kombiniert).</li>
+            </ol>
+        </section>
+        <section class="chapter">
+            <h2>3 Speed Debugging-Challenges</h2>
+            <ol>
+                <li><code>stack.pop()</code> gibt <code>undefined</code> zurück - was ist passiert?</li>
+                <li>Warum ist das erste Element nicht entfernt worden, obwohl du <code>pop()</code> genutzt hast?</li>
+                <li>Wieso funktioniert dein FIFO-System nicht korrekt, obwohl du <code>push()</code> und
+                    <code>pop()</code> nutzt?
+                </li>
+                <li><code>array.length = 0</code> geleert, aber deine Schleife läuft trotzdem - warum nur?</li>
+                <li>Du bekommst einen "Cannot read property 'length' of undefined"-Fehler - wo liegt der Fehler im Code?
+                </li>
+                <li>Deine Funktion gibt <code>NaN</code> zurück - obwohl du nur Zahlen addierst. Was könnte
+                    schiefgelaufen sein?</li>
+                <li>Ein <code>for</code>-Loop läuft endlos - wie konntest du dich selbst in die Infinity-Schleife
+                    stürzen?</li>
+                <li>Deine Variable <code>count</code> springt immer wieder auf <code>0</code>, obwohl du sie erhöhst -
+                    wo liegt der Haken?</li>
+                <li>Du nutzt <code>==</code> statt <code>===</code> - warum kann das zu unerwarteten Ergebnissen führen?
+                </li>
+                <li>Ein <code>click</code>-Event feuert doppelt - was könnte das Ghost-Click-Problem auslösen?</li>
+            </ol>
+        </section>
+        <section class="chapter">
+            <h2>Zusammenfassung</h2>
+            <p> Stacks und Queues sind einfache, aber mächtige Strukturen - wie das Inventar- und Wartesystem deines
+                Lieblings-MMORPGs. <strong>Stack</strong> ist LIFO - das letzte rein, als erstes raus.
+                <strong>Queue</strong> ist FIFO - wer zuerst da war, geht auch zuerst rein. Nutze die richtigen Methoden
+                und kombiniere sie klug für Undo-Listen, Warteschlangen oder Verläufe.
+            </p>
+        </section>
+        <section class="playground"> 
+<textarea id="codeInput" rows="30" cols="120">// Teste hier deinen Code für einen Stack oder eine Queue! const queue = [];
+queue.push("Paladin");
+queue.push("Schurke");
+queue.push("Magier");
+
+console.log("Nächster in der Queue:", queue.shift());</textarea><br>
+            <button onclick="runCode()">Code ausführen</button><br>
+            <pre id="output"></pre><br>
+            <p>Teste deinen Code z.B. im <a href="https://developer.mozilla.org/de/play" target="_blank">MDN
+                    Playground</a></p>
+
+        </section>
+        <section class="end"> <a href="#"><button>Zum nächsten Thema</button></a> </section>
+        <script src="../../../src/js/main.js"></script>
+
     </main>
 
     <footer>
